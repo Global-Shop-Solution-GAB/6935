@@ -1,0 +1,3451 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_CustOptions..Create(BaseForm)
+Gui.F_CustOptions..Caption("E-Invoicing Customer Options")
+Gui.F_CustOptions..Size(13485,7650)
+Gui.F_CustOptions..MinX(13485)
+Gui.F_CustOptions..MinY(7650)
+Gui.F_CustOptions..Position(0,0)
+Gui.F_CustOptions..BackColor(-2147483633)
+Gui.F_CustOptions..MousePointer(0)
+Gui.F_CustOptions..Event(UnLoad,F_CustOptions_UnLoad)
+Gui.F_CustOptions..AlwaysOnTop(False)
+Gui.F_CustOptions..FontName("Tahoma")
+Gui.F_CustOptions..FontSize(8.25)
+Gui.F_CustOptions..ControlBox(True)
+Gui.F_CustOptions..MaxButton(True)
+Gui.F_CustOptions..MinButton(True)
+Gui.F_CustOptions..Moveable(True)
+Gui.F_CustOptions..Sizeable(True)
+Gui.F_CustOptions..ShowInTaskBar(True)
+Gui.F_CustOptions..TitleBar(True)
+Gui.F_CustOptions.lbl3.Create(Label,"Additional Contacts (Delimit each email with a comma.)",True,4455,255,0,105,120,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_CustOptions.lbl3.BorderStyle(0)
+Gui.F_CustOptions.txtAddEmails.Create(TextBox,"",True,13185,300,0,105,330,True,0,"Arial",8,-2147483643,1)
+Gui.F_CustOptions.txtAddEmails.TabStop(True)
+Gui.F_CustOptions.txtAddEmails.TabIndex(1)
+Gui.F_CustOptions.lbl4.Create(Label,"Subject",True,1935,255,0,105,930,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_CustOptions.lbl4.BorderStyle(0)
+Gui.F_CustOptions.txtSubject.Create(TextBox,"",True,13185,300,0,105,1140,True,0,"Arial",8,-2147483643,1)
+Gui.F_CustOptions.txtSubject.Event(LostFocus,txtSubject_LostFocus)
+Gui.F_CustOptions.txtSubject.TabStop(True)
+Gui.F_CustOptions.txtSubject.TabIndex(3)
+Gui.F_CustOptions.lbl5.Create(Label,"Body",True,1935,255,0,105,1530,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_CustOptions.lbl5.BorderStyle(0)
+Gui.F_CustOptions.txtBody.Create(TextboxM)
+Gui.F_CustOptions.txtBody.Size(13185,5250)
+Gui.F_CustOptions.txtBody.Position(105,1740)
+Gui.F_CustOptions.txtBody.Event(LostFocus,txtBody_LostFocus)
+Gui.F_CustOptions.txtBody.TabStop(True)
+Gui.F_CustOptions.txtBody.TabIndex(4)
+Gui.F_CustOptions.txtBody.Enabled(True)
+Gui.F_CustOptions.txtBody.Visible(True)
+Gui.F_CustOptions.txtBody.Zorder(0)
+Gui.F_CustOptions.txtBody.FontName("Tahoma")
+Gui.F_CustOptions.txtBody.FontSize(8.25)
+Gui.F_CustOptions.ddlWildcards.Create(DropDownList)
+Gui.F_CustOptions.ddlWildcards.Size(1725,330)
+Gui.F_CustOptions.ddlWildcards.Position(11580,750)
+Gui.F_CustOptions.ddlWildcards.Event(SelectedIndexChanged,ddlWildCards_SelectedIndexChanged)
+Gui.F_CustOptions.ddlWildcards.TabStop(True)
+Gui.F_CustOptions.ddlWildcards.TabIndex(2)
+Gui.F_CustOptions.ddlWildcards.Enabled(True)
+Gui.F_CustOptions.ddlWildcards.Visible(True)
+Gui.F_CustOptions.ddlWildcards.Zorder(0)
+Gui.F_CustOptions.ddlWildcards.FontName("Tahoma")
+Gui.F_CustOptions.ddlWildcards.FontSize(8.25)
+Gui.F_CustOptions.lblWildcards.Create(Label,"Wildcards",True,870,255,0,10665,855,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_CustOptions.lblWildcards.BorderStyle(0)
+Gui.F_Review..Create(BaseForm)
+Gui.F_Review..Size(15360,10695)
+Gui.F_Review..MinX(0)
+Gui.F_Review..MinY(0)
+Gui.F_Review..Position(0,0)
+Gui.F_Review..BackColor(-2147483633)
+Gui.F_Review..MousePointer(0)
+Gui.F_Review..Caption("E-Invoicing Review")
+Gui.F_Review..Event(UnLoad,F_Review_UnLoad)
+Gui.F_Review..AlwaysOnTop(False)
+Gui.F_Review..FontName("Tahoma")
+Gui.F_Review..FontSize(8.25)
+Gui.F_Review..ControlBox(True)
+Gui.F_Review..MaxButton(True)
+Gui.F_Review..MinButton(True)
+Gui.F_Review..Moveable(True)
+Gui.F_Review..Sizeable(True)
+Gui.F_Review..ShowInTaskBar(True)
+Gui.F_Review..TitleBar(True)
+Gui.F_Review.gsgcReview.Create(GsGridControl)
+Gui.F_Review.gsgcReview.Size(14955,9360)
+Gui.F_Review.gsgcReview.Position(225,165)
+Gui.F_Review.gsgcReview.Event(RowCellClick,gsgcReview_RowCellClick)
+Gui.F_Review.gsgcReview.Enabled(True)
+Gui.F_Review.gsgcReview.Visible(True)
+Gui.F_Review.gsgcReview.Zorder(0)
+Gui.F_Review.gsgcReview.Anchor(15)
+Gui.F_Review.cmdSend.Create(Button)
+Gui.F_Review.cmdSend.Size(855,375)
+Gui.F_Review.cmdSend.Position(225,9705)
+Gui.F_Review.cmdSend.Caption("Send")
+Gui.F_Review.cmdSend.Event(Click,cmdReviewSend_Click)
+Gui.F_Review.cmdSend.Enabled(True)
+Gui.F_Review.cmdSend.Visible(True)
+Gui.F_Review.cmdSend.Zorder(0)
+Gui.F_Review.cmdSend.FontName("Tahoma")
+Gui.F_Review.cmdSend.FontSize(8.25)
+Gui.F_Review.cmdSend.Anchor(6)
+Gui.F_InvoiceView..Create(BaseForm)
+Gui.F_InvoiceView..Caption("Invoice View")
+Gui.F_InvoiceView..Size(15210,10515)
+Gui.F_InvoiceView..MinX(0)
+Gui.F_InvoiceView..MinY(0)
+Gui.F_InvoiceView..Position(0,0)
+Gui.F_InvoiceView..BackColor(-2147483633)
+Gui.F_InvoiceView..MaxButton(False)
+Gui.F_InvoiceView..MinButton(False)
+Gui.F_InvoiceView..MousePointer(0)
+Gui.F_InvoiceView..Sizeable(False)
+Gui.F_InvoiceView..ShowInTaskBar(False)
+Gui.F_InvoiceView..Event(UnLoad,cmdCloseInvoiceView_Click)
+Gui.F_InvoiceView..AlwaysOnTop(False)
+Gui.F_InvoiceView..FontName("Tahoma")
+Gui.F_InvoiceView..FontSize(8.25)
+Gui.F_InvoiceView..ControlBox(True)
+Gui.F_InvoiceView..Moveable(True)
+Gui.F_InvoiceView..TitleBar(True)
+Gui.F_InvoiceView.htmlView.Create(HtmlContainer)
+Gui.F_InvoiceView.htmlView.Size(14955,9900)
+Gui.F_InvoiceView.htmlView.Position(60,75)
+Gui.F_InvoiceView.htmlView.Visible(True)
+Gui.F_InvoiceView.htmlView.Zorder(0)
+Gui.F_ReviewStandAlone..Create(BaseForm)
+Gui.F_ReviewStandAlone..Size(15360,11355)
+Gui.F_ReviewStandAlone..MinX(0)
+Gui.F_ReviewStandAlone..MinY(0)
+Gui.F_ReviewStandAlone..Position(0,0)
+Gui.F_ReviewStandAlone..BackColor(-2147483633)
+Gui.F_ReviewStandAlone..MousePointer(0)
+Gui.F_ReviewStandAlone..Caption("E-Invoicing Standalone Review")
+Gui.F_ReviewStandAlone..Event(UnLoad,F_Review_UnLoad)
+Gui.F_ReviewStandAlone..AlwaysOnTop(False)
+Gui.F_ReviewStandAlone..FontName("Tahoma")
+Gui.F_ReviewStandAlone..FontSize(8.25)
+Gui.F_ReviewStandAlone..ControlBox(True)
+Gui.F_ReviewStandAlone..MaxButton(True)
+Gui.F_ReviewStandAlone..MinButton(True)
+Gui.F_ReviewStandAlone..Moveable(True)
+Gui.F_ReviewStandAlone..Sizeable(True)
+Gui.F_ReviewStandAlone..ShowInTaskBar(True)
+Gui.F_ReviewStandAlone..TitleBar(True)
+Gui.F_ReviewStandAlone.gsgcReview.Create(GsGridControl)
+Gui.F_ReviewStandAlone.gsgcReview.Size(14955,9435)
+Gui.F_ReviewStandAlone.gsgcReview.Position(210,840)
+Gui.F_ReviewStandAlone.gsgcReview.Event(RowCellClick,gsgcReview_RowCellClick)
+Gui.F_ReviewStandAlone.gsgcReview.Enabled(True)
+Gui.F_ReviewStandAlone.gsgcReview.Visible(True)
+Gui.F_ReviewStandAlone.gsgcReview.Zorder(0)
+Gui.F_ReviewStandAlone.gsgcReview.Anchor(15)
+Gui.F_ReviewStandAlone.cmdSend.Create(Button)
+Gui.F_ReviewStandAlone.cmdSend.Size(855,375)
+Gui.F_ReviewStandAlone.cmdSend.Position(225,10335)
+Gui.F_ReviewStandAlone.cmdSend.Caption("Send")
+Gui.F_ReviewStandAlone.cmdSend.Event(Click,cmdStandAloneSend_Click)
+Gui.F_ReviewStandAlone.cmdSend.TabStop(True)
+Gui.F_ReviewStandAlone.cmdSend.TabIndex(6)
+Gui.F_ReviewStandAlone.cmdSend.Enabled(True)
+Gui.F_ReviewStandAlone.cmdSend.Visible(True)
+Gui.F_ReviewStandAlone.cmdSend.Zorder(0)
+Gui.F_ReviewStandAlone.cmdSend.FontName("Tahoma")
+Gui.F_ReviewStandAlone.cmdSend.FontSize(8.25)
+Gui.F_ReviewStandAlone.cmdSend.Anchor(6)
+Gui.F_ReviewStandAlone.frame1.Create(Frame)
+Gui.F_ReviewStandAlone.frame1.Size(15075,855)
+Gui.F_ReviewStandAlone.frame1.Position(150,-45)
+Gui.F_ReviewStandAlone.frame1.BorderStyle(0)
+Gui.F_ReviewStandAlone.frame1.Enabled(True)
+Gui.F_ReviewStandAlone.frame1.Visible(True)
+Gui.F_ReviewStandAlone.frame1.Zorder(0)
+Gui.F_ReviewStandAlone.frame1.Caption("")
+Gui.F_ReviewStandAlone.frame1.FontName("Tahoma")
+Gui.F_ReviewStandAlone.frame1.FontSize(8.25)
+Gui.F_ReviewStandAlone.dtpStart.Create(DatePicker)
+Gui.F_ReviewStandAlone.dtpStart.Size(1935,285)
+Gui.F_ReviewStandAlone.dtpStart.Position(195,450)
+Gui.F_ReviewStandAlone.dtpStart.Parent("frame1")
+Gui.F_ReviewStandAlone.dtpStart.Event(LostFocus,dtpStart_Change)
+Gui.F_ReviewStandAlone.dtpStart.Enabled(True)
+Gui.F_ReviewStandAlone.dtpStart.Visible(True)
+Gui.F_ReviewStandAlone.dtpStart.Zorder(0)
+Gui.F_ReviewStandAlone.dtpStart.CheckBox(False)
+Gui.F_ReviewStandAlone.dtpStart.FontName("Tahoma")
+Gui.F_ReviewStandAlone.dtpStart.FontSize(8.25)
+Gui.F_ReviewStandAlone.txtBatch.Create(TextBox,"",True,1845,300,0,4545,450,True,0,"Arial",8,-2147483643,1)
+Gui.F_ReviewStandAlone.txtBatch.TabStop(True)
+Gui.F_ReviewStandAlone.txtBatch.TabIndex(1)
+Gui.F_ReviewStandAlone.txtBatch.Parent("frame1")
+Gui.F_ReviewStandAlone.lbl1.Create(Label,"Batch",True,1260,255,0,4545,195,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_ReviewStandAlone.lbl1.Parent("frame1")
+Gui.F_ReviewStandAlone.lbl1.BorderStyle(0)
+Gui.F_ReviewStandAlone.dtpEnd.Create(DatePicker)
+Gui.F_ReviewStandAlone.dtpEnd.Size(1935,285)
+Gui.F_ReviewStandAlone.dtpEnd.Position(2355,450)
+Gui.F_ReviewStandAlone.dtpEnd.Parent("frame1")
+Gui.F_ReviewStandAlone.dtpEnd.Event(LostFocus,dtpEnd_Change)
+Gui.F_ReviewStandAlone.dtpEnd.Enabled(True)
+Gui.F_ReviewStandAlone.dtpEnd.Visible(True)
+Gui.F_ReviewStandAlone.dtpEnd.Zorder(0)
+Gui.F_ReviewStandAlone.dtpEnd.CheckBox(False)
+Gui.F_ReviewStandAlone.dtpEnd.FontName("Tahoma")
+Gui.F_ReviewStandAlone.dtpEnd.FontSize(8.25)
+Gui.F_ReviewStandAlone.lbl3.Create(Label,"Start Date",True,1395,255,0,195,195,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_ReviewStandAlone.lbl3.Parent("frame1")
+Gui.F_ReviewStandAlone.lbl3.BorderStyle(0)
+Gui.F_ReviewStandAlone.lbl4.Create(Label,"End Date",True,1935,255,0,2355,195,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_ReviewStandAlone.lbl4.Parent("frame1")
+Gui.F_ReviewStandAlone.lbl4.BorderStyle(0)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Create(Button)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Size(345,345)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Position(6450,435)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Caption("^")
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Event(Click,cmdBrowseBatch_Click)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.TabStop(True)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.TabIndex(2)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Parent("frame1")
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Enabled(True)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Visible(True)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Zorder(0)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.FontName("Tahoma")
+Gui.F_ReviewStandAlone.cmdBrowseBatch.FontSize(8.25)
+Gui.F_ReviewStandAlone.lbl2.Create(Label,"Invoice",True,1935,255,0,7035,195,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_ReviewStandAlone.lbl2.Parent("frame1")
+Gui.F_ReviewStandAlone.lbl2.BorderStyle(0)
+Gui.F_ReviewStandAlone.txtInvoice.Create(TextBox,"",True,1980,300,0,7035,450,True,0,"Arial",8,-2147483643,1)
+Gui.F_ReviewStandAlone.txtInvoice.TabStop(True)
+Gui.F_ReviewStandAlone.txtInvoice.TabIndex(3)
+Gui.F_ReviewStandAlone.txtInvoice.Parent("frame1")
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Create(Button)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Size(345,345)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Position(9090,435)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Caption("^")
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Event(Click,cmdBrowseInvoice_Click)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.TabStop(True)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.TabIndex(4)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Parent("frame1")
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Enabled(True)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Visible(True)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Zorder(0)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.FontName("Tahoma")
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.FontSize(8.25)
+Gui.F_ReviewStandAlone.cmdSelect.Create(Button)
+Gui.F_ReviewStandAlone.cmdSelect.Size(855,375)
+Gui.F_ReviewStandAlone.cmdSelect.Position(9750,405)
+Gui.F_ReviewStandAlone.cmdSelect.Caption("Select")
+Gui.F_ReviewStandAlone.cmdSelect.Event(Click,cmdSelect_Click)
+Gui.F_ReviewStandAlone.cmdSelect.TabStop(True)
+Gui.F_ReviewStandAlone.cmdSelect.TabIndex(5)
+Gui.F_ReviewStandAlone.cmdSelect.Parent("frame1")
+Gui.F_ReviewStandAlone.cmdSelect.Enabled(True)
+Gui.F_ReviewStandAlone.cmdSelect.Visible(True)
+Gui.F_ReviewStandAlone.cmdSelect.Zorder(0)
+Gui.F_ReviewStandAlone.cmdSelect.FontName("Tahoma")
+Gui.F_ReviewStandAlone.cmdSelect.FontSize(8.25)
+Gui.F_ReviewStandAlone.lblStatus.Create(Label,"Select Batch/Invoice",True,1470,210,0,10770,525,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_ReviewStandAlone.lblStatus.Parent("frame1")
+Gui.F_ReviewStandAlone.lblStatus.BorderStyle(0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iLastField.Declare(Long,0)
+Variable.Global.iLastPosition.Declare(Long,0)
+Variable.Global.bQueueInvoices.Declare(Boolean,False)
+Variable.Global.sDefaultPDFSavePath.Declare(String,0)
+Variable.Global.bConsolidate.Declare(Boolean,False)
+Variable.Global.bLimit.Declare(Boolean,False)
+Variable.Global.iLimitNumber.Declare(Long,-1)
+Variable.Global.bTracking.Declare(Boolean,False)
+Variable.Global.bReview.Declare(Boolean,False)
+Variable.Global.bSO.Declare(Boolean,False)
+Variable.Global.iSOGroup.Declare(Long,-1)
+Variable.Global.bCust.Declare(Boolean,False)
+Variable.Global.iCustGroup.Declare(Long,-1)
+Variable.Global.bFolder.Declare(Boolean,False)
+Variable.Global.sBaseDir.Declare(String)
+Variable.Global.sInvoiceDir.Declare(String)
+Variable.Global.sFileName.Declare(String)
+Variable.Global.bEmail.Declare(Boolean,False)
+Variable.Global.sSubject.Declare(String)
+Variable.Global.sBody.Declare(String)
+Variable.Global.bFileName.Declare(Boolean,False)
+Variable.Global.iMode.Declare(Long,-1)
+Variable.Global.bChange.Declare(Boolean,False)
+Variable.Global.dInvoiceDT.Declare(Date,1/1/1900)
+Variable.Global.dMax.Declare(Date,1/1/1900)
+Variable.Global.bTypeAhead.Declare(Boolean,false)
+variable.Global.bDateChanged.Declare(Boolean,false)
+variable.Global.bSalesRep.Declare(Boolean,False)
+variable.Global.dStartDt.Declare(Date,1/1/1900)
+variable.Global.dEndDt.Declare(Date,1/1/1900)
+Variable.Global.bSeparateEmail.Declare(Boolean,False)
+
+Variable.Global.bPrtWgt.Declare(String)
+Variable.Global.bWgtTotal.Declare(String)
+Variable.Global.sWgtTitle.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+'TJS, October 2022
+'Customer: Metal Zinc
+'Quote 13719
+'BUSINESS CASE: The customer would like to auto-create and post invoices every day and let e-invoicing send those invoices without manual intervention.
+
+'SOLUTION:  
+'- Modify the e-invoicing script to pull the recipients from CRM where the contacts 'user field 11' = 'Y'.
+'- If the customer is part of a buying group, find the correct contact from the buying group as well as the current customer. Both should get the email with the invoice attached.
+'- If the customer does not have a designated recipient, send the invoice to a watched email
+'address (can be set in new e-invoicing options)
+'- All emails should list the sender as coming from a default sender to be set in the new e-invoicing options. The customer's courier settings are set to BCC the sender. The sender email address in this case is a shared mail box monitored by a few different people.
+
+V.Local.sError.Declare(String)
+V.Local.bRet.Declare(Boolean)
+V.Local.dStart.Declare(Date)
+V.Local.bExists.Declare(Boolean)
+
+'Open Connection
+F.ODBC.Connection!con.OpenCompanyConnection(120)
+
+F.Intrinsic.Control.CallSub(loadoptions)
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+	Function.Intrinsic.Control.Case(14350)'Customer master populate hook - used for relabeling script 2 button
+		'Setting Script2 button label
+		Function.Intrinsic.Control.CallSub(popuplatecustomermaster)
+
+		Function.Intrinsic.Control.CallSub(unload)
+	Function.Intrinsic.Control.Case(14370)'Customer master script 2 button - used for defining customer specific options
+		'Loading addtional info
+		Function.Intrinsic.Control.CallSub(getoptionsinfo)
+
+		Gui.F_CustOptions..Show
+	Function.Intrinsic.Control.Case(15225)'Invoice batch job stream post save process hook - used for processing each invoice and saving to PDF
+		'009000 - Invoice
+		'009001 - Customer
+		'009002 - Invoice Date YYYYMMDD
+		'009003 - Invoice/Credit Memo
+		'009004 - Batch
+		'009005 - ?
+		'009006 - ?
+	
+		'TJS - Comment out.  If no e-invoicing contacts exist, send invoice to a watched email address.
+		'Checking to see if e-invoice contacts exists against customer
+		'Function.Intrinsic.Control.CallSub(contactsexist,"CustomerID",V.Passed.009001)'Expects Customer ID to be passed and Returns a boolean in a arg named Exists if contacts exist against customer
+
+		'Function.Intrinsic.Control.If(V.Args.Exists,=,False)
+'			Function.Intrinsic.Control.CallSub(unload)	
+'		Function.Intrinsic.Control.EndIf
+
+		'Processing invoice into PDF
+		Function.Intrinsic.Control.CallSub(processinvoice,"Invoice",V.Passed.009000.Trim,"Batch",V.Passed.009004.Trim,"Customer",V.Passed.009001.Trim)
+		Function.Intrinsic.Control.CallSub(unload)
+		
+	Function.Intrinsic.Control.Case(15226)'Invoice batch job stream post batch process hook - used for reviewing einvoice items before final send
+		'Building data tables used for review grid
+
+		Gui.F_Review..MousePointer(11)
+		
+		'Check use review options
+		F.Intrinsic.Control.SelectCase(V.Global.iMode)
+			F.Intrinsic.Control.Case(0)
+				'process emails directly
+				Function.Intrinsic.Control.CallSub(builddatatables)
+				Function.Intrinsic.Control.CallSub(getinvoicedatafromBDF)
+				F.Intrinsic.Control.CallSub(sendemails)
+			F.Intrinsic.Control.Case(1)
+				'Load review screen
+				Function.Intrinsic.Control.CallSub(builddatatables)
+				Function.Intrinsic.Control.CallSub(getinvoicedatafromBDF)
+				Function.Intrinsic.Control.CallSub(loadreview)
+				Gui.F_Review..Show
+			F.Intrinsic.Control.Case(2)
+				F.Intrinsic.Control.End
+
+			F.Intrinsic.Control.CaseElse
+				F.Intrinsic.Control.End
+
+		F.Intrinsic.Control.EndSelect
+
+		Gui.F_Review..MousePointer(0)
+
+	Function.Intrinsic.Control.CaseElse'Show the standalone review screen
+	
+		F.Intrinsic.UI.InvokeWaitDialog("Loading")
+		
+		F.Intrinsic.Date.DateAdd("D",-90,V.Ambient.Date,V.Local.dStart)
+		Gui.F_ReviewStandAlone.dtpStart.Value(V.Local.dStart)
+		V.Global.dStartDT.Set(V.Local.dStart)
+		V.Global.dEndDT.Set(V.Ambient.Date)
+
+		F.Intrinsic.Control.If(V.Global.bTypeAhead,=,True)
+			'Loading batch numbers dictionary
+			Function.Intrinsic.Control.CallSub(getbatchesdictionary)
+
+			'Loading invoice numbers dictionary
+			Function.Intrinsic.Control.CallSub(getinvoicesdictionary)
+		Function.Intrinsic.Control.EndIf
+
+		'Building data tables used for review grid
+		Function.Intrinsic.Control.CallSub(builddatatables)
+
+		F.Intrinsic.Variable.PassedExists("DSHInvoice",V.Local.bRet)
+		Function.Intrinsic.Control.If(V.Local.bRet,=,True)
+		
+			F.Intrinsic.Control.CallSub(getinvoicedate,"INVOICE",V.Passed.DSHInvoice)
+			Function.Intrinsic.Variable.ArgExists("DATE",V.Local.bExists)
+			Function.Intrinsic.Control.If(V.Local.bExists)
+				Gui.F_ReviewStandAlone.dtpStart.Value(V.Args.DATE)
+				Gui.F_ReviewStandAlone.dtpEnd.Value(V.Args.DATE)
+			function.Intrinsic.Control.EndIf
+			
+			Gui.F_ReviewStandAlone.txtInvoice.Text(V.Passed.DSHInvoice)
+			F.Intrinsic.Control.CallSub(cmdselect_click)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.UI.CloseWaitDialog	
+		Gui.F_ReviewStandAlone..Show
+		
+Function.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.Intrinsic.Control.SetErrorHandler("Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Unload.End
+
+Program.Sub.PopuplateCustomerMaster.Start
+F.Intrinsic.Control.SetErrorHandler("PopuplateCustomerMaster_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Passed.000202.Set("E-Inv Options")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PopuplateCustomerMaster_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.PopuplateCustomerMaster.End
+
+Program.Sub.F_CustOptions_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("Unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+Gui.F_CustOptions..Visible(False)
+
+'Updating additional info
+Function.Intrinsic.Control.CallSub(setoptionsinfo)
+
+'Calling main unload sub
+Function.Intrinsic.Control.CallSub(unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.F_CustOptions_UnLoad.End
+
+Program.Sub.ContactsExist.Start
+F.Intrinsic.Control.SetErrorHandler("ContactsExist_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Checks to see if any e-invoicing contacts exist for a customer.
+'Args:: CustomerID as String
+'Returns:: Exists as Boolean
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.bExit.Declare(Boolean)
+V.Local.bArray.Declare(Boolean)
+V.Local.bExists.Declare(Boolean,False)
+V.Local.sTemp.Declare
+
+'TJS - Modified to pull contacts from CRM where contact user field 11 = 'Y'
+'Checking table to see if any e-invoice contacts exist for customer
+'Function.Intrinsic.String.Build("select CUST, TYPE, ID, CID, NAME, EMAIL1, E_PROG_SETTINGS from CONTACT inner join CRM_CONTACT_AUX on CONTACT.ALT_ID = CRM_CONTACT_AUX.CID and 1 & CRM_CONTACT_AUX.E_PROG_SETTINGS <> 0 Where CUST = '{0}' AND TYPE = 'C' AND ACTIVE = 1",V.Args.CustomerID.PSQLFriendly,V.Local.sSql)
+Function.Intrinsic.String.Build("select A.CUST as CUSTOMER, A.NAME, A.EMAIL1 as EMAIL from CONTACT A left join CRM_UF_VALUE B on A.CUST = B.COMPID and A.ALT_ID = B.CID where A.CUST = '{0}' and A.EMAIL1 <> '' AND A.TYPE = 'C' AND LTRIM(RTRIM(B.UF11)) = 'Y' ORDER BY NAME",V.Args.CustomerID.PSQLFriendly,V.Local.sSql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,true)
+	F.Intrinsic.String.Build("Select ADDL_EMAILS from PPT_EINV_COPT where CUSTOMER_ID='{0}'",V.Args.CustomerID.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sSql)
+	F.Intrinsic.Control.If(V.Local.sSql,<>,"")
+		'Return true if additional contacts exist
+		V.Local.bExists.Set(True)
+	F.Intrinsic.Control.Else
+		'TJS - Check to see if a watched email account exists from E-Invoicing options
+		'Watched email account  = sequence 1000
+		F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,1000,5,"",V.Local.sTemp)
+		F.Intrinsic.Control.If(V.Local.sTemp.Trim,<>,"")
+			V.Local.bExists.Set(True)
+		F.Intrinsic.Control.EndIf		
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.Else
+	F.Intrinsic.Control.DoUntil(V.Local.bExit,=,True)
+		F.Intrinsic.Variable.LongtoBitArray(V.ODBC.con!rst.FieldValLong!E_PROG_SETTINGS,V.Local.bArray)
+		F.Intrinsic.Control.If(V.Local.bArray(0),=,True)
+			V.Local.bExists.Set(True)
+			V.Local.bExit.Set(True)
+		F.Intrinsic.Control.EndIf
+		F.ODBC.con!rst.MoveNext
+	F.Intrinsic.Control.Loop
+Function.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+Function.Intrinsic.Variable.AddRV("Exists",V.Local.bExists)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ContactsExist_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ContactsExist.End
+
+Program.Sub.ProcessInvoice.Start
+F.Intrinsic.Control.SetErrorHandler("ProcessInvoice_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Prints and saves the invoice PDF.
+'Args:: Invoice as String
+'Returns:: None
+'Test Text
+
+V.Local.sError.Declare(String)
+V.Local.sParams.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.sInvoiceFQP.Declare(String)
+V.Local.iRunID.Declare(Long)
+V.Local.iLogID.Declare(Long)
+V.Local.iRet.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.bIsWeight.Declare
+V.Local.sCreditMemo.Declare(string, "")
+V.Local.sqlMemoCheck.Declare
+V.Local.sReportSeq.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.bRet.Declare(Boolean)
+V.Local.bIsPrepay.Declare(Boolean)
+
+'Clearing BI table as although callwrapper performs this action, it cannot be always trusted to do so
+Function.Intrinsic.Control.CallSub(clearbitable)
+
+F.Intrinsic.String.Build("SELECT CREDIT_MEMO_FLAG FROM ORDER_HIST_HEAD WHERE INVOICE = '{0}'", V.args.Invoice, V.Local.sqlMemoCheck)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sqlMemoCheck, V.Local.sCreditMemo)
+
+F.Intrinsic.Control.If(V.Local.sCreditMemo, =, "Y")
+	Function.Intrinsic.String.Build("{0}!*!",V.Args.Invoice,V.Local.sParams)
+	F.Global.General.CallWrapperSyncBIO(200905,V.Local.sParams)	
+F.Intrinsic.Control.Else
+		'Building params to call reprint invoice callwrapper - 200900
+	Function.Intrinsic.String.Build("{0}!*!",V.Args.Invoice,V.Local.sParams)
+	F.Global.General.CallWrapperSyncBIO(200900,V.Local.sParams)'Builds BI data to PRT_LASR_INVOICE table, but does not call report to print
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Delete from PRT_LASER_INVOICE where TERMINAL_NO='{0}' and INVOICE_NO<>'{1}'",V.Caller.Terminal,V.Args.Invoice,V.Local.sSQL)
+F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+'Checking what report ID to use for generating Crystal Report
+Function.Intrinsic.Control.CallSub(getreportid)'Returns report ID used in BI data in a args named ReportID, if return is -1 the callwrapper failed and BI data was not generated properly
+
+F.Intrinsic.Control.If(V.Args.ReportID,=,"000055")
+	F.ODBC.Connection!conc.opencommonconnection
+	F.Intrinsic.String.Build("select A.REPORT_SEQUENCE, U.REPORT_FILE from BIR_ACTIVE_SEQ A JOIN BIR_USER_SEQ U on A.REPORT_ID=U.REPORT_ID where A.REPORT_ID=55 and ACTIVE=1 and A.COMPANY='{0}'",V.Caller.CompanyCode,V.Local.sSQL)
+	F.ODBC.Connection!conc.ExecuteAndReturn(V.Local.sSQL,V.Local.sReportSeq)
+	F.Intrinsic.String.Split(V.Local.sReportSeq,"#$#",V.Local.sReportSeq)
+	F.Intrinsic.Control.For(V.Local.i,0,V.Local.sReportSeq.UBound,1)
+		F.Intrinsic.String.IsInString(V.Local.sReportSeq(V.Local.i),"PREPAY",True,V.Local.bRet)
+		F.Intrinsic.Control.If(V.Local.bRet,=,True)
+			V.Local.bIsPrepay.Set(True)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Next(V.Local.i)
+	F.ODBC.Connection!conc.Close
+
+F.Intrinsic.Control.EndIf
+
+'Changes related to weights for reports with ID's 62 and 65. Parameters that are passed will change depending on the value of this variable
+Function.Intrinsic.Control.If(V.Args.ReportID,=,"000062",Or,V.Args.ReportID,=,"000065")
+	V.Local.bIsWeight.Set(True)
+Function.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Args.ReportID,=,-1)
+	'No report ID found, this is a sign the callwrapper failed to generate the BI data
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+'Making sure invoices dir exists
+Function.Intrinsic.Control.CallSub(createinvoicedir)
+
+'Generate File Name
+F.Intrinsic.Control.CallSub(createfilename,"Invoice",V.Args.Invoice,"Batch",V.Args.Batch,"Customer",V.Args.Customer)
+
+'Building file path for saving
+Function.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Args.sFile,V.Local.sInvoiceFQP)
+
+F.Intrinsic.Variable.ArgToVar("sFile",V.Local.sTemp)
+
+F.Intrinsic.Variable.AddRV("sFile",V.local.sTemp)
+
+F.Intrinsic.Debug.SetLA(V.Local.sInvoiceFQP)
+
+'Building params name and values list for Crystal Report
+
+F.Intrinsic.Control.If(V.Local.bIsWeight,=,True)
+	V.Local.sParams.Set("REPORTID*!*TERMINAL*!*PROGRAM*!*TRACK*!*IVCTYPE*!*PRTSHIP*!*PRTORD*!*PRTWGT*!*WGTTOTAL*!*WGTTITLE")
+	F.Intrinsic.Control.If(V.Global.bTracking,=,True)
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"Y","","","",V.Global.bPrtWgt,V.Global.bWgtTotal,V.Global.sWgtTitle,V.Local.sValues)
+	F.Intrinsic.Control.Else
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}*!*{9}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"","","","",V.Global.bPrtWgt,V.Global.bWgtTotal,V.Global.sWgtTitle,V.Local.sValues)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.ElseIf(V.Local.bIsPrepay,=,True)
+	V.Local.sParams.Set("REPORTID*!*TERMINAL*!*PROGRAM*!*TRACK*!*COMMIVC*!*SHIPNO*!*REMIT")
+	F.Intrinsic.Control.If(V.Global.bTracking,=,True)
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"Y","N","N","Y",V.Local.sValues)
+	F.Intrinsic.Control.Else
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"","N","N","Y",V.Local.sValues)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Else
+	V.Local.sParams.Set("REPORTID*!*TERMINAL*!*PROGRAM*!*TRACK*!*IVCTYPE*!*PRTSHIP*!*PRTORD")
+	F.Intrinsic.Control.If(V.Global.bTracking,=,True)
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"Y","","","",V.Local.sValues)
+	F.Intrinsic.Control.Else
+		Function.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}",V.Args.ReportID,V.Caller.Terminal,V.Caller.Caller,"","","","",V.Local.sValues)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'Getting Run ID
+F.Global.BI.GetRunID(V.Local.iRunID)
+'Getting log ID
+F.Global.BI.StartLogging(V.Local.iRunID,V.Args.ReportID,-1,"",V.Local.iLogID)
+
+'Callreport to generate data
+F.Global.BI.RunReportPreProcessor(V.Local.iRunID,V.Local.iLogID,V.Local.sParams,V.Local.sValues,"",4,True,"",-1,"",0,V.Local.sInvoiceFQP,"",V.Local.iRet)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ProcessInvoice_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ProcessInvoice.End
+
+Program.Sub.ClearBITable.Start
+F.Intrinsic.Control.SetErrorHandler("ClearBITable_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Clears the invoice BI table of data for user's terminal number.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+Function.Intrinsic.String.Build("Delete PRT_LASER_INVOICE where TERMINAL_NO = '{0}'",V.Caller.Terminal,V.Local.sSql)
+F.ODBC.Connection!con.Execute(V.Local.sSql)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ClearBITable_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.ClearBITable.End
+
+Program.Sub.GetReportID.Start
+F.Intrinsic.Control.SetErrorHandler("GetReportID_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Gets the report ID from invoice BI table to use for printing report.
+'Args:: None
+'Returns:: ReportID as Long
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sReportID.Declare(String)
+
+'Gets the report ID that the callwrapper used in BI table.  This is because CORE already has the logic within it's processes to determine the correct report ID to use for invoice
+Function.Intrinsic.String.Build("Select DISTINCT RPTID from PRT_LASER_INVOICE where TERMINAL_NO = '{0}'",V.Caller.Terminal,V.Local.sSql)
+'F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+F.ODBC.Connection!con.Executeandreturn(V.Local.sSql,V.Local.sReportID)
+'Function.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,false)
+F.Intrinsic.Control.If(V.Ambient.executeandreturneoF.not)
+	'V.Local.sReportID.Set(V.ODBC.con!rst.FieldValTrim!RPTID)
+	'Return report ID used in BI data
+	Function.Intrinsic.Variable.AddRV("ReportID",V.Local.sReportID)
+Function.Intrinsic.Control.Else
+	'Could not find BI data, this is a sign that callwrapper failed, so return -1
+	Function.Intrinsic.Variable.AddRV("ReportID",-1)
+Function.Intrinsic.Control.EndIf
+'F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetReportID_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetReportID.End
+
+Program.Sub.CreateInvoiceDir.Start
+F.Intrinsic.Control.SetErrorHandler("CreateInvoiceDir_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Creates directory for saving invoice PDFs.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sFolder.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'Making sure invoices dir exists
+Function.Intrinsic.String.Build("{0}",V.Global.sInvoiceDir,V.Local.sFolder)
+F.Intrinsic.File.DirExists(V.Local.sFolder,V.Local.bExists)
+Function.Intrinsic.Control.If(V.Local.bExists,=,false)
+	'Creating directory if it does not exist
+	Function.Intrinsic.File.CreateDir(V.Local.sFolder)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CreateInvoiceDir_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.CreateInvoiceDir.End
+
+Program.Sub.F_Review_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("F_Review_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Calling main unload
+Function.Intrinsic.Control.CallSub(unload)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("F_Review_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.F_Review_UnLoad.End
+
+Program.Sub.GetInvoiceDataFromBDF.Start
+F.Intrinsic.Control.SetErrorHandler("GetInvoiceDataFromBDF_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Uses BDF from the Post Save Batch hook to load data tables with invoice and contact data.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sRow.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.sAttachment.Declare(String)
+V.Local.sAttachmentFQP.Declare(String)
+V.Local.sFileSize.Declare(String)
+V.Local.sAddlEmails.Declare(String)
+V.Local.fFileSize.Declare(Float)
+V.Local.iRows.Declare(Long)
+V.Local.iRowCount.Declare(Long)
+V.Local.i.Declare(Long)
+V.Local.iPages.Declare(Long)
+V.Local.bExists.Declare(Boolean)
+V.Local.sOrder.Declare(String)
+V.Local.sFilter.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sRetCust.Declare(String)
+V.Local.bSelected.Declare(Boolean)
+V.Local.sInvoice.Declare(String)
+V.Local.bValidation.Declare(Boolean)
+
+V.Local.bValidation.Set(False)
+
+F.Intrinsic.BDF.Load("AUX001","AUX001")
+
+F.Intrinsic.BDF.ReadRowCount("AUX001",V.Local.iRows)
+
+F.Intrinsic.Control.If(V.Local.iRows,=,0)
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Math.Sub(V.Local.iRows,1,V.Local.iRows)
+
+F.Data.DataTable.Create("dtTemp")
+F.Data.DataTable.AddColumn("dtTemp","Customer","String")
+F.Data.DataTable.AddColumn("dtTemp","Invoice","String")
+F.Data.DataTable.AddColumn("dtTemp","Einvoice","String")
+
+'Load BDF into datatable
+F.Intrinsic.Control.For(V.Local.i,0,V.Local.iRows,1)
+
+	F.Intrinsic.BDF.ReadRow("AUX001",V.Local.i,V.Local.sRow)
+	F.Intrinsic.Debug.SetLA(V.Local.sRow)
+	F.Intrinsic.String.Split(V.Local.sRow,"|~|",V.Local.sRow)
+	F.Data.DataTable.AddRow("dtTemp","Customer",V.Local.sRow(1).trim,"Invoice",V.Local.sRow(0).trim,"Einvoice",V.Local.sRow(4).trim)
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.String.Build("Select Top 1 DATE_INVOICE from V_ORDER_HIST_HEAD where BATCH='{0}' order by DATE_INVOICE DESC",V.Passed.batch,V.Local.sSql)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sDate)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF,=,True)
+	V.Local.sDate.Set(V.Ambient.Date)
+Function.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select DISTINCT RTRIM(Customer) as CUSTOMER, RTRIM(Name_Customer) as NAME_CUSTOMER, RTRIM(Batch) as BATCH, RTRIM(Invoice) as INVOICE, RTRIM(Order_No) + '-' + RTRIM(Order_Suffix) as ORDER_NO, RTRIM(Customer_PO) as CUSTOMER_PO, EInvoice_Flg from V_ORDER_HIST_HEAD where Batch='{0}' and DATE_INVOICE='{1}'",V.passed.batch,V.Local.sDate.pervasivedate,V.Local.sSql)
+F.Data.DataTable.CreateFromSQL("dtInvoice","con",V.Local.sSql,true)
+
+F.Intrinsic.Control.If(V.DataTable.dtInvoice.exists,=,true)
+	F.Intrinsic.Control.If(V.DataTable.dtInvoice.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtInvoice exists but no data")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.Else
+	F.Intrinsic.Debug.SetLA("Datatable dtInvoice does not exist.")
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+F.Data.linq.join("LeftJoin","DataTable","dtInvoice*!*I","DataTable","dtTemp*!*T","I.Invoice=T.Invoice","I.Customer*!*I.Name_Customer*!*I.Batch*!*I.Invoice*!*I.Order_No*!*I.Customer_PO*!*I.EInvoice_Flg","T.Einvoice='Y'",,,"dtInv",True)
+F.Data.DataTable.Close("dtTemp")
+F.Data.DataTable.Close("dtInvoice")
+
+F.Intrinsic.Control.If(V.DataTable.dtInV.Exists,=,False)
+	F.Intrinsic.Debug.SetLA("Datatable dtInv doesn't exist")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtInV.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtInv empty.")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Create("dtInv","dvInv")
+
+F.Data.DataView.ToDataTableDistinct("dtInv","dvInv","dtCustomerData","CUSTOMER",true)
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData.Exists,=,False)
+	F.Intrinsic.Debug.SetLA("Datatable dtCustomerData doesn't exist")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtCustomerData empty.")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.AddColumn("dtCustomerData","bContacts","Boolean")
+
+F.Intrinsic.Control.CallSub(getcontacts)
+
+F.Intrinsic.Control.If(V.DataTable.dtContacts.Exists,=,False)
+	F.Intrinsic.Debug.SetLA("Datatable dtContacts not created. No contacts exist.")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtContacts.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtContacts empty. No contacts exist.")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.linq.join("Innerjoin","DataTable","dtCustomerData*!*C","datatable","dtInv*!*I","C.CUSTOMER=I.CUSTOMER","I.CUSTOMER*!*I.NAME_CUSTOMER*!*I.BATCH*!*I.INVOICE*!*I.ORDER_NO*!*I.CUSTOMER_PO*!*I.EINVOICE_FLG","C.bContacts = TRUE",,,"dtCustomerData$dtInvoiceData",True)
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData.Exists,=,False)
+	F.Intrinsic.Debug.SetLA("Datatable dtCustomerData$dtInvoiceData not created.")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtCustomerData$dtInvoiceData empty.")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+'F.Data.linq.join("LeftJoin","DataTable","dtCustomerData$dtInvoiceData*!*I","datatable","dtContacts*!*C","I.CUSTOMER=C.CUSTOMER","I.INVOICE*!*I.ORDER_NO*!*C.NAME*!*C.EMAIL*!*I.CUSTOMER",,,,"dtCustomerData$dtInvoiceData$dtContactData",True)
+
+F.Data.linq.join("LeftJoin","DataTable","dtCustomerData$dtInvoiceData*!*A","DataTable","dtContacts*!*B","A.CUSTOMER=B.CUSTOMER","A.INVOICE*!*A.ORDER_NO*!*B.NAME*!*B.EMAIL*!*A.CUSTOMER",,,,"dtContactData",True)
+
+F.Data.DataView.Create("dtContactData","dvContactData")
+
+F.Data.DataView.ToDataTableDistinct("dtContactData","dvContactData","dtCustomerData$dtInvoiceData$dtContactData","INVOICE*!*ORDER_NO*!*NAME*!*EMAIL*!*CUSTOMER",true)
+
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData$dtContactData.Exists,=,False)
+	F.Intrinsic.Debug.SetLA("Datatable dtCustomerData$dtInvoiceData$dtContactData not created.")
+	F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData$dtContactData.RowCount,=,0)
+		F.Intrinsic.Debug.SetLA("Datatable dtCustomerData$dtInvoiceData$dtContactData empty.")
+		F.Intrinsic.Control.End
+
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Close("dtContactData","dvContactData")
+F.Data.DataTable.Close("dtContactData")
+
+F.Data.DataView.Close("dtInv","dvInv")
+F.Data.DataTable.Close("dtInv")
+F.Data.DataTable.close("dtContacts")
+
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Attachment",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Pages",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Size",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Selected",Boolean)
+
+F.Data.DataTable.AddRelation("dtCustomerData","Customer","dtCustomerData$dtInvoiceData","Customer")
+F.Data.DataTable.AddRelation("dtCustomerData$dtInvoiceData","Invoice*!*ORDER_NO","dtCustomerData$dtInvoiceData$dtContactData","Invoice*!*ORDER_NO")
+
+F.Data.DataView.Create("dtCustomerData$dtInvoiceData","dvInvoiceData")
+F.Data.DataView.Create("dtCustomerData$dtInvoiceData$dtContactData","dvContactData")
+F.Data.DataView.Create("dtCustomerData","dvCust",22,"bContacts=True","Customer ASC")
+
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.dtCustomerData$dtInvoiceData.RowCount--,1)
+
+	F.Intrinsic.Control.If(V.Local.i,=,0)
+		V.Local.sInvoice.Set(V.DataTable.dtCustomerData$dtInvoiceData(0).Invoice!FieldValTrim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Local.sInvoice,=,V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim)
+			F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData",V.Local.i,"Selected",V.Local.bSelected,"Attachment",V.Local.sAttachment,"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+			F.Intrinsic.Control.GoTo("Next")
+		F.Intrinsic.Control.Else
+			V.Local.sInvoice.Set(V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+
+	V.Local.bSelected.Set(True)
+
+	'Forming FQP to PDF
+	F.Intrinsic.Control.CallSub(CreateFileName,"Invoice",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim,"Batch",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Batch!FieldValTrim,"Customer",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer!FieldValTrim)
+
+	Function.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Args.sfile,V.Local.sAttachmentFQP)
+
+	'Make sure PDf exists
+	Function.Intrinsic.File.Exists(V.Local.sAttachmentFQP,V.Local.bExists)
+	Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+		'File exists, getting file size
+		F.Intrinsic.File.GetFileSize(V.Local.sAttachmentFQP,V.Local.fFileSize)
+		'size is returned in bytes, so have to convert to KB
+		Function.Intrinsic.Math.Div(V.Local.fFileSize,1000,V.Local.fFileSize)
+		'Building file size string
+		Function.Intrinsic.String.Build("{0} KB",V.Local.fFileSize.Long,V.Local.sFileSize)
+
+		'Forming filename for attachment			
+		'Function.Intrinsic.String.Build("{0}.pdf",V.Local.sRow(0).Trim,V.Local.sAttachment)
+		V.Local.sAttachment.Set(V.Args.sfile)	
+
+		'Getting page count of PDF
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.GetPageCount("InvoicePDF",V.Local.iPages)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,=,"***NO RETURN***")
+			V.Local.sAttachment.Set("File Error!")
+			V.Local.sFileSize.Set("0 KB")
+			V.Local.bSelected.Set(False)
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Name_Customer!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer_PO!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.bValidation,=,False)
+			V.Local.sAttachment.Set("File Error!")
+			V.Local.sFileSize.Set("0 KB")
+			V.Local.bSelected.Set(False)
+		F.Intrinsic.Control.EndIf
+		
+	Function.Intrinsic.Control.Else
+		'File missing, setting size to 0 and setting attachment name to file missing for user
+		V.Local.sAttachment.Set("File Missing!")
+		V.Local.sFileSize.Set("0 KB")
+		V.Local.bSelected.Set(false)
+	Function.Intrinsic.Control.EndIf
+
+	'Add invoice to data table
+	F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData",V.Local.i,"Selected",V.Local.bSelected,"Attachment",V.Local.sAttachment,"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+
+	F.Intrinsic.Control.Label("Next")
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.If(V.Global.bConsolidate,=,True)
+	'Merge PDFs
+	'Loop through customers
+
+	F.Intrinsic.Control.For(V.Local.i,0,V.DataView.dtCustomerData!dvCust.RowCount--,1)
+	
+		F.Intrinsic.String.Build("Customer = '{0}' AND Attachment <> 'File Missing!' AND Attachment <> 'File Error!'",V.DataView.dtCustomerData!dvCust(V.Local.i).Customer!FieldVal,V.Local.sFilter)
+		F.Data.DataView.SetFilter("dtCustomerData","dvInvoiceData",V.Local.sFilter)
+
+		F.Data.DataView.ToDataTableDistinct("dtCustomerData","dvInvoiceData","dtTemp","Attachment",True)
+
+		'Loop through invoices for customer
+		F.Intrinsic.Control.If(V.DataTable.dtTemp.RowCount,>,1)
+			F.Intrinsic.Control.CallSub(mergepdfs,"CustID",V.DataView.dtCustomerData!dvCust(V.Local.i).Customer!FieldVal)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("dtTemp")
+
+	F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetInvoiceDataFromBDF_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetInvoiceDataFromBDF.End
+
+Program.Sub.BuildDataTables.Start
+F.Intrinsic.Control.SetErrorHandler("BuildDataTables_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Builds data tables used by review screens.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+
+'
+F.Data.DataTable.Create("SentInvoices",True)
+F.Data.DataTable.AddColumn("SentInvoices","Invoice",String)
+
+F.Data.DataView.Create("SentInvoices","SentInvoicesDV")
+
+F.Data.DataTable.Create("Orders",True)
+F.Data.DataTable.AddColumn("Orders","Order",String)
+
+F.Data.DataView.Create("Orders","OrdersDV")
+
+F.Data.DataTable.Create("POs",True)
+F.Data.DataTable.AddColumn("POs","PO",String)
+
+F.Data.DataView.Create("POs","POsDV")
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("BuildDataTables_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.BuildDataTables.End
+
+Program.Sub.SetCustomer.Start
+F.Intrinsic.Control.SetErrorHandler("SetCustomer_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Adds customer to CustomerData data table if the customer does not exit.
+'Args:: CustomerID as String
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sExpression.Declare(String)
+V.Local.sReturn.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sCustomerName.Declare(String)
+
+'Building expression
+Function.Intrinsic.String.Build("Customer_ID = '{0}'",V.Args.CustomerID,V.Local.sExpression)
+
+'Executing select against data table
+F.Data.DataTable.Select("CustomerData",V.Local.sExpression,V.Local.sReturn)
+
+'Checking to see if customer is not already in data table and if not adding
+Function.Intrinsic.Control.If(V.Local.sReturn,=,"***NORETURN***")
+	'Getting customer name
+	Function.Intrinsic.String.Build("Select NAME_CUSTOMER from CUSTOMER_MASTER where CUSTOMER = '{0}' and REC = 1",V.Args.CustomerID.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+	Function.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,false)
+		V.Local.sCustomerName.Set(V.ODBC.con!rst.FieldValTrim!NAME_CUSTOMER)
+	Function.Intrinsic.Control.Else
+		V.Local.sCustomerName.Set("Not Found")
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+
+	'adding row to data table
+	F.Data.DataTable.AddRow("CustomerData","Customer_ID",V.Args.CustomerID,"Customer_Name",V.Local.sCustomerName)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SetCustomer_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SetCustomer.End
+
+Program.Sub.LoadReview.Start
+F.Intrinsic.Control.SetErrorHandler("LoadReview_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Loads the review grid with data tables.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+
+Gui.F_Review.gsgcReview.SuspendLayout()
+
+F.Data.dataview.SetFilter("dtCustomerData","dvInvoiceData","")
+F.Data.DataView.SetFilter("dtCustomerData","dvContactData","")
+
+'Creating grid views
+'Gui.F_Review.gsgcReview.AddGridviewFromDataview("CustomerDataGV","CustomerData","CustomerDataDV")
+Gui.F_Review.gsgcReview.AddGridviewFromDataview("InvoiceDataGV","dtCustomerData","dvInvoiceData")
+Gui.F_Review.gsgcReview.AddGridviewFromDataview("EmailDataGV","dtCustomerData","dvContactData")
+
+'Gui.F_Review.gsgcReview.AddGridviewFromDatatable("InvoiceDataGV","dtCustomerData$dtInvoiceData")
+'Gui.F_Review.gsgcReview.AddGridviewFromDatatable("EmailDataGV","dtCustomerData$dtInvoiceData$dtContactData")
+
+'Binding to main view
+Gui.F_Review.gsgcReview.MainView("InvoiceDataGV")
+
+'Setting the Readonly and Editable properties of the grid vews are nescassary in order for the RowCellClick event to work propertly on the gird for some reason
+'Gui.F_Review.gsgcReview.SetGridviewProperty("CustomerDataGV","ReadOnly","True")
+'Gui.F_Review.gsgcReview.SetGridviewProperty("CustomerDataGV","Editable","False")
+
+'Allowing user to add and remove contacts on the fly
+Gui.F_Review.gsgcReview.SetGridviewProperty("EmailDataGV","AllowAddRows","True")
+Gui.F_Review.gsgcReview.SetGridviewProperty("EmailDataGV","AllowDeleteRows","True")
+'Gui.F_Review.gsgcReview.SetGridviewProperty("EmailDataGV","AllowEdit","True")
+
+'Making selected check box editable and setting ReadOnly and AllowEdit properties of rest of columns to make sure RowCellClick even works
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","ReadOnly","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","AllowEdit","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","VisibleIndex","0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","VisibleIndex","1")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","NAME_CUSTOMER","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","NAME_CUSTOMER","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","NAME_CUSTOMER","VisibleIndex","2")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","VisibleIndex","3")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","VisibleIndex","4")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","VisibleIndex","5")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","VisibleIndex","6")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","ReadOnly","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","AllowEdit","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","VisibleIndex","7")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","CUSTOMER_PO","Visible","False")
+
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","EINVOICE_FLG","Visible","False")
+'Allowing user to mainuplate email addresses
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Name","ReadOnly","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Name","AllowEdit","True")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Email","ReadOnly","False")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Email","AllowEdit","True")
+
+'Settting column captions
+'Gui.F_Review.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_ID","Caption","Customer")
+'Gui.F_Review.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_Name","Caption","Name")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Name","Caption","Contact")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Email","Caption","Email")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","Caption","Selected")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","Caption","Customer")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","NAME_CUSTOMER","Caption","Name")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","Caption","Invoice")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","Caption","Order")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","Caption","Attachment")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","Caption","Pages")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","Caption","Size")
+
+'Setting heder color
+'Gui.F_Review.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_ID","HeaderBackColor","#F0F0F0")
+'Gui.F_Review.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_Name","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","NAME_Customer","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Name","HeaderBackColor","#F0F0F0")
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Email","HeaderBackColor","#F0F0F0")
+
+'Setting column props to hide key fields
+'Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","Visible",False)
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Invoice","Visible",False)
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","Customer","Visible",False)
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","BATCH","Visible",False)
+Gui.F_Review.gsgcReview.SetColumnProperty("EmailDataGV","ORDER_NO","Visible",False)
+
+'Making Attachment column look like link
+Gui.F_Review.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","CellForeColor","Blue")
+
+Gui.F_Review.gsgcReview.ResumeLayout()
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadReview_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.LoadReview.End
+
+Program.Sub.GetOptionsInfo.Start
+F.Intrinsic.Control.SetErrorHandler("GetOptionsInfo_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Gets the customer options info and loads to screen.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sText.Declare(String)
+
+'Setting form anchors
+Gui.F_CustOptions.txtAddEmails.Anchor(13)
+Gui.F_CustOptions.txtSubject.Anchor(13)
+Gui.F_CustOptions.txtBody.Anchor(15)
+Gui.F_CustOptions.lblWildcards.Anchor(9)
+Gui.F_CustOptions.ddlWildcards.Anchor(9)
+
+'Loading wildcards drop down list
+Gui.F_CustOptions.ddlWildcards.AddItem("#CUSTOMERID#",0)
+Gui.F_CustOptions.ddlWildcards.AddItem("#CUSTOMERNAME#",1)
+Gui.F_CustOptions.ddlWildcards.AddItem("#CONTACTNAME#",2)
+Gui.F_CustOptions.ddlWildcards.AddItem("#INVOICES#",3)
+Gui.F_CustOptions.ddlWildcards.AddItem("#ORDERS#",4)
+Gui.F_CustOptions.ddlWildcards.AddItem("#CURRENTDATE#",6)
+Gui.F_CustOptions.ddlWildcards.AddItem("#PO#",7)
+
+'Loading additional information
+Function.Intrinsic.String.Build("Select SUBJECT, BODY, ADDL_EMAILS from PPT_EINV_COPT where CUSTOMER_ID = '{0}'",V.Passed.000002.PSQLFriendly,V.Local.sSql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,false)
+	'Setting additional emails
+	Gui.F_CustOptions.txtAddEmails.Text(V.ODBC.con!rst.FieldVal!ADDL_EMAILS)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.FieldVal!SUBJECT,<>,"")
+		Gui.F_CustOptions.txtSubject.Text(V.ODBC.con!rst.FieldVal!SUBJECT)
+	F.Intrinsic.Control.Else
+		Gui.F_CustOptions.txtSubject.Text(V.Global.sSubject)
+	F.Intrinsic.Control.endif
+	V.Local.sText.Set(V.ODBC.con!rst.FieldVal!BODY)
+	F.Intrinsic.Control.If(V.Local.sText,<>,"")
+		Gui.F_CustOptions.txtBody.Text(V.Local.sText)
+	F.Intrinsic.Control.Else
+		Gui.F_CustOptions.txtBody.Text(V.Global.sBody)
+	F.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.Else
+	'Not subject saved previously so generating default text
+	'Subject Line
+	Gui.F_CustOptions.txtSubject.Text(V.Global.sSubject)
+
+	'Body
+	Gui.F_CustOptions.txtBody.Text(V.Global.sBody)
+Function.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetOptionsInfo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(F_CustOptions_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetOptionsInfo.End
+
+Program.Sub.txtSubject_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtSubject_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Setting last position of cursor
+V.Global.iLastPosition.Set(V.Args.SelectionStart)
+
+'Setting last field flag, so we know last field user had cursor in, in case the user wants to add a wildcard
+V.Global.iLastField.Set(0)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtSubject_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(F_CustOptions_unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.txtSubject_LostFocus.End
+
+Program.Sub.ddlWildCards_SelectedIndexChanged.Start
+F.Intrinsic.Control.SetErrorHandler("ddlWildCards_SelectedIndexChanged_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sWildcard.Declare(String)
+V.Local.sLeftString.Declare(String)
+V.Local.sRightString.Declare(String)
+V.Local.sCombinedString.Declare(String)
+V.Local.iPosition.Declare(Long)
+V.Local.iLength.Declare(String)
+
+'Add wildcard to last field
+Function.Intrinsic.Control.If(V.Screen.F_CustOptions!ddlWildcards.Text,<>,"")
+	'Getting wildcard selected
+	V.Local.sWildcard.Set(V.Screen.F_CustOptions!ddlWildcards.Text)
+
+	'Reseting ddl back to blank
+	Gui.F_CustOptions.ddlWildcards.ClearSelected
+	
+	'Check to see which was lst field.  0 - Subject, 1 - Body
+	Function.Intrinsic.Control.If(V.Global.iLastField,=,0)
+		'Getting text up to cursor position
+		Function.Intrinsic.String.Left(V.Screen.F_CustOptions!txtSubject.Text,V.Global.iLastPosition,V.Local.sLeftString)
+		'Getting text after cursor position
+		Function.Intrinsic.String.Len(V.Screen.F_CustOptions!txtSubject.Text,V.Local.iLength)
+		F.Intrinsic.Math.Sub(V.Local.iLength,V.Global.iLastPosition,V.Local.iLength)
+		F.Intrinsic.String.Mid(V.Screen.F_CustOptions!txtSubject.Text,V.Global.iLastPosition.++,V.Local.iLength,V.Local.sRightString)
+
+		'Combining string
+		Function.Intrinsic.String.Build("{0}{1}{2}",V.Local.sLeftString,V.Local.sWildcard,V.Local.sRightString,V.Local.sCombinedString)
+		'Setting String back to text box
+		Gui.F_CustOptions.txtSubject.Text(V.Local.sCombinedString)
+
+		'Setting the selection start
+		F.Intrinsic.String.Len(V.Local.sWildcard,V.Local.iLength)
+		F.Intrinsic.Math.Add(V.Global.iLastPosition,V.Local.iLength,V.Global.iLastPosition)
+		Gui.F_CustOptions.txtSubject.SelectionStart(V.Global.iLastPosition)
+
+		Gui.F_CustOptions.txtSubject.SetFocus
+	Function.Intrinsic.Control.Elseif(V.Global.iLastField,>,0)
+		'Getting text up to cursor position
+		Function.Intrinsic.String.Left(V.Screen.F_CustOptions!txtBody.Text,V.Global.iLastPosition,V.Local.sLeftString)
+		'Getting text after cursor position
+		Function.Intrinsic.String.Len(V.Screen.F_CustOptions!txtBody.Text,V.Local.iLength)
+		F.Intrinsic.Math.Sub(V.Local.iLength,V.Global.iLastPosition,V.Local.iLength)
+		F.Intrinsic.String.Mid(V.Screen.F_CustOptions!txtBody.Text,V.Global.iLastPosition.++,V.Local.iLength,V.Local.sRightString)	
+
+	    'Combining string
+		Function.Intrinsic.String.Build("{0}{1}{2}",V.Local.sLeftString,V.Local.sWildcard,V.Local.sRightString,V.Local.sCombinedString)
+		'Setting String back to text box
+		Gui.F_CustOptions.txtBody.Text(V.Local.sCombinedString)
+
+		'Setting the selection start
+		F.Intrinsic.String.Len(V.Local.sWildcard,V.Local.iLength)
+		F.Intrinsic.Math.Add(V.Global.iLastPosition,V.Local.iLength,V.Global.iLastPosition)
+		Gui.F_CustOptions.txtBody.SelectionStart(V.Global.iLastPosition)
+
+		Gui.F_CustOptions.txtBody.SetFocus
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ddlWildCards_SelectedIndexChanged_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ddlWildCards_SelectedIndexChanged.End
+
+Program.Sub.txtBody_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtBody_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Setting last position of cursor
+V.Global.iLastPosition.Set(V.Args.SelectionStart)
+
+'Setting last field flag, so we know last field user had cursor in, in case the user wants to add a wildcard
+V.Global.iLastField.Set(1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtBody_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(F_CustOptions_unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.txtBody_LostFocus.End
+
+Program.Sub.SetOptionsInfo.Start
+F.Intrinsic.Control.SetErrorHandler("SetOptionsInfo_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Saves the customer options info.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+
+
+F.Intrinsic.Control.If(V.Screen.F_CustOptions!txtAddEmails.Text,<>,"","OR",V.Screen.F_CustOptions!txtBody.Text,<>,V.Global.sBody,V.Screen.F_CustOptions!txtSubject.Text,<>,V.Global.sSubject)
+
+	'Setting additional info fields
+	Function.Intrinsic.String.Build("Select CUSTOMER_ID, SUBJECT, BODY, ADDL_EMAILS From PPT_EINV_COPT where CUSTOMER_ID = '{0}'",V.Passed.000002.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRW("rst",V.Local.sSql)
+	Function.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,true)
+		'Adding record for customer if one doesn't exist yet
+		F.ODBC.con!rst.AddNew
+		F.ODBC.con!rst.Set!CUSTOMER_ID(V.Passed.000002)
+	Function.Intrinsic.Control.EndIf
+
+	'Updating fields
+	Function.Intrinsic.Control.If(V.Screen.F_CustOptions!txtSubject.Text,<>,V.Global.sSubject)
+		F.ODBC.con!rst.Set!SUBJECT(V.Screen.F_CustOptions!txtSubject.Text)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Screen.F_CustOptions!txtBody.Text,<>,V.Global.sBody)
+		F.ODBC.con!rst.Set!BODY(V.Screen.F_CustOptions!txtBody.Text)
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Set!ADDL_EMAILS(V.Screen.F_CustOptions!txtAddEmails.Text)
+	F.ODBC.con!rst.Update
+	F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.Else
+
+	F.Intrinsic.Control.If(V.Screen.F_CustOptions!txtAddEmails.text,=,"","AND",V.Screen.F_CustOptions!txtBody.Text,=,V.Global.sBody,V.Screen.F_CustOptions!txtSubject.Text,=,V.Global.sSubject)
+
+	'Setting additional info fields
+	Function.Intrinsic.String.Build("Select CUSTOMER_ID, SUBJECT, BODY, ADDL_EMAILS From PPT_EINV_COPT where CUSTOMER_ID = '{0}'",V.Passed.000002.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRW("rst",V.Local.sSql)
+	Function.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+		'Adding record for customer if one doesn't exist yet
+		F.ODBC.con!rst.Delete
+		F.ODBC.con!rst.Update
+	Function.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+	
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.endif
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SetOptionsInfo_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.SetOptionsInfo.End
+
+Program.Sub.gsgcReview_RowCellClick.Start
+F.Intrinsic.Control.SetErrorHandler("gsgcReview_RowCellClick_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sFQP.Declare(String)
+V.Local.iXPos.Declare(Long)
+V.Local.iYPos.Declare(Long)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.Control.BlockEvents
+
+Function.Intrinsic.Control.SelectCase(V.Args.Column)
+	Function.Intrinsic.Control.Case("Attachment")
+		'blanking out view
+		Gui.F_InvoiceView.htmlView.Navigate("about:blank")
+
+		'Forming FQP
+		Function.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Args.CellValue,V.Local.sFQP)
+		F.Intrinsic.File.Exists(V.Local.sFQP,V.Local.bExists)
+		F.Intrinsic.Control.If(V.Local.bExists.not)
+			F.Intrinsic.UI.Msgbox("File not found")
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+		
+		'Getting mouse position to set position of pop up screen
+		F.Intrinsic.API.GetMousePosition(V.Local.iXPos,V.Local.iYPos)
+
+		'Shifting position over on x-axis by a small amount
+		F.Intrinsic.Math.Add(V.Local.iXPos,40,V.Local.iXPos)
+
+		'Converting to twips
+		Function.Intrinsic.Math.Mult(V.Local.iXPos,15,V.Local.iXPos)
+		Function.Intrinsic.Math.Mult(V.Local.iYPos,15,V.Local.iYPos)
+
+		'Setting form position
+		Gui.F_InvoiceView..Position(V.Local.iXPos,V.Local.iYPos)
+		Gui.F_InvoiceView..Show
+		'loading PDF to HTML container
+		Gui.F_InvoiceView.htmlView.Navigate(V.Local.sFQP)
+Function.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.UnBlockEvents
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("gsgcReview_RowCellClick_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Control.UnBlockEvents
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+	'Function.Intrinsic.Control.CallSub(f_review_unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gsgcReview_RowCellClick.End
+
+Program.Sub.F_Review_Activate.Start
+F.Intrinsic.Control.SetErrorHandler("F_Review_Activate_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Hiding invoice view incase it's showing
+Gui.F_InvoiceView..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("F_Review_Activate_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.F_Review_Activate.End
+
+Program.Sub.cmdCloseInvoiceView_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Hiding invoice view incase it's showing
+Gui.F_InvoiceView..Visible(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdCloseInvoiceView_Click.End
+
+Program.Sub.GetBatchesDictionary.Start
+F.Intrinsic.Control.SetErrorHandler("GetBatchesDictionary_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Data.Dictionary.Exists("Batches",V.Local.bExists)
+Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Data.Dictionary.Close("Batches")
+	Gui.F_ReviewStandAlone.txtBatch.ClearAutoCompleteItems
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select Distinct BATCH, BATCH From V_ORDER_HIST_HEAD where BATCH <> '' and DATE_INVOICE >= '{0}' and DATE_INVOICE <= '{1}'",V.Screen.F_ReviewStandAlone!dtpStart.Value.pervasivedate,V.Screen.F_ReviewStandAlone!dtpEnd.Value.pervasivedate,V.Local.sSql)
+'V.Local.sSql.Set("Select Distinct BATCH, BATCH From ORDER_HIST_HEAD where BATCH <> ''")
+
+'Creating dictionary of batches for batch text box
+F.Data.Dictionary.CreateFromSql("Batches","con",V.Local.sSql,18)
+
+'Binding to text box
+Gui.F_ReviewStandAlone.txtBatch.AddAutoCompleteItem("Batches",dictionary)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetBatchesDictionary_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetBatchesDictionary.End
+
+Program.Sub.GetInvoicesDictionary.Start
+F.Intrinsic.Control.SetErrorHandler("GetInvoicesDictionary_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.bExists.Declare(boolean)
+
+F.Data.Dictionary.Exists("Invoices",V.Local.bExists)
+Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Data.Dictionary.Close("Invoices")
+	Gui.F_ReviewStandAlone.txtInvoice.ClearAutoCompleteItems
+Function.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.String.Build("Select Distinct Invoice,Invoice From V_ORDER_HIST_HEAD where BATCH <> '' and DATE_INVOICE >= '{0}' and DATE_INVOICE <= '{1}'",V.Screen.F_ReviewStandAlone!dtpStart.Value.pervasivedate,V.Screen.F_ReviewStandAlone!dtpEnd.Value.pervasivedate,V.Local.sSql)
+'V.Local.sSql.Set("Select Distinct INVOICE, INVOICE From ORDER_HIST_HEAD where BATCH <> ''")
+
+'Creating dictionary of batches for batch text box
+F.Data.Dictionary.CreateFromSql("Invoices","con",V.Local.sSql,18)
+
+'Binding to text box
+Gui.F_ReviewStandAlone.txtInvoice.AddAutoCompleteItem("Invoices",dictionary)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetInvoicesDictionary_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetInvoicesDictionary.End
+
+Program.Sub.cmdBrowseBatch_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdBrowseBatch_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTitle.Set("Batch*!*Invoice Date")
+V.Local.sWidth.Set("3500*!*3500")
+
+
+F.Intrinsic.String.Build("select Distinct BATCH, DATE_INVOICE from V_ORDER_HIST_HEAD where BATCH <>'' and DATE_INVOICE >= '{0}' and DATE_INVOICE <= '{1}' order by DATE_INVOICE DESC",V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+
+F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+F.Intrinsic.UI.Browser("Select Batch","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	'Splitting return
+	Function.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	'Setting batch to text box
+	Gui.F_ReviewStandAlone.txtBatch.Text(V.Local.sRet(0).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdBrowseBatch_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdBrowseBatch_Click.End
+
+Program.Sub.cmdBrowseInvoice_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdBrowseInvoice_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sTitle.Declare(String)
+V.Local.sWidth.Declare(String)
+V.Local.sRet.Declare(String)
+
+
+V.Local.sTitle.Set("Invoice*!*Batch*!*Customer*!*Customer Name*!* Invoice Date")
+V.Local.sWidth.Set("1000*!*1000*!*1500*!*3000*!*1000")
+'See if user already has batch selected
+Function.Intrinsic.Control.If(V.Screen.F_ReviewStandAlone!txtBatch.Text,=,"")
+	'No batch selected, show all invoices
+	F.Intrinsic.String.Build("select DISTINCT INVOICE, BATCH, CUSTOMER, NAME_CUSTOMER, DATE_INVOICE from V_ORDER_HIST_HEAD where BATCH <> '' and DATE_INVOICE >= '{0}' AND DATE_INVOICE <='{1}' ORDER BY DATE_INVOICE DESC",V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+Function.Intrinsic.Control.Else
+	'Batch selected, filtering list of invoices to those only within selected batch
+	Function.Intrinsic.String.Build("select DISTINCT INVOICE, BATCH, CUSTOMER, NAME_CUSTOMER, DATE_INVOICE from V_ORDER_HIST_HEAD where BATCH <> '' and BATCH = '{0}' and DATE_INVOICE >= '{1}' AND DATE_INVOICE <='{2}' ORDER BY DATE_INVOICE DESC",V.Screen.F_ReviewStandAlone!txtBatch.Text,V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Split(V.Local.sTitle,"*!*",V.Local.sTitle)
+F.Intrinsic.String.Split(V.Local.sWidth,"*!*",V.Local.sWidth)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select Invoice","con",V.Local.sSql,V.Local.sTitle,V.Local.sWidth,8000,8000,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	'Splitting return
+	Function.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	'Setting batch to text box
+	Gui.F_ReviewStandAlone.txtInvoice.Text(V.Local.sRet(0).Trim)
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdBrowseInvoice_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdBrowseInvoice_Click.End
+
+Program.Sub.GetInvoiceData.Start
+F.Intrinsic.Control.SetErrorHandler("GetInvoiceData_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Gets the invoice data for a specified invoice, batch, or both.
+'Args:: Batch as String, Invoice as String
+'Returns:: None
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sAttachment.Declare(String)
+V.Local.sAttachmentFQP.Declare(String)
+V.Local.sFileSize.Declare(String)
+V.Local.sAddlEmails.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.iPages.Declare(Long)
+V.Local.i.Declare(Long)
+V.Local.fFileSize.Declare(Float)
+V.Local.bSent.Declare(Boolean)
+V.Local.bSelected.Declare(Boolean)
+V.Local.sFilter.Declare(String)
+V.Local.sCust.Declare(String)
+V.Local.iTemp.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sRetCust.Declare(String)
+V.local.sInvoice.Declare(String)
+V.Local.bValidation.Declare(Boolean)
+
+V.Local.bValidation.Set(False)
+
+'Building where clause for SQL statment
+
+
+F.Intrinsic.UI.InvokeWaitDialog("Loading E-Invoices","E-Invoicing")
+
+Function.Intrinsic.Control.If(V.Args.Batch,=,"","and",V.Args.Invoice,=,"")
+	'Passed blank for batch and invoice, exiting sub
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.ElseIf(V.Args.Batch,<>,"","and",V.Args.Invoice,=,"")
+	'Only batch passed
+	Function.Intrinsic.String.Build("and BATCH = '{0}' and DATE_INVOICE >= '{1}' and DATE_INVOICE <= '{2}'",V.Args.Batch,V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+Function.Intrinsic.Control.ElseIf(V.Args.Batch,=,"","and",V.Args.Invoice,<>,"")
+	'Only invoice passed
+	Function.Intrinsic.String.Build("and INVOICE = '{0}' and DATE_INVOICE >= '{1}' and DATE_INVOICE <= '{2}'",V.Args.Invoice,V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+Function.Intrinsic.Control.ElseIf(V.Args.Batch,<>,"","and",V.Args.Invoice,<>,"")
+	'Batch and invoice passed
+	Function.Intrinsic.String.Build("and (BATCH = '{0}' or INVOICE ='{1}') and DATE_INVOICE >= '{2}' and DATE_INVOICE <= '{3}'",V.Args.Batch,V.Args.Invoice,V.Screen.F_ReviewStandAlone!dtpStart.Value.PervasiveDate,V.Screen.F_ReviewStandAlone!dtpEnd.value.PervasiveDate,V.Local.sSql)
+Function.Intrinsic.Control.EndIf
+
+'Building full SQL
+Function.Intrinsic.String.Build("select DISTINCT RTRIM(H.CUSTOMER) as CUSTOMER, RTRIM(NAME_CUSTOMER) as NAME_CUSTOMER, RTRIM(BATCH) as BATCH, RTRIM(INVOICE) as INVOICE, RTRIM(ORDER_NO) + '-' + RTRIM(ORDER_SUFFIX) as ORDER_NO, RTRIM(CUSTOMER_PO) AS CUSTOMER_PO, EINVOICE_FLG, IVC_DELIVERY from V_ORDER_HIST_HEAD H LEFT JOIN V_CUST_FORM_INFO F ON H.CUSTOMER=F.CUSTOMER WHERE IVC_DELIVERY > 1 {0}",V.Local.sSql,V.Local.sSql)
+
+F.Data.DataTable.CreateFromSQL("dtInv","con",V.Local.sSql,true)
+
+'CloseConnection
+
+F.Intrinsic.Control.If(V.DataTable.dtInV.Exists,=,True)
+	F.Intrinsic.Control.If(V.DataTable.dtInV.Rowcount,=,0)
+		F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+		F.Intrinsic.UI.CloseWaitDialog
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Data.DataView.Create("dtInv","dvInv")
+
+F.Data.DataView.ToDataTableDistinct("dtInv","dvInv","dtCustomerData","CUSTOMER",true)
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.Exitsub
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData.RowCount,=,0)
+		F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+		F.Intrinsic.UI.CloseWaitDialog
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+F.Data.DataTable.AddColumn("dtCustomerData","bContacts","Boolean")
+
+F.Intrinsic.Control.CallSub(getcontacts)
+
+F.Intrinsic.Control.If(V.DataTable.dtContacts.Exists,=,False)
+	F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.Exitsub
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.DataTable.dtContacts.RowCount,=,0)
+		F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+		F.Intrinsic.UI.CloseWaitDialog
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.linq.join("InnerJoin","DataTable","dtCustomerData*!*C","datatable","dtInv*!*I","C.CUSTOMER=I.CUSTOMER","I.CUSTOMER*!*I.NAME_CUSTOMER*!*I.BATCH*!*I.INVOICE*!*I.ORDER_NO*!*I.CUSTOMER_PO*!*I.EINVOICE_FLG","C.bContacts = TRUE",,,"dtCustomerData$dtInvoiceData",True)
+
+F.Data.DataView.Close("dtInv","dvInv")
+F.Data.DataTable.Close("dtInv")
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData.exists,=,true)
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData.RowCount,=,0)
+		F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+		F.Intrinsic.UI.CloseWaitDialog
+		F.Intrinsic.Control.Exitsub
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.Exitsub
+	F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+
+'F.Data.linq.join("LeftJoin","DataTable","dtCustomerData$dtInvoiceData*!*A","DataTable","dtContacts*!*B","A.CUSTOMER=B.CUSTOMER","A.INVOICE*!*A.ORDER_NO*!*B.NAME*!*B.EMAIL*!*A.CUSTOMER",,,,"dtCustomerData$dtInvoiceData$dtContactData",True)
+
+F.Data.linq.join("LeftJoin","DataTable","dtCustomerData$dtInvoiceData*!*A","DataTable","dtContacts*!*B","A.CUSTOMER=B.CUSTOMER","A.INVOICE*!*A.ORDER_NO*!*B.NAME*!*B.EMAIL*!*A.CUSTOMER",,,,"dtContactData",True)
+
+F.Data.DataView.Create("dtContactData","dvContactData")
+
+F.Data.DataView.ToDataTableDistinct("dtContactData","dvContactData","dtCustomerData$dtInvoiceData$dtContactData","INVOICE*!*ORDER_NO*!*NAME*!*EMAIL*!*CUSTOMER",true)
+
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData$dtContactData.exists,=,true)
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData$dtContactData.RowCount,=,0)
+		F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+		F.Intrinsic.UI.CloseWaitDialog
+		F.Intrinsic.Control.Exitsub
+	F.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("There are no contacts set up for this Invoice/Batch.")
+	F.Intrinsic.UI.CloseWaitDialog
+	F.Intrinsic.Control.Exitsub
+Function.Intrinsic.Control.EndIf
+
+F.Data.DataView.Close("dtContactData","dvContactData")
+F.Data.DataTable.Close("dtContactData")
+
+F.Data.DataTable.close("dtContacts")
+
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Attachment",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Pages",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Size",String)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Sent",Boolean)
+F.Data.DataTable.AddColumn("dtCustomerData$dtInvoiceData","Selected",Boolean)
+
+'10/14/2019 - CVR - customer was added to key relation as the keys are copied when additional rows are added when manually adding recipient email addresses
+'The filter to send emails filters by customer, which caused the new manually added recipients to be ignored
+F.Data.DataTable.AddRelation("dtCustomerData","Customer","dtCustomerData$dtInvoiceData","Customer")
+F.Data.DataTable.AddRelation("dtCustomerData$dtInvoiceData","Invoice*!*Order_No*!*Customer","dtCustomerData$dtInvoiceData$dtContactData","Invoice*!*Order_No*!*Customer")
+
+F.Data.DataView.Create("dtCustomerData$dtInvoiceData","dvInvoiceData")
+F.Data.DataView.Create("dtCustomerData$dtInvoiceData$dtContactData","dvContactData")
+F.Data.DataView.Create("dtCustomerData","dvCust",22,"bContacts=True","Customer ASC")
+
+
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.dtCustomerData$dtInvoiceData.RowCount--,1)
+
+
+	F.Intrinsic.Math.Add(V.Local.i,1,V.Local.iTemp)
+
+	F.Intrinsic.UI.ChangeWaitStatus("Creating PDFs for Invoices",V.Local.iTemp,0,V.DataTable.dtCustomerData$dtInvoiceData.RowCount)
+	
+	F.Intrinsic.Control.If(V.Local.i,=,0)
+		V.Local.sInvoice.Set(V.DataTable.dtCustomerData$dtInvoiceData(0).Invoice!FieldValTrim)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.Control.If(V.Local.sInvoice,=,V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim)
+			F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData",V.Local.i,"Sent",V.Local.bSent,"Selected",V.Local.bSelected,"Attachment",V.Local.sAttachment,"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+			F.Intrinsic.Control.GoTo("Next")
+		F.Intrinsic.Control.Else
+			V.Local.sInvoice.Set(V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim)
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	'Creating and saving invoice PDF
+	F.Intrinsic.Control.CallSub(processinvoice,"Invoice",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim,"Batch",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Batch!FieldValTrim,"Customer",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer!FieldValTrim)
+	
+	'Forming FQP to PDF
+	Function.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Args.sFile,V.Local.sAttachmentFQP)
+
+	'Make sure PDf exists
+	Function.Intrinsic.File.Exists(V.Local.sAttachmentFQP,V.Local.bExists)
+	Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+		'File exists, getting file size
+		F.Intrinsic.File.GetFileSize(V.Local.sAttachmentFQP,V.Local.fFileSize)
+		'size is returned in bytes, so have to convert to KB
+		Function.Intrinsic.Math.Div(V.Local.fFileSize,1000,V.Local.fFileSize)
+		'Building file size string
+		Function.Intrinsic.String.Build("{0} KB",V.Local.fFileSize.Long,V.Local.sFileSize)
+
+		'Forming filename for attachment
+		V.Local.sAttachment.Set(V.Args.sFile)
+		
+		'Getting page count of PDF
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.GetPageCount("InvoicePDF",V.Local.iPages)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Invoice!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,=,"***NO RETURN***")
+			V.Local.sAttachment.Set("File Error!")
+			V.Local.sFileSize.Set("0 KB")
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Name_Customer!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Automation.PDF.Open("InvoicePDF",V.Local.sAttachmentFQP)
+		F.Automation.PDF.TextSearch("InvoicePDF",V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).Customer_PO!FieldValTrim,V.Local.sRet)
+		F.Automation.PDF.Close("InvoicePDF")
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NO RETURN***")
+			V.Local.bValidation.Set(True)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.bValidation,=,False)
+			V.Local.sAttachment.Set("File Error!")
+			V.Local.sFileSize.Set("0 KB")
+		F.Intrinsic.Control.EndIf
+		
+	Function.Intrinsic.Control.Else
+		'File missing, setting size to 0 and setting attachment name to file missing for user
+		V.Local.sAttachment.Set("File Missing!")
+		V.Local.sFileSize.Set("0 KB")
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData(V.Local.i).EINVOICE_FLG!FieldVal,=,"1")
+		V.Local.bSent.Set(False)
+		V.Local.bSelected.Set(True)
+	F.Intrinsic.Control.Else
+		V.Local.bSent.Set(True)
+		V.Local.bSelected.Set(False)
+	F.Intrinsic.Control.EndIf
+	
+	Function.Intrinsic.Control.If(V.Local.sAttachment,=,"File Missing!","or",V.Local.sAttachment,=,"File Error!")
+		V.Local.bSelected.Set(False)
+	Function.Intrinsic.Control.EndIf
+	
+	F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData",V.Local.i,"Sent",V.Local.bSent,"Selected",V.Local.bSelected,"Attachment",V.Local.sAttachment,"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+
+	F.Intrinsic.Control.Label("Next")
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.If(V.Global.bConsolidate,=,True)
+	'Merge PDFs
+	'Loop through customers
+
+	F.Intrinsic.Control.For(V.Local.i,0,V.DataView.dtCustomerData!dvCust.RowCount--,1)
+
+		F.Intrinsic.Math.Add(V.Local.i,1,V.Local.iTemp)
+		F.Intrinsic.UI.ChangeWaitStatus("Merging PDFs",V.Local.iTemp,0,V.DataView.dtCustomerData!dvCust.RowCount)
+
+		F.Intrinsic.String.Build("Customer = '{0}' AND Attachment <> 'File Missing!' AND Attachment <> 'File Error!'",V.DataView.dtCustomerData!dvCust(V.Local.i).Customer!FieldVal,V.Local.sFilter)
+		F.Data.DataView.SetFilter("dtCustomerData","dvInvoiceData",V.Local.sFilter)
+		
+		F.Data.DataView.ToDataTableDistinct("dtCustomerData","dvInvoiceData","dtTemp","Attachment",true)
+
+		'Loop through invoices for customer
+		F.Intrinsic.Control.If(V.DataTable.dtTemp.RowCount,>,1)
+			F.Intrinsic.Control.CallSub(mergepdfs,"CustID",V.DataView.dtCustomerData!dvCust(V.Local.i).Customer!FieldVal)
+		F.Intrinsic.Control.EndIf
+		
+		F.Data.DataTable.Close("dtTemp")
+
+	F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetInvoiceData_Err")
+
+
+
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+
+	F.Intrinsic.Control.If(V.Ambient.ErrorNumber,=,21034)
+		F.Intrinsic.UI.Msgbox("The invoice selected contains multiple records with different Customer POs. Please resolve the issue before continuing")
+		Function.Intrinsic.Control.CallSub(unload)
+	F.Intrinsic.Control.EndIf
+	
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetInvoiceData.End
+
+Program.Sub.LoadStandaloneReview.Start
+F.Intrinsic.Control.SetErrorHandler("LoadStandaloneReview_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Loads the standalone review grid with data tables.
+'Args:: None
+'Returns:: None
+
+V.Local.sError.Declare(String)
+
+Gui.F_ReviewStandAlone.gsgcReview.SuspendLayout()
+
+'Creating grid views
+'Gui.F_ReviewStandAlone.gsgcReview.AddGridviewFromDataview("CustomerDataGV","CustomerData","CustomerDataDV")
+
+F.Intrinsic.Control.If(V.dataview.dtCustomerData!dvInvoiceData.Exists,=,False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.If(V.dataview.dtCustomerData!dvInvoiceData.RowCount,=,0)
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.dataview.SetFilter("dtCustomerData","dvInvoiceData","")
+F.Data.DataView.SetFilter("dtCustomerData","dvContactData","")
+
+Gui.F_ReviewStandAlone.gsgcReview.AddGridviewFromDataview("InvoiceDataGV","dtCustomerData","dvInvoiceData")
+Gui.F_ReviewStandAlone.gsgcReview.AddGridviewFromDataview("EmailDataGV","dtCustomerData","dvContactData")
+
+'Gui.F_Review.gsgcReview.AddGridviewFromDatatable("InvoiceDataGV","dtCustomerData$dtInvoiceData")
+'Gui.F_Review.gsgcReview.AddGridviewFromDatatable("EmailDataGV","dtCustomerData$dtInvoiceData$dtContactData")
+
+'Binding to main view
+Gui.F_ReviewStandAlone.gsgcReview.MainView("InvoiceDataGV")
+
+'Setting the Readonly and Editable properties of the grid vews are nescassary in order for the RowCellClick event to work propertly on the gird for some reason
+'Gui.F_ReviewStandAlone.gsgcReview.SetGridviewProperty("CustomerDataGV","ReadOnly","True")
+'Gui.F_ReviewStandAlone.gsgcReview.SetGridviewProperty("CustomerDataGV","Editable","False")
+
+'Allowing user to add and remove contacts on the fly
+Gui.F_ReviewStandAlone.gsgcReview.SetGridviewProperty("EmailDataGV","AllowAddRows","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetGridviewProperty("EmailDataGV","AllowDeleteRows","True")
+
+'Making selected check box editable and setting ReadOnly and AllowEdit properties of rest of columns to make sure RowCellClick even works
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","ReadOnly","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","AllowEdit","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","VisibleIndex","0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","VisibleIndex","1")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Name_Customer","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Name_Customer","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Name_Customer","VisibleIndex","2")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","VisibleIndex","3")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","VisibleIndex","4")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","VisibleIndex","5")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","VisibleIndex","6")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","VisibleIndex","7")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","CUSTOMER_PO","Visible","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","BATCH","Visible","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","EINVOICE_FLG","Visible","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Sent","ReadOnly","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Sent","AllowEdit","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Sent","VisibleIndex","8")
+
+
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Customer","Visible",False)
+'Allowing user to mainuplate email addresses
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Name","ReadOnly","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Name","AllowEdit","True")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Email","ReadOnly","False")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Email","AllowEdit","True")
+
+
+'Settting column captions
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_ID","Caption","Customer")
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_Name","Caption","Name")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Name","Caption","Contact")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Email","Caption","Email")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Name_Customer","Caption","Name")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","Caption","Customer")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Sent","Caption","Previously Sent")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","Caption","Invoice")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","Caption","Order")
+
+'Setting header color
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_ID","HeaderBackColor","#F0F0F0")
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("CustomerDataGV","Customer_Name","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Selected","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Name_Customer","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Invoice","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Order_no","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Pages","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Size","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Sent","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Name","HeaderBackColor","#F0F0F0")
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Email","HeaderBackColor","#F0F0F0")
+
+'Setting column props to hide key fields
+'Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Customer_ID","Visible",False)
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Invoice","Visible",False)
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Customer","Visible",False)
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("EmailDataGV","Order_No","Visible",False)
+
+'Making Attachment column look like link
+Gui.F_ReviewStandAlone.gsgcReview.SetColumnProperty("InvoiceDataGV","Attachment","CellForeColor","Blue")
+
+Gui.F_ReviewStandAlone.gsgcReview.ResumeLayout
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadStandaloneReview_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.LoadStandaloneReview.End
+
+Program.Sub.cmdSelect_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdSelect_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sStatus.Declare(String)
+
+Gui.F_ReviewStandAlone.cmdSelect.SetFocus
+
+'Making sure user selected batch/invoice
+Function.Intrinsic.Control.If(V.Screen.F_ReviewStandAlone!txtBatch.Text,=,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,=,"")
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+'Disabling form durign load
+Function.Intrinsic.Control.CallSub(enableform,"Enabled",False)'Enables or disables form controls
+
+Gui.F_ReviewStandAlone..MousePointer(11)
+
+'Setting Status
+Function.Intrinsic.Control.If(V.Screen.F_ReviewStandAlone!txtBatch.Text,<>,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,=,"")
+	'Only batch passed
+	Function.Intrinsic.String.Build("Rebuilding batch: {0}",V.Screen.F_ReviewStandAlone!txtBatch.Text,V.Local.sStatus)
+Function.Intrinsic.Control.ElseIf(V.Screen.F_ReviewStandAlone!txtBatch.Text,=,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,<>,"")
+	'Only invoice passed
+	Function.Intrinsic.String.Build("Rebuilding invoice: {0}",V.Screen.F_ReviewStandAlone!txtInvoice.Text,V.Local.sStatus)
+Function.Intrinsic.Control.ElseIf(V.Screen.F_ReviewStandAlone!txtBatch.Text,<>,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,<>,"")
+	'Batch and invoice passed
+	Function.Intrinsic.String.Build("Rebuilding invoice: {0} from batch: {1}",V.Screen.F_ReviewStandAlone!txtInvoice.Text,V.Screen.F_ReviewStandAlone!txtBatch.Text,V.Local.sStatus)
+Function.Intrinsic.Control.EndIf
+
+Gui.F_ReviewStandAlone.lblStatus.Caption(V.Local.sStatus)
+
+'Clearing data tables, delete row when called without a row index will clear the entire data table
+'F.Data.DataTable.DeleteRow("CustomerData$InvoiceData$EmailData")
+'F.Data.DataTable.DeleteRow("CustomerData$InvoiceData")
+'F.Data.DataTable.DeleteRow("CustomerData")
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData.exists,=,true)
+	F.Data.DataTable.Close("dtCustomerData")
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData.exists,=,true)
+	F.Data.DataTable.Close("dtCustomerData$dtInvoiceData")
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtCustomerData$dtInvoiceData$dtContactData.exists,=,true)
+	F.Data.DataTable.Close("dtCustomerData$dtInvoiceData$dtContactData")
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtInV.Exists,=,True)
+	F.Data.DataTable.Close("dtInv")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtContacts.Exists,=,True)
+	F.Data.DataTable.Close("dtContacts")
+F.Intrinsic.Control.EndIf
+
+'F.Data.DataTable.DeleteRow("InvoiceData$EmailData")
+'F.Data.DataTable.DeleteRow("InvoiceData")
+
+
+'Getting invoice data for batch/invoice
+Function.Intrinsic.Control.CallSub(getinvoicedata,"Batch",V.Screen.F_ReviewStandAlone!txtBatch.Text,"Invoice",V.Screen.F_ReviewStandAlone!txtInvoice.Text)
+
+'Load review screen
+Function.Intrinsic.Control.CallSub(loadstandalonereview)
+
+'Setting Status
+Function.Intrinsic.Control.If(V.Screen.F_ReviewStandAlone!txtBatch.Text,<>,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,=,"")
+	'Only batch passed
+	Function.Intrinsic.String.Build("Batch: {0}",V.Screen.F_ReviewStandAlone!txtBatch.Text,V.Local.sStatus)
+Function.Intrinsic.Control.ElseIf(V.Screen.F_ReviewStandAlone!txtBatch.Text,=,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,<>,"")
+	'Only invoice passed
+	Function.Intrinsic.String.Build("Invoice: {0}",V.Screen.F_ReviewStandAlone!txtInvoice.Text,V.Local.sStatus)
+Function.Intrinsic.Control.ElseIf(V.Screen.F_ReviewStandAlone!txtBatch.Text,<>,"","and",V.Screen.F_ReviewStandAlone!txtInvoice.Text,<>,"")
+	'Batch and invoice passed
+	Function.Intrinsic.String.Build("Invoice: {0} Batch: {1}",V.Screen.F_ReviewStandAlone!txtInvoice.Text,V.Screen.F_ReviewStandAlone!txtBatch.Text,V.Local.sStatus)
+Function.Intrinsic.Control.EndIf
+
+Gui.F_ReviewStandAlone.lblStatus.Caption(V.Local.sStatus)
+
+'Enable form
+Function.Intrinsic.Control.CallSub(enableform,"Enabled",True)'Enables or disables form controls
+Gui.F_ReviewStandAlone..MousePointer(0)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdSelect_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdSelect_Click.End
+
+Program.Sub.EnableForm.Start
+F.Intrinsic.Control.SetErrorHandler("EnableForm_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Description::  Enables or disables the standalone review screen controls.
+'Args:: Enabled as Booelan
+'Returns:: None
+
+V.Local.sError.Declare(String)
+
+Gui.F_ReviewStandAlone.txtBatch.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.cmdBrowseBatch.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.txtInvoice.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.cmdBrowseInvoice.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.cmdSelect.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.dtpStart.Enabled(V.Args.Enabled)
+Gui.F_ReviewStandAlone.dtpEnd.Enabled(V.Args.enabled)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("EnableForm_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.EnableForm.End
+
+Program.Sub.LoadOptions.Start
+F.Intrinsic.Control.SetErrorHandler("LoadOptions_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.sInvoiceDir.Declare(String)
+V.Local.sBaseDir.Declare(String)
+V.Local.bFileName.Declare(String)
+V.Local.sPrefix.Declare(String)
+V.Local.sSuffix.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.bRet.Declare(Boolean)
+
+'Queue Invoices
+'Function.Global.General.ReadOption(402135,0,False,00000,V.Global.bQueueInvoices)
+Function.Global.General.ReadOption(402135,2,1,"00000",V.Global.iMode)
+
+'Consolidate
+Function.Global.General.ReadOption(402133,0,False,"00000",V.Global.bConsolidate)
+F.Intrinsic.Debug.SetLA("Consolidate= ",V.Global.bConsolidate)
+F.Intrinsic.Control.If(V.Global.bConsolidate,=,True)
+	Function.Global.General.ReadOption(402133,0,False,"00001",V.Global.bLimit)
+	F.Intrinsic.Control.If(V.Global.bLimit,=,True)
+		'Read Option for Num Limit
+		Function.Global.General.ReadOption(402133,2,1,"00002",V.Global.iLimitNumber)
+		F.Intrinsic.Debug.SetLA("Limit: ",V.Global.iLimitNumber)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+'Include Tracking Number
+Function.Global.General.ReadOption(402134,0,False,"00000",V.Global.bTracking)
+
+F.Intrinsic.Debug.SetLA("Include Tracking Number: ",V.Global.bTracking)
+
+'Show Review Screen
+'F.Global.General.ReadOption(402400,0,False,V.Global.bReview)
+
+
+'Attach Invoice to DCC Sales Order
+Function.Global.General.ReadOption(402136,0,False,"00000",V.Global.bSO)
+F.Intrinsic.Control.If(V.Global.bSO,=,True)
+	Function.Global.General.ReadOption(402136,2,-1,"00001",V.Global.iSOGroup)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Attach to Sales Order: ",V.Global.bSO)
+
+'Attach Invoice to DCC Customer
+Function.Global.General.ReadOption(402137,0,False,"00000",V.Global.bCust)
+F.Intrinsic.Control.If(V.Global.bCust,=,True)
+	Function.Global.General.ReadOption(402137,2,-1,"00001",V.Global.iCustGroup)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Attach to Customer: ",V.Global.bCust)
+
+'Use Custom Folder
+Function.Global.General.ReadOption(402139,0,False,"00000",V.Global.bFolder)
+F.Intrinsic.Control.If(V.Global.bFolder,=,True)
+	F.Intrinsic.String.Build("{0}\Invoices",V.Caller.PluginsDir,V.Local.sBaseDir)
+	Function.Global.General.ReadOption(402139,1,V.local.sBaseDir,"00001",V.local.sBaseDir)
+	Function.Global.General.ReadOption(402139,1,"#BASE#","00002",V.local.sInvoiceDir)
+	F.Intrinsic.String.Replace(V.Local.sInvoiceDir,"#BASE#",V.Local.sBaseDir,V.Local.sInvoiceDir)
+	F.Intrinsic.String.Replace(V.Local.sInvoiceDir,"#CCC#",V.Caller.CompanyCode,V.Local.sInvoiceDir)
+	'F.Intrinsic.String.Build("{0}\{1}",V.Local.sBaseDir,V.Local.sInvoiceDir,V.Global.sInvoiceDir)
+	V.global.sInvoiceDir.Set(V.Local.sInvoiceDir)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}\Invoices",V.Caller.PluginsDir,V.Global.sInvoiceDir)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Right(V.Global.sInvoiceDir,1,V.Local.sTemp)
+F.Intrinsic.Control.If(V.Local.sTemp,=,"\")
+	F.Intrinsic.String.Len(V.Global.sInvoiceDir,V.Local.sTemp)
+	F.Intrinsic.Math.Sub(V.Local.sTemp,1,V.Local.sTemp)
+	F.Intrinsic.String.Left(V.Global.sInvoiceDir,V.Local.sTemp,V.Global.sInvoiceDir)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Invoice Dir: ",V.Global.sInvoiceDir)
+
+'File Name Format
+Function.Global.General.ReadOption(402140,0,"False","00000",V.global.bFileName)
+F.Intrinsic.Control.If(V.global.bFileName,=,True)
+	Function.Global.General.ReadOption(402140,1,"INVOICENO","00001",V.local.sPrefix)
+	Function.Global.General.ReadOption(402140,1,"ORDERNO","00002",V.local.sSuffix)
+	F.Intrinsic.String.Build("{0}-{1}.pdf",V.Local.sPrefix,V.Local.sSuffix,V.Global.sFileName)
+F.Intrinsic.Control.Else
+	V.Global.sFileName.Set("INVOICENO-ORDERNO.pdf")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA("Folder Format: ",V.Global.sFileName)
+
+Function.Global.General.ReadOption(402138,1,"Your Invoice(s) #INVOICES# for Order(s) #ORDERS#",00001,V.Global.sSubject)
+Function.Global.General.ReadOption(402138,1,"Your invoice(s) #INVOICES# for order(s) #ORDERS# are ready to view.",00002,V.Global.sBody)
+
+
+Function.Global.General.ReadOption(402533,0,"False",00000,V.global.bTypeAhead)
+
+Function.Global.General.ReadOption(402558,0,"False",00000,V.global.bSalesRep)
+
+'Send Each Invoice in a Separate Email
+Function.Global.General.ReadOption(402608,0,"False",00000,V.Global.bSeparateEmail)
+
+'Reading Options related to weights for reports with ID's 62 and 65
+Function.Global.General.ReadOption(402570,1,"","00000",V.Global.bPrtWgt)
+Function.Global.General.ReadOption(402571,1,"","00000",V.Global.bWgtTotal)
+Function.Global.General.ReadOption(402572,1,"","00000",V.Global.sWgtTitle)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("LoadOptions_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4304_E-Invoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+Program.Sub.LoadOptions.End
+
+Program.Sub.CreateFileName.Start
+F.Intrinsic.Control.SetErrorHandler("CreateFileName_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.Control.If(V.Global.bFileName,=,True)
+	'Use Custom File Name format, getting wildcard values
+	
+	V.Local.sTemp.Set(V.Global.sFileName)
+	
+	'Open Connection
+
+	
+	F.Intrinsic.String.Build("Select DISTINCT ORDER_NO from V_ORDER_HIST_HEAD where INVOICE='{0}' AND BATCH='{1}' AND CUSTOMER='{2}'",V.args.Invoice,V.Args.Batch,V.Args.Customer,V.Local.sQuery)
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+	
+
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF.Not,=,True)
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"")
+			F.Intrinsic.String.Split(V.Local.sRet,"#$#",V.Local.sRet)
+			F.Intrinsic.Control.If(V.Local.sRet.UBound,=,0)
+				F.Intrinsic.String.Replace(V.Local.sTemp,"ORDERNO",V.Local.sRet.Trim,V.Local.sTemp)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Replace(V.Local.sTemp,"ORDERNO","MultipleOrders",V.Local.sTemp)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.String.Replace(V.Local.sTemp,"INVOICENO",V.Args.Invoice,V.Local.sTemp)
+	F.Intrinsic.String.Replace(V.Local.sTemp,"CCC",V.Caller.CompanyCode,V.Local.sTemp)
+	F.Intrinsic.String.Replace(V.Local.sTemp,"CUST",V.Args.Customer,V.Local.sTemp)
+	F.Intrinsic.String.Replace(V.Local.sTemp,"DATE",V.Ambient.Date.FormatYYYYMMDD,V.Local.sTemp)
+	
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}.pdf",V.Args.Invoice,V.Local.sTemp)
+
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Debug.SetLA(V.Local.stemp)
+
+F.Intrinsic.Variable.AddRV("sFile",V.Local.sTemp)
+
+'V.Global.sFileName.Set(V.Local.sTemp)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("CreateFileName_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4304_E-Invoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CreateFileName.End
+
+Program.Sub.AddSODocument.Start
+F.Intrinsic.Control.SetErrorHandler("AddSODocument_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRet.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sAttachments.Declare(String)
+V.Local.sFQP.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'Create/Retrieve Link ID
+
+F.Global.DocumentControl.CreateReference(V.Args.sOrder,45,V.Local.iRet)
+
+F.Intrinsic.String.right(V.Global.sInvoiceDir,1,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"\")
+	F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Args.sFile,V.Local.sFQP)
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("{0}{1}",V.Global.sInvoiceDir,V.Args.sFile,V.Local.sFQP)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.File.Exists(V.Local.sFQP,V.Local.bExists)
+
+F.Intrinsic.Control.If(V.Local.bExists,=,True)
+	F.Global.DocumentControl.AddDocument(V.Local.iRet,V.Local.sFQP,"",V.Global.iSOGroup,V.Caller.User,"PDF",False,False)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("AddSODocument_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4304_E-Invoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.AddSODocument.End
+
+Program.Sub.AddCustDocument.Start
+F.Intrinsic.Control.SetErrorHandler("AddCustDocument_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.i.Declare(Long)
+V.Local.sAttachments.Declare(String)
+V.Local.sFQP.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+'Create/Retrieve Link ID
+F.Global.DocumentControl.CreateReference(V.args.sCust,15,V.Local.iRet)
+
+F.Intrinsic.String.Split(V.Args.sFile,"@!@",V.Local.sAttachments)
+
+F.Intrinsic.Control.For(V.Local.i,0,V.Local.sAttachments.UBound,1)
+
+	F.Intrinsic.String.Split(V.Local.sAttachments(V.Local.i),"*!*",V.Local.sFQP)
+
+	F.Intrinsic.String.right(V.Local.sFQP(1),1,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,<>,"\")
+		F.Intrinsic.String.Build("{0}\{1}",V.Local.sFQP(1),V.Local.sFQP(0),V.Local.sFQP)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("{0}{1}",V.Local.sFQP(1),V.Local.sFQP(0),V.Local.sFQP)
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.File.Exists(V.Local.sFQP,V.Local.bExists)
+
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+
+		F.Global.DocumentControl.AddDocument(V.Local.iRet,V.Local.sFQP,"",V.Global.iCustGroup,V.Caller.User,"PDF",False,False)
+	F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("AddCustDocument_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4304_E-Invoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.AddCustDocument.End
+
+Program.Sub.cmdReviewSend_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdReviewSend_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_Review..Enabled(False)
+
+F.Intrinsic.Control.CallSub(sendemails)
+
+Gui.F_Review..Enabled(True)
+
+'Re-enabling form causes it to hide behind windows
+'enable always on top to bring to front then disable always on top
+Gui.F_Review..AlwaysOnTop(True)
+Gui.F_Review..AlwaysOnTop(False)
+
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Label("cmdReviewSend_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdReviewSend_Click.End
+
+Program.Sub.cmdStandAloneSend_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdStandAloneSend_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+Gui.F_ReviewStandAlone..Enabled(False)
+
+V.Local.sError.Declare(String)
+
+F.Intrinsic.Control.CallSub(sendemails)
+
+
+Gui.F_ReviewStandAlone.gsgcReview.ClearRows("EmailDataGV")
+Gui.F_ReviewStandAlone.gsgcReview.ClearRows("InvoiceDataGV")
+
+Gui.F_ReviewStandAlone..Enabled(True)
+
+'Re-enabling form causes it to hide behind windows
+'enable always on top to bring to front then disable always on top
+Gui.F_ReviewStandAlone..AlwaysOnTop(True)
+Gui.F_ReviewStandAlone..AlwaysOnTop(False)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdStandAloneSend_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdStandAloneSend_Click.End
+
+Program.Sub.GetEmailSubjectBody.Start
+F.Intrinsic.Control.SetErrorHandler("GetEmailSubjectBody_Err")
+F.Intrinsic.Control.ClearErrors
+
+'Looks to see if there is a custom Subject and Body set up for the customer. If there is none, the subject/body from the company options or defaults will be used.
+
+V.Local.sError.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+V.Local.sCustName.Declare(String)
+
+F.Intrinsic.String.Build("Select Subject, Body from PPT_EINV_COPT where CUSTOMER_ID='{0}'",V.Args.CustID.PSQLFriendly,V.Local.sQuery)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF,=,False)
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Function.Intrinsic.Control.If(V.Local.sRet(0),<>,"")
+		V.Local.sSubject.Set(V.Local.sRet(0))
+	Function.Intrinsic.Control.Else
+		V.Local.sSubject.Set(V.Global.sSubject)
+	Function.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.If(V.Local.sRet(1),<>,"")
+		V.Local.sBody.Set(V.Local.sRet(1))
+	Function.Intrinsic.Control.Else
+		V.Local.sBody.Set(V.Global.sBody)
+	Function.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	V.Local.sSubject.Set(V.Global.sSubject)
+	V.Local.sBody.Set(V.Global.sBody)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select NAME_CUSTOMER from V_CUSTOMER_MASTER where CUSTOMER = '{0}'",V.Args.CustID,V.Local.sQuery)
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF,=,False)
+	V.Local.sCustName.Set(V.Local.sRet)
+F.Intrinsic.Control.EndIf
+
+'#CUSTOMERID#
+'#CUSTOMERNAME#
+'#CONTACTNAME#
+'#INVOICES#
+'#CURRENTDATE#
+
+F.Intrinsic.String.Replace(V.Local.sSubject,"#CUSTOMERID#",V.Args.CustID,V.Local.sSubject)
+F.Intrinsic.String.Replace(V.Local.sSubject,"#CUSTOMERNAME#",V.Local.sCustName.Trim,V.Local.sSubject)
+F.Intrinsic.String.Replace(V.Local.sSubject,"#CURRENTDATE#",V.Ambient.Date.formatMM/DD/YYYY,V.Local.sSubject)
+
+F.Intrinsic.String.Replace(V.Local.sBody,"#CUSTOMERID#",V.Args.CustID,V.Local.sBody)
+F.Intrinsic.String.Replace(V.Local.sBody,"#CUSTOMERNAME#",V.Local.sCustName.Trim,V.Local.sBody)
+F.Intrinsic.String.Replace(V.Local.sBody,"#CURRENTDATE#",V.Ambient.Date.formatMM/DD/YYYY,V.Local.sBody)
+
+F.Intrinsic.Variable.AddRV("sSubject",V.Local.sSubject)
+F.Intrinsic.Variable.AddRV("sBody",V.Local.sBody)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("GetEmailSubjectBody_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetEmailSubjectBody.End
+
+Program.Sub.MergePDFs.Start
+F.Intrinsic.Control.SetErrorHandler("MergePDFs_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.sFiles.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.sFQP.Declare(String)
+V.Local.sReturnFiles.Declare(String)
+V.Local.iTemp.Declare(Long)
+V.Local.iCount.Declare(Long)
+V.Local.bExists.Declare(Boolean)
+V.Local.bRet.Declare(Boolean)
+V.Local.sTemp.Declare(String)
+V.Local.iPages.Declare(Long)
+V.Local.sIndexes.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sFileSize.Declare(String)
+V.Local.fFileSize.Declare(Float)
+V.Local.sRet.Declare(String)
+
+
+F.Data.DataTable.AddColumn("dtTemp","New_Attachment","String")
+F.Data.DataTable.AddColumn("dtTemp","Pages","Long")
+F.Data.DataTable.AddColumn("dtTemp","Size","String")
+
+F.Intrinsic.String.Build("{0}{1}.pdf",V.Args.CustID,V.Ambient.Now.formatYYYYMMDDHHMMSS,V.Local.sFileName)
+F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Local.sFileName,V.Local.sFQP)
+
+F.Intrinsic.Control.For(V.Local.i,0,V.datatable.dtTemp.RowCount--,1)
+
+	F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.datatable.dtTemp(V.Local.i).Attachment!FieldVal,V.Local.sTemp)
+	F.Intrinsic.File.Exists(V.Local.sTemp,V.Local.bExists)
+	F.Intrinsic.Control.If(V.Local.bExists,=,True)
+		
+		F.Intrinsic.Math.Add(V.Local.i,1,V.Local.iTemp)
+		
+		F.Intrinsic.Control.If(V.Global.bLimit,=,True)
+			F.Intrinsic.Math.Mod(V.Local.iTemp,V.Global.iLimitNumber,V.Local.iTemp)
+		F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Mod(V.Local.iTemp,50,V.Local.iTemp)
+		F.Intrinsic.Control.EndIf
+		
+		F.Intrinsic.Control.If(V.Local.iTemp,=,0,"OR",V.Local.i,=,V.datatable.dtTemp.RowCount--)
+			
+			F.Intrinsic.Control.If(V.Local.sFiles,<>,"")
+				
+				F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sFiles,V.Local.sTemp,V.Local.sFiles)
+				Function.Automation.PDF.Merge(V.Local.sFiles,V.Local.sFQP)
+				F.Intrinsic.File.Exists(V.Local.sFQP,V.Local.bExists)
+				'Check to make sure new merged PDF exists
+				F.Intrinsic.Control.If(V.Local.bExists,=,True)
+					
+					F.Intrinsic.File.GetFileSize(V.Local.sFQP,V.Local.fFileSize)
+					'size is returned in bytes, so have to convert to KB
+					Function.Intrinsic.Math.Div(V.Local.fFileSize,1000,V.Local.fFileSize)
+					'Building file size string
+					Function.Intrinsic.String.Build("{0} KB",V.Local.fFileSize.Long,V.Local.sFileSize)
+				
+					F.Automation.PDF.Open("InvoicePDF",V.Local.sFQP)
+					F.Automation.PDF.GetPageCount("InvoicePDF",V.Local.iPages)
+					F.Automation.PDF.Close("InvoicePDF")
+					F.Data.DataTable.SetValue("dtTemp",V.Local.i,"New_Attachment",V.Local.sFileName,"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+				
+					F.Intrinsic.String.Split(V.Local.sIndexes,"*!*",V.Local.sIndexes)
+					F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sIndexes.UBound,1)
+						F.Data.DataTable.SetValue("dtTemp",V.Local.sIndexes(V.Local.iC),"Pages",V.Local.iPages,"Size",V.Local.sFileSize)
+					F.Intrinsic.Control.Next(V.Local.ic)
+				
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndIf
+			
+			V.Local.sIndexes.Set("")
+			V.Local.sFiles.Set("")
+			F.Intrinsic.String.Build("{0}{1}{2}.pdf",V.Args.CustID,V.Ambient.Now.formatYYYYMMDDHHMMSS,V.Local.i,V.Local.sFileName)
+			F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.Local.sFileName,V.Local.sFQP)
+				
+		F.Intrinsic.Control.Else
+		
+			F.Intrinsic.Control.If(V.Local.sFiles,=,"")
+				
+				V.Local.sFiles.Set(V.Local.sTemp)
+				V.Local.sIndexes.Set(V.Local.i)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sFiles,V.Local.sTemp,V.Local.sFiles)
+				F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sIndexes,V.Local.i,V.Local.sIndexes)
+			F.Intrinsic.Control.EndIf
+
+			F.Data.DataTable.SetValue("dtTemp",V.Local.i,"New_Attachment",V.Local.sFileName)
+		
+		F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Next(V.Local.i)
+
+	'Update parent table with values
+	
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.dtTemp.RowCount--,1)
+	
+	F.Intrinsic.Control.If(V.DataTable.dtTemp(V.Local.i).New_Attachment!FieldValTrim,<>,"")
+		
+		F.Intrinsic.String.Build("Customer='{0}' AND Attachment='{1}'",V.Args.CustID,V.DataTable.dtTemp(V.Local.i).Attachment!FieldValTrim,V.Local.sTemp)
+		F.Data.DataTable.Select("dtCustomerData$dtInvoiceData",V.Local.sTemp,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Local.sRet,<>,"***NORETURN***")
+			
+			F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+			F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sRet.UBound,1)
+			
+				F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData",V.Local.sRet(V.Local.ic),"Attachment",V.DataTable.dtTemp(V.Local.i).New_Attachment!FieldValTrim,"Pages",V.DataTable.dtTemp(V.Local.i).Pages!FieldValTrim,"Size",V.DataTable.dtTemp(V.Local.i).Size!FieldValTrim)
+			F.Intrinsic.Control.Next(V.Local.iC)
+		
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+		
+F.Intrinsic.Control.Next(V.Local.i)
+	
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("MergePDFs_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.MergePDFs.End
+
+Program.Sub.SendEmails.Start
+V.Local.sError.Declare(String)
+
+V.Local.i.Declare(Long)
+V.Local.sFilter.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.sSubject.Declare(String)
+V.Local.sBody.Declare(String)
+V.Local.iL.Declare(Long)
+V.Local.sRet.Declare(String)
+V.Local.sInvoices.Declare(String)
+V.Local.sTempSubject.Declare(String)
+V.Local.sTempBody.Declare(String)
+V.Local.sContacts.Declare(String)
+V.Local.iLen.Declare(Long)
+V.Local.iStart.Declare(Long)
+V.Local.sAttachments.Declare(String)
+V.Local.sTemp.Declare(String)
+V.Local.sSender.Declare(String)
+V.Local.sOrders.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Local.sPOs.Declare(String)
+V.Local.iUID.Declare(Long)
+V.Local.bErrorOccured.Declare(boolean, false)
+V.Local.sSelMissingCust.Declare(String)
+V.Local.sSelMissingCustReF.Declare(String)
+
+F.Intrinsic.Control.If(V.ODBC.Con.State,=,0)
+	F.ODBC.Connection!con.OpenCompanyConnection(120)
+F.Intrinsic.Control.EndIf
+
+'TJS - Removed in favor of a fixed sender address set in e-invoicing options and saved to the GS Registry
+'******Get Sender info
+'F.Global.Security.GetUserEmail(V.Caller.User,V.Local.sTemp)
+'F.Intrinsic.Control.If(V.Local.sTemp,=,"")
+'	F.Intrinsic.UI.Msgbox("An email address for this user must be provided to send e-invoices. Please go to System Support> File> User Security Maintenance to set up your email address.")
+'	F.Intrinsic.Control.ExitSub
+'F.Intrinsic.Control.Else
+'	F.Global.Security.GetFullName(V.Caller.User,V.Caller.CompanyCode,V.Local.sSender)
+'F.Intrinsic.Control.EndIf
+'F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sTemp,V.Local.sSender,V.Local.sSender)
+
+'Default sender account = sequence 2000
+F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,2000,5,"",V.Local.sTemp)
+Gui.F_Main.txtDefaultSenderAddr.Text(V.Local.sTemp)
+'Default sender name = sequence 3000
+F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,3000,5,"",V.Local.sTemp)
+Gui.F_Main.txtDefaultSenderName.Text(V.Local.sSender)
+
+F.Intrinsic.String.Build("{0}*!*{1}",V.Local.sTemp,V.Local.sSender,V.Local.sSender)
+F.Global.Security.GetUserId(V.Caller.User,V.Caller.CompanyCode,V.Local.iUID)
+
+F.Data.DataView.Create("dtCustomerData$dtInvoiceData","SelectedInvoicesDV")
+
+'Fill missing Customer Numbers in DTContactData table, so all emails go out properly. 
+F.Data.Datatable.Select("dtCustomerData$dtInvoiceData$dtContactData", "[CUSTOMER] = '' OR [CUSTOMER] is null", V.Local.sSelMissingCust)
+F.Intrinsic.Control.If(V.Local.sSelMissingCust, <>, "***NORETURN***")
+	F.Intrinsic.String.Split(V.Local.sSelMissingCust, "*!*", V.Local.sSelMissingCust)
+
+	F.Intrinsic.Control.For(V.Local.i, 0, V.Local.sSelMissingCust.UBound)
+		F.Intrinsic.String.Build("[INVOICE] = '{0}' And [ORDER_NO] = '{1}'", V.DataTable.dtCustomerData$dtInvoiceData$dtContactData(V.Local.sSelMissingCust(V.Local.i)).INVOICE!FieldValTrim, V.DataTable.dtCustomerData$dtInvoiceData$dtContactData(V.Local.sSelMissingCust(V.Local.i)).ORDER_NO!FieldValTrim, V.Local.sTemp)
+		F.Data.Datatable.Select("dtCustomerData$dtInvoiceData", V.Local.sTemp, V.Local.sSelMissingCustRef)
+		F.Intrinsic.String.Split(V.Local.sSelMissingCustRef, "*!*", V.Local.sSelMissingCustRef)
+	
+		F.Data.DataTable.SetValue("dtCustomerData$dtInvoiceData$dtContactData", V.Local.sSelMissingCust(V.Local.i), "CUSTOMER", V.DataTable.dtCustomerData$dtInvoiceData(V.Local.sSelMissingCustRef(0)).CUSTOMER!FieldValTrim)
+	
+	F.Intrinsic.Control.Next(V.Local.i)
+F.Intrinsic.Control.EndIf
+
+'Looping through Customers
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.dtCustomerData.RowCount--,1)
+	
+		'F.Data.DataTable.DeleteRow("Contacts")
+		F.Data.DataTable.DeleteRow("SentInvoices")
+		F.Data.DataTable.DeleteRow("Orders")
+		F.Data.DataTable.DeleteRow("POs")
+		V.Local.sSubject.Set("")
+		V.Local.sBody.Set("")
+		
+		'Create a dataview of selected invoices for the current customer. If there are no invoices, go to the next customer
+		F.Intrinsic.String.Build("Customer = '{0}' AND Selected = True",V.DataTable.dtCustomerData(V.Local.i).Customer!FieldVal,V.Local.sFilter)
+		F.Data.DataView.SetFilter("dtCustomerData","SelectedInvoicesDV",V.Local.sFilter)
+		Function.Intrinsic.Control.If(V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV.RowCount,=,0)
+			'F.Intrinsic.Control.Next(V.Local.i)
+			F.Intrinsic.Control.GoTo("End")
+		Function.Intrinsic.Control.EndIf
+	
+		'Gets subject/body for email
+		F.Intrinsic.Control.CallSub(getemailsubjectbody,"CustID",V.DataTable.dtCustomerData(V.Local.i).Customer!FieldVal)
+		V.Local.sSubject.Set(V.Args.sSubject)
+		V.Local.sBody.Set(V.Args.sBody)
+	
+		'Looping through all selected Invoices for Customer
+		F.Intrinsic.Control.For(V.Local.ic,0,V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV.RowCount--,1)
+		
+				F.Intrinsic.String.Build("Invoice = '{0}'",V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Invoice!FieldVal,V.Local.sFilter)
+				F.Data.DataView.SetFilter("dtCustomerData","dvContactData",V.Local.sFilter)
+	
+				'Getting string of invoices for Subject/Body wildcards
+				F.Data.DataTable.Select("SentInvoices",V.Local.sFilter,V.Local.sRet)
+				F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+					F.Data.DataTable.AddRow("SentInvoices","Invoice",V.dataview.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Invoice!FieldVal)
+				F.Intrinsic.Control.EndIf
+				
+				'F.Intrinsic.String.Build("Order = '{0}'",V.dataview.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Order_No!FieldVal,V.Local.sFilter)
+				'F.Data.DataTable.Select("Orders",V.Local.sFilter,V.Local.sRet)
+				'F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+					F.Data.DataTable.AddRow("Orders","Order",V.dataview.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Order_No!FieldVal)
+				'F.Intrinsic.Control.EndIf
+							
+				'F.Intrinsic.String.Replace(V.dataview.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Customer_PO!FieldVal,"'","''",V.Local.sTemp)
+				'F.Intrinsic.String.Build("PO = '{0}'",V.dataview.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Customer_PO!FieldVal,V.Local.sFilter)
+				'F.Intrinsic.String.Build("PO = '{0}'",V.Local.sTemp,V.Local.sFilter)
+				'F.Data.DataTable.Select("POs",V.Local.sFilter,V.Local.sRet)
+				'F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+					F.Data.DataTable.AddRow("POs","PO",V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Customer_PO!FieldVal)
+				'F.Intrinsic.Control.EndIf
+	
+				F.Intrinsic.Control.If(V.Global.bSO,=,True)
+					F.Intrinsic.Control.CallSub(addsodocument,"sFile",V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(V.Local.iC).Attachment!FieldVal,"sOrder",V.dataview.dtcustomerdata$dtinvoicedata!SelectedInvoicesDV(V.Local.iC).Order_No!FieldVal)
+				F.Intrinsic.Control.EndIf
+	
+		F.Intrinsic.Control.Next(V.Local.ic)
+	
+		F.Data.DataView.ToString("SentInvoices","SentInvoicesDV","*!*",", ",V.Local.sInvoices)
+		F.Data.DataView.ToString("Orders","OrdersDV","*!*",", ",V.Local.sOrders)
+		F.Data.DataView.ToString("POs","POsDV","*!*",", ",V.Local.sPOs)
+	
+		F.Intrinsic.String.Replace(V.Local.sSubject,"#INVOICES#",V.Local.sInvoices,V.Local.sSubject)
+		F.Intrinsic.String.Replace(V.Local.sBody,"#INVOICES#",V.Local.sInvoices,V.Local.sBody)
+		F.Intrinsic.String.Replace(V.Local.sSubject,"#ORDERS#",V.Local.sOrders,V.Local.sSubject)
+		F.Intrinsic.String.Replace(V.Local.sBody,"#ORDERS#",V.Local.sOrders,V.Local.sBody)
+		F.Intrinsic.String.Replace(V.Local.sSubject,"#PO#",V.Local.sPOs,V.Local.sSubject)
+		F.Intrinsic.String.Replace(V.Local.sBody,"#PO#",V.Local.sPOs,V.Local.sBody)
+		
+	
+		'******Get Attachment(s)
+	
+		F.Intrinsic.Control.If(V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV.RowCount,>,1)
+			'Multiple invoices
+			
+			'Create datatable with distinct file names, so there are no duplicates
+			F.Data.DataView.ToDataTableDistinct("dtCustomerData","SelectedInvoicesDV","dtAttachments","Attachment")
+			
+			F.Intrinsic.Control.For(V.Local.iC,0,V.DataTable.dtAttachments.RowCount--,1)
+				F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.DataTable.dtAttachments(V.Local.iC).Attachment!FieldVal,V.Local.sTemp)
+				F.Intrinsic.File.Exists(V.Local.sTemp,V.Local.bExists)
+				F.Intrinsic.Control.If(V.Local.bExists,=,True)
+					Function.Intrinsic.Control.If(V.Local.sAttachments,=,"")
+						F.Intrinsic.String.Build("{0}*!*{1}",V.DataTable.dtAttachments(V.Local.iC).Attachment!FieldVal,V.Global.sInvoiceDir,V.Local.sAttachments)
+					Function.Intrinsic.Control.Else
+						F.Intrinsic.String.Build("{0}@!@{1}*!*{2}",V.Local.sAttachments,V.DataTable.dtAttachments(V.Local.iC).Attachment!FieldVal,V.Global.sInvoiceDir,V.Local.sAttachments)
+					Function.Intrinsic.Control.EndIf
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.iC)
+			
+			F.Data.DataTable.Close("dtAttachments")
+			
+		F.Intrinsic.Control.ElseIf(V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV.RowCount,>,0)
+			'Single pdf
+			F.Intrinsic.String.Build("{0}\{1}",V.Global.sInvoiceDir,V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(0).Attachment!FieldVal,V.Local.sTemp)
+			F.Intrinsic.File.Exists(V.Local.sTemp,V.Local.bExists)
+			F.Intrinsic.Control.If(V.Local.bExists,=,True)	
+	
+				F.Intrinsic.String.Build("{0}*!*{1}",V.DataView.dtCustomerData$dtInvoiceData!SelectedInvoicesDV(0).Attachment!FieldVal,V.Global.sInvoiceDir,V.Local.sAttachments)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+		
+		'********
+		F.Intrinsic.Control.If(V.Local.sAttachments,=,"")
+			F.Intrinsic.Debug.SetLA("No attachments to email")
+			F.Intrinsic.Control.GoTo("End")
+			'F.Intrinsic.Control.Next(V.Local.i)
+		F.Intrinsic.Control.EndIf
+	
+		'******Get Contacts
+		
+		F.Intrinsic.String.Build("Customer = '{0}'",V.DataTable.dtCustomerData(V.Local.i).Customer!FieldVal,V.Local.sFilter)
+		
+		F.Data.DataView.SetFilter("dtCustomerData","dvContactData",V.Local.sFilter)
+		F.Data.Dataview.ToDataTableDistinct("dtCustomerData","dvContactData","dtContacts","Name*!*Email")
+		
+		F.Intrinsic.Control.For(V.Local.iC,0,V.DataTable.dtContacts.RowCount--,1)
+			'Try block around each attempt to queue an invoice
+			'this way if one fails, it continues to the others without bombing out
+			F.Intrinsic.Control.Try
+				F.Intrinsic.String.Build("{0}*!*{1}",V.DataTable.dtContacts(V.Local.iC).Name!FieldVal,V.DataTable.dtContacts(V.Local.iC).Email!FieldVal,V.Local.sContacts)
+				
+				F.Intrinsic.String.Replace(V.Local.sSubject,"#CONTACTNAME#",V.DataTable.dtContacts(V.Local.iC).Name!FieldVal,V.Local.sTempSubject)
+				F.Intrinsic.String.Replace(V.Local.sBody,"#CONTACTNAME#",V.DataTable.dtContacts(V.Local.iC).Name!FieldVal,V.Local.sTempBody)
+				
+				'Changes made for option to 'Send each invoice in a separate email
+				F.Intrinsic.Control.If(V.Global.bSeparateEmail,=,True,and,V.Global.bConsolidate,=,False)
+					V.Local.iCt.Declare
+					V.Local.sSplitAttachments.Declare(String)
+					V.Local.sTempInvoices.Declare(String)
+					V.Local.sTempOrders.Declare(String)
+					V.Local.sTempPOs.Declare(String)
+					V.Local.sTempSubjectInV.Declare(String)
+					V.Local.sTempBodyInV.Declare(String)
+					V.Local.sFullSubj.Declare(String)
+					V.Local.sFullBody.Declare(String)
+					
+					F.Intrinsic.String.Split(V.Local.sAttachments,"@!@",V.Local.sSplitAttachments)
+		
+					F.Intrinsic.String.Split(V.Local.sInvoices,",",V.Local.sTempInvoices)
+					F.Intrinsic.String.Split(V.Local.sOrders,",",V.Local.sTempOrders)
+					F.Intrinsic.String.Split(V.Local.sPOs,",",V.Local.sTempPOs)
+							
+					F.Intrinsic.Control.For(V.Local.ict,V.local.sSplitAttachments.LBound,V.local.sSplitAttachments.UBound,1)
+						F.Intrinsic.String.Replace(V.Local.sTempSubject,V.Local.sInvoices,V.Local.sTempInvoices(V.Local.ict),V.Local.sTempSubjectInv)
+						F.Intrinsic.String.Replace(V.Local.sTempSubjectInv,V.Local.sOrders,V.Local.sTempOrders(V.Local.ict),V.Local.sFullSubj)
+						F.Intrinsic.String.Replace(V.Local.sFullSubj,V.Local.sPOs,V.Local.sTempPOs(V.Local.ict),V.Local.sFullSubj)
+						F.Intrinsic.String.Replace(V.Local.sTempBody,V.Local.sInvoices,V.Local.sTempInvoices(V.Local.ict),V.Local.sTempBodyInv)
+						F.Intrinsic.String.Replace(V.Local.sTempBodyInv,V.Local.sOrders,V.Local.sTempOrders(V.Local.ict),V.Local.sFullBody)
+						F.Intrinsic.String.Replace(V.Local.sFullBody,V.Local.sPOs,V.Local.sTempPOs(V.Local.ict),V.Local.sFullBody)
+						F.Global.Security.GetUserId(V.Caller.User,V.Caller.CompanyCode,V.Local.iUID)
+						F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUID,"E-Invoicing",V.Local.sFullSubj,V.Local.sSender,V.Local.sContacts,V.Local.sFullBody,5,,False,,,,,,,,V.Local.sSplitAttachments(V.Local.iCt),False)
+					F.Intrinsic.Control.Next(V.Local.iCt)
+				F.Intrinsic.Control.Else
+					F.Global.Messaging.QueueMessage(V.Caller.CompanyCode,V.Local.iUID,"E-Invoicing",V.Local.sTempSubject,V.Local.sSender,V.Local.sContacts,V.Local.sTempBody,5,,False,,,,,,,,V.Local.sAttachments,False)
+				F.Intrinsic.Control.EndIf
+				
+			'Catch error if occurred and log the invoice details as well as error, then move on to next invoice
+			F.Intrinsic.Control.Catch
+				V.Local.bErrorOccured.Set(True)
+				F.Intrinsic.String.Build("{0} {1}: Invoice(s) {2} were unable to be sent due to the following error: {3}", V.Ambient.Date, V.Ambient.Time, V.Local.sInvoices, V.Ambient.ErrorDescription, V.Local.sError)
+				'Log error to Temp
+				V.Local.sFileFQP.Declare(string)
+				V.Local.bFileExists.Declare(boolean)
+				F.Intrinsic.String.Build("{0}\GCG_6935_EInvoicingErrors.txt", V.Caller.TempDir, V.Local.sFileFQP)
+				F.Intrinsic.File.Exists(V.Local.sFileFQP, V.Local.bFileExists)
+				F.Intrinsic.Control.If(V.Local.bFileExists, =, False)
+					F.Intrinsic.File.String2File(V.Local.sFileFQP, V.Local.sError)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.File.Append2FileNewLine(V.Local.sFileFQP, V.Local.sError)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.EndTry
+		F.Intrinsic.Control.Next(V.Local.iC)
+		
+		F.Data.DataTable.close("dtContacts")
+	
+		F.Intrinsic.Control.If(V.Global.bCust,=,True)
+			F.Intrinsic.Control.CallSub(addcustdocument,"sFile",V.Local.sAttachments,"sCust",V.DataTable.dtCustomerData(V.Local.i).Customer!FieldVal)
+		F.Intrinsic.Control.EndIf
+	
+			V.Local.sAttachments.Set("")
+			V.Local.sTempSubject.Set("")
+			V.Local.sTempBody.Set("")
+			V.Local.sContacts.Set("")
+			'******
+		F.Intrinsic.Control.CallSub(updateeinvoiceflag)
+		
+		F.Intrinsic.Control.Label("End")
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Data.DataTable.Close("dtCustomerData$dtInvoiceData$dtContactData")
+F.Data.DataTable.Close("dtCustomerData$dtInvoiceData")
+F.Data.DataTable.Close("dtCustomerData")
+
+Gui.F_ReviewStandAlone.txtBatch.Text("")
+Gui.F_ReviewStandAlone.txtInvoice.text("")
+
+F.Intrinsic.Control.If(V.Local.bErrorOccured, =, True)
+	F.Intrinsic.String.Build("One or more invoices were not properly sent.{0}Please See {1}\GCG_6935_EInvoicingErrors.txt for details.", V.Ambient.NewLine, V.Caller.TempDir, V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+F.Intrinsic.Control.EndIf
+Program.Sub.SendEmails.End
+
+Program.Sub.UpdateEinvoiceFlag.Start
+F.Intrinsic.Control.SetErrorHandler("UpdateEinvoiceFlag_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.i.Declare(Long)
+V.Local.sSQL.Declare(String)
+V.Local.sIn.Declare(String)
+
+F.Data.DataView.ToString("SentInvoices","SentInvoicesDV","","', '",V.Local.sIn)
+F.Intrinsic.String.Build("Update ORDER_HIST_HEAD set EINVOICE_FLG=' ' where INVOICE in ('{0}')",V.Local.sIn,V.Local.sSQL)
+F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("UpdateEinvoiceFlag_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4304_E-Invoicing.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	Function.Intrinsic.Control.CallSub(unload)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.UpdateEinvoiceFlag.End
+
+Program.Sub.dtpEnd_Change.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Static.dDate.declare(Date)
+
+F.Intrinsic.Control.If(V.Global.bTypeAhead,=,false)
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.dEndDT,=,V.Screen.F_ReviewStandAlone!dtpEnd.Value)
+	V.Static.dDate.set(V.Global.dEndDT)
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Static.dDate,=,V.Screen.F_ReviewStandAlone!dtpEnd.Value)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Static.dDate.set(V.Screen.F_ReviewStandAlone!dtpEnd.Value)
+
+V.Global.bDateChanged.Set(True)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.dtpEnd_Change.End
+
+Program.Sub.dtpStart_Change.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+V.Static.dDate.declare(Date)
+
+F.Intrinsic.Control.If(V.Global.bTypeAhead,=,false)
+	Function.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Global.dStartDT,=,V.Screen.F_ReviewStandAlone!dtpStart.value)
+	V.Static.dDate.set(V.Global.dStartDT)
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Static.dDate,=,V.Screen.F_ReviewStandAlone!dtpStart.Value)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Static.dDate.set(V.Screen.F_ReviewStandAlone!dtpStart.Value)
+
+V.Global.bDateChanged.Set(True)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.dtpStart_Change.End
+
+Program.Sub.GetContacts.Start
+V.Local.i.Declare(Long)
+V.Local.sCust.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sContacts.Declare(String)
+V.Local.iC.Declare(Long)
+V.Local.bExists.Declare(Boolean)
+V.Local.iTemp.Declare(Long)
+V.Local.sTemp.Declare
+
+F.Intrinsic.Control.For(V.Local.i,0,V.DataTable.dtCustomerData.RowCount--,1)
+	
+	V.Local.bExists.Set(False)
+	'Getting list of e-invoicing contacts
+	V.Local.sCust.Set(V.DataTable.dtCustomerData(V.Local.i).CUSTOMER!FieldValTrim)
+	'TJS - Modified to pull contacts from CRM where contact user field 11 = 'Y'
+	'Function.Intrinsic.String.Build("select CUST as CUSTOMER, NAME, EMAIL1 as EMAIL from CONTACT inner join CRM_CONTACT_AUX on CONTACT.ALT_ID = CRM_CONTACT_AUX.CID and 1 & CRM_CONTACT_AUX.E_PROG_SETTINGS <> 0 Where CUST = '{0}' and EMAIL1 <> '' AND TYPE = 'C' AND ACTIVE = 1 ORDER BY NAME",V.Local.sCust.PSQLFriendly,V.Local.sSql)
+	Function.Intrinsic.String.Build("select A.CUST as CUSTOMER, A.NAME, A.EMAIL1 as EMAIL from CONTACT A left join CRM_UF_VALUE B on A.CUST = B.COMPID and A.ALT_ID = B.CID where A.CUST = '{0}' and A.EMAIL1 <> '' AND A.TYPE = 'C' AND LTRIM(RTRIM(B.UF11)) = 'Y' ORDER BY NAME",V.Local.sCust.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+
+	F.Intrinsic.Control.If(V.DataTable.dtContacts.Exists,=,False)
+		F.Data.DataTable.Create("dtContacts",true)
+		F.Data.DataTable.AddColumn("dtContacts","Customer",string)
+		F.Data.DataTable.AddColumn("dtContacts","Email",string)
+		F.Data.DataTable.AddColumn("dtContacts","Name",string)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+			V.Local.bExists.Set(True)
+
+			F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+				F.Data.DataTable.AddRow("dtContacts","Customer",V.ODBC.con!rst.FieldValTrim!CUSTOMER,"Name",V.ODBC.con!rst.FieldValTrim!NAME,"Email",V.ODBC.con!rst.FieldValTrim!EMAIL)
+				F.ODBC.con!rst.MoveNext
+			F.Intrinsic.Control.Loop
+	F.Intrinsic.Control.Else
+		'TJS - no contacts exist so default to watched email account (set in new E-Invoicing options)	
+		'Watched email account  = sequence 1000
+		F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,1000,5,"",V.Local.sTemp)
+		F.Data.DataTable.AddRow("dtContacts","Customer",V.Local.sCust.PSQLFriendly,"Name","No contact on file","Email",V.Local.sTemp)	
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.con!rst.Close
+	
+	'Getting list of additional email contacts
+	Function.Intrinsic.String.Build("Select Top 1 CUSTOMER_ID as CUSTOMER, ADDL_EMAILS From PPT_EINV_COPT Where CUSTOMER_ID = '{0}'",V.Local.sCust.PSQLFriendly,V.Local.sSql)
+	
+	F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sSql,V.Local.sRet)
+	Function.Intrinsic.Control.If(V.ambient.executeandreturneoF.not)
+		F.Intrinsic.Control.If(V.DataTable.dtContacts.exists,=,False)
+			F.Data.DataTable.Create("dtContacts",true)
+			F.Data.DataTable.AddColumn("dtContacts","Customer",string)
+			F.Data.DataTable.AddColumn("dtContacts","Email",string)
+			F.Data.DataTable.AddColumn("dtContacts","Name",string)
+		Function.Intrinsic.Control.EndIf
+
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet(1),",",V.Local.sContacts)
+		
+		F.Intrinsic.Control.For(V.Local.iC,0,V.Local.sContacts.UBound,1)
+			Function.Intrinsic.Control.If(V.Local.sContacts(V.Local.iC).trim,<>,"")
+				F.Intrinsic.String.Build("Customer='{0}' AND Email='{1}'",V.Local.sCust,V.Local.sContacts(V.Local.iC).trim,V.Local.sRet)
+				F.data.DataTable.Select("dtContacts",V.Local.sRet,V.Local.sRet)
+				F.Intrinsic.Control.If(V.Local.sRet,=,"***NORETURN***")
+					F.Data.DataTable.AddRow("dtContacts","Customer",V.Local.sCust,"Email",V.Local.sContacts(V.Local.iC).trim)
+					V.Local.bExists.Set(True)
+				F.Intrinsic.Control.EndIf
+			
+			Function.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.Next(V.Local.iC)
+	Function.Intrinsic.Control.EndIf
+	
+	'TJS - Getting additional buying group emails if customer is a member
+	F.Intrinsic.String.Build("Select A.CUST as CUSTOMER,A.NAME,A.EMAIL1 as EMAIL from CONTACT A left join CRM_UF_VALUE B on A.CUST = B.COMPID and A.ALT_ID = B.CID where A.CUST in (select C.GROUP_CUST from BUYING_GROUP C where C.CUSTOMER = '{0}') and LTRIM(RTRIM(B.UF11)) = 'Y' ORDER BY NAME",V.Local.sCust.PSQLFriendly,V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.Local.sSql)
+
+	F.Intrinsic.Control.If(V.DataTable.dtContacts.Exists,=,False)
+		F.Data.DataTable.Create("dtContacts",true)
+		F.Data.DataTable.AddColumn("dtContacts","Customer",string)
+		F.Data.DataTable.AddColumn("dtContacts","Email",string)
+		F.Data.DataTable.AddColumn("dtContacts","Name",string)
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+
+		F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+			F.Data.DataTable.AddRow("dtContacts","Customer",V.ODBC.con!rst.FieldValTrim!CUSTOMER,"Name",V.ODBC.con!rst.FieldValTrim!NAME,"Email",V.ODBC.con!rst.FieldValTrim!EMAIL)
+			F.ODBC.con!rst.MoveNext
+		F.Intrinsic.Control.Loop
+	F.Intrinsic.Control.EndIf
+	F.ODBC.con!rst.Close
+		
+	F.Intrinsic.Control.If(V.Global.bSalesRep)
+		F.Intrinsic.String.Build("Select Salesperson from V_Customer_master where CUSTOMER='{0}'",V.Local.sCust.PSQLFriendly,V.Local.sSql)
+		F.ODBC.Connection!con.executeandreturn(V.Local.sSql,V.Local.sRet)
+		F.Intrinsic.Control.If(V.Ambient.executeandreturneoF.not)
+			F.Intrinsic.String.Build("Select Name, Email from V_Salespersons where ID='{0}' and Email <> ''",V.Local.sRet,V.Local.sSql)
+			F.ODBC.Connection!con.Executeandreturn(V.Local.sSql,V.Local.sRet)
+			F.Intrinsic.Control.If(V.Ambient.executeandreturneoF.not)
+				F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+				
+					F.Intrinsic.Control.If(V.DataTable.dtContacts.exists,=,False)
+						F.Data.DataTable.Create("dtContacts",true)
+						F.Data.DataTable.AddColumn("dtContacts","Customer",string)
+						F.Data.DataTable.AddColumn("dtContacts","Email",string)
+						F.Data.DataTable.AddColumn("dtContacts","Name",string)
+					Function.Intrinsic.Control.EndIf
+		
+					F.Data.DataTable.AddRow("dtContacts","Customer",V.Local.sCust,"Name",V.local.sRet(0).trim,"Email",V.Local.sRet(1).trim)
+			F.Intrinsic.Control.EndIf
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+
+	F.Data.DataTable.SetValue("dtCustomerData",V.Local.i,"bContacts",V.Local.bExists)
+
+F.Intrinsic.Control.Next(V.Local.i)
+
+Program.Sub.GetContacts.End
+
+Program.Sub.Reload_Dictionaries.Start
+F.Intrinsic.Control.SetErrorHandler("Sub_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+V.Local.bExists.Declare(Boolean)
+
+F.Intrinsic.Control.If(V.Global.bDateChanged,=,false)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Control.If(V.Screen.F_ReviewStandAlone!dtpStart.Value,<=,V.Screen.F_ReviewStandAlone!dtpEnd.Value)
+
+	F.Intrinsic.UI.InvokeWaitDialog("Loading Type Ahead Dictionary")
+	F.Intrinsic.Control.CallSub(enableform,"Enabled",false)
+
+	F.Data.Dictionary.Exists("Invoices",V.Local.bExists)
+	Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Data.Dictionary.Close("Invoices")
+		Gui.F_ReviewStandAlone.txtInvoice.ClearAutoCompleteItems
+	Function.Intrinsic.Control.EndIf
+
+	F.Data.Dictionary.Exists("Batches",V.Local.bExists)
+	Function.Intrinsic.Control.If(V.Local.bExists,=,True)
+		F.Data.Dictionary.Close("Batches")
+		Gui.F_ReviewStandAlone.txtBatch.ClearAutoCompleteItems
+	Function.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.CallSub(getbatchesdictionary)
+	F.Intrinsic.Control.CallSub(getinvoicesdictionary)
+
+	F.Intrinsic.Control.CallSub(enableform,"Enabled",true)
+	V.Global.bDateChanged.Set(False)
+
+	F.Intrinsic.UI.CloseWaitDialog
+
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Sub_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: Project",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.Reload_Dictionaries.End
+
+Program.Sub.GetInvoiceDate.Start
+V.Local.sQuery.Declare
+V.Local.sRet.Declare
+V.Local.dRet.Declare
+
+F.Intrinsic.String.Build("Select Top 1 DATE_INVOICE From V_ORDER_HIST_LINE Where INVOICE = '{0}'",V.Args.INVOICE,V.Local.sQuery)
+
+F.ODBC.Connection!con.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF,=,False)
+	V.Local.dRet.Set(V.Local.sRet)
+	Function.Intrinsic.Variable.AddRV("DATE",V.Local.dRet)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GetInvoiceDate.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$$}$12/8/2016 8:20:10 AM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Box Label
+${$5$}$2.0.0.0$}$2
+${$6$}$tsmith$}$20230928102856750$}$xqPbj9atw05FglvzeFsZ9cqXP+qvG6tXeL6gS2oy5ErdXSwqox5IUVwAX9E1FHs+kiZtjiVAJwc=
+Program.Sub.Comments.End
