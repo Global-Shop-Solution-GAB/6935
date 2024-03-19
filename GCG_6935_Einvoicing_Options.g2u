@@ -1,0 +1,1171 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_Main..create(BaseForm)
+Gui.F_Main..caption("E-Invoicing Options")
+Gui.F_Main..size(9375,10665)
+Gui.F_Main..position(0,0)
+Gui.F_Main..event(UnLoad,f_main_unload)
+Gui.F_Main..forecolor(0)
+Gui.F_Main..BackColor(-2147483633)
+Gui.F_Main..maxbutton(False)
+Gui.F_Main..minbutton(False)
+Gui.F_Main..mousepointer(0)
+Gui.F_Main..sizeable(False)
+Gui.F_Main..MinX(0)
+Gui.F_Main..MinY(0)
+Gui.F_Main..AlwaysOnTop(False)
+Gui.F_Main..FontName("Tahoma")
+Gui.F_Main..FontSize(8.25)
+Gui.F_Main..ControlBox(True)
+Gui.F_Main..Moveable(True)
+Gui.F_Main..ShowInTaskBar(True)
+Gui.F_Main..TitleBar(True)
+Gui.F_Main.frm_Opt.create(frame)
+Gui.F_Main.frm_Opt.caption("Frame")
+Gui.F_Main.frm_Opt.size(4425,1665)
+Gui.F_Main.frm_Opt.position(195,195)
+Gui.F_Main.frm_Opt.borderstyle(0)
+Gui.F_Main.frm_Opt.Enabled(True)
+Gui.F_Main.frm_Opt.Visible(True)
+Gui.F_Main.frm_Opt.Zorder(0)
+Gui.F_Main.frm_Opt.FontName("Tahoma")
+Gui.F_Main.frm_Opt.FontSize(8.25)
+Gui.F_Main.ddlReview.Create(DropDownList)
+Gui.F_Main.ddlReview.Size(4365,330)
+Gui.F_Main.ddlReview.Position(0,0)
+Gui.F_Main.ddlReview.Parent("frm_Opt")
+Gui.F_Main.ddlReview.Enabled(True)
+Gui.F_Main.ddlReview.Visible(True)
+Gui.F_Main.ddlReview.Zorder(0)
+Gui.F_Main.ddlReview.FontName("Tahoma")
+Gui.F_Main.ddlReview.FontSize(8.25)
+Gui.F_Main.chkConsolidate.create(checkbox)
+Gui.F_Main.chkConsolidate.caption("Consolidate Multiple Invoices to Single PDF")
+Gui.F_Main.chkConsolidate.size(3975,300)
+Gui.F_Main.chkConsolidate.position(0,375)
+Gui.F_Main.chkConsolidate.parent("frm_Opt")
+Gui.F_Main.chkConsolidate.Event(Click,chkConsolidate_Click)
+Gui.F_Main.chkConsolidate.Enabled(True)
+Gui.F_Main.chkConsolidate.Visible(True)
+Gui.F_Main.chkConsolidate.Zorder(0)
+Gui.F_Main.chkConsolidate.FontName("Tahoma")
+Gui.F_Main.chkConsolidate.FontSize(8.25)
+Gui.F_Main.chkLimit.Create(CheckBox)
+Gui.F_Main.chkLimit.Size(4005,300)
+Gui.F_Main.chkLimit.Position(0,675)
+Gui.F_Main.chkLimit.Parent("frm_Opt")
+Gui.F_Main.chkLimit.Caption("Limit Number of Invoices When Merging")
+Gui.F_Main.chkLimit.Event(Click,chkLimit_Click)
+Gui.F_Main.chkLimit.Enabled(True)
+Gui.F_Main.chkLimit.Visible(True)
+Gui.F_Main.chkLimit.Zorder(0)
+Gui.F_Main.chkLimit.FontName("Tahoma")
+Gui.F_Main.chkLimit.FontSize(8.25)
+Gui.F_Main.txtNumLimit.Create(TextBox,"",True,1215,300,0,480,1050,True,0,"Arial",8,-2147483643,1)
+Gui.F_Main.txtNumLimit.Parent("frm_Opt")
+Gui.F_Main.txtNumLimit.DefaultValue("1")
+Gui.F_Main.chkTracking.create(checkbox)
+Gui.F_Main.chkTracking.caption("Include Tracking Number on Invoice")
+Gui.F_Main.chkTracking.size(3600,300)
+Gui.F_Main.chkTracking.position(0,1365)
+Gui.F_Main.chkTracking.parent("frm_Opt")
+Gui.F_Main.chkTracking.Enabled(True)
+Gui.F_Main.chkTracking.Visible(True)
+Gui.F_Main.chkTracking.Zorder(0)
+Gui.F_Main.chkTracking.FontName("Tahoma")
+Gui.F_Main.chkTracking.FontSize(8.25)
+Gui.F_Main.frm_DCC.create(frame)
+Gui.F_Main.frm_DCC.caption("Frame")
+Gui.F_Main.frm_DCC.size(4425,2085)
+Gui.F_Main.frm_DCC.position(195,1890)
+Gui.F_Main.frm_DCC.borderstyle(0)
+Gui.F_Main.frm_DCC.Enabled(True)
+Gui.F_Main.frm_DCC.Visible(True)
+Gui.F_Main.frm_DCC.Zorder(0)
+Gui.F_Main.frm_DCC.FontName("Tahoma")
+Gui.F_Main.frm_DCC.FontSize(8.25)
+Gui.F_Main.lbl_txtCustGroup.create(label,"Document Control Group",True,2040,165,1,405,1200,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_txtCustGroup.parent("frm_DCC")
+Gui.F_Main.lbl_txtCustGroup.defaultvalue("")
+Gui.F_Main.lbl_txtCustGroup.BorderStyle(0)
+Gui.F_Main.lbl_txtGroup.create(label,"Document Control Group",True,2040,195,1,405,315,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_txtGroup.parent("frm_DCC")
+Gui.F_Main.lbl_txtGroup.defaultvalue("")
+Gui.F_Main.lbl_txtGroup.BorderStyle(0)
+Gui.F_Main.chk_DocSO.create(checkbox)
+Gui.F_Main.chk_DocSO.caption("Attach Invoice to Document Control for Sales Order")
+Gui.F_Main.chk_DocSO.size(4410,300)
+Gui.F_Main.chk_DocSO.position(0,0)
+Gui.F_Main.chk_DocSO.parent("frm_DCC")
+Gui.F_Main.chk_DocSO.event(Click,chk_docso_click)
+Gui.F_Main.chk_DocSO.Enabled(True)
+Gui.F_Main.chk_DocSO.Visible(True)
+Gui.F_Main.chk_DocSO.Zorder(0)
+Gui.F_Main.chk_DocSO.FontName("Tahoma")
+Gui.F_Main.chk_DocSO.FontSize(8.25)
+Gui.F_Main.txtSOGroup.create(textbox,"",True,1800,300,0,405,525,True,0,"Arial",8,16777215,1)
+Gui.F_Main.txtSOGroup.parent("frm_DCC")
+Gui.F_Main.txtSOGroup.defaultvalue("")
+Gui.F_Main.txtSOGroup.Event(LostFocus,txtSOGroup_LostFocus)
+Gui.F_Main.cmd_txtSOGroup.create(button)
+Gui.F_Main.cmd_txtSOGroup.caption("^")
+Gui.F_Main.cmd_txtSOGroup.size(330,330)
+Gui.F_Main.cmd_txtSOGroup.position(2295,525)
+Gui.F_Main.cmd_txtSOGroup.parent("frm_DCC")
+Gui.F_Main.cmd_txtSOGroup.event(Click,cmd_txtsogroup_click)
+Gui.F_Main.cmd_txtSOGroup.defaultvalue("")
+Gui.F_Main.cmd_txtSOGroup.Enabled(True)
+Gui.F_Main.cmd_txtSOGroup.Visible(True)
+Gui.F_Main.cmd_txtSOGroup.Zorder(0)
+Gui.F_Main.cmd_txtSOGroup.FontName("Tahoma")
+Gui.F_Main.cmd_txtSOGroup.FontSize(8.25)
+Gui.F_Main.chk_DocCust.create(checkbox)
+Gui.F_Main.chk_DocCust.caption("Attach Invoice to Document Control for Customer")
+Gui.F_Main.chk_DocCust.size(4440,300)
+Gui.F_Main.chk_DocCust.position(0,900)
+Gui.F_Main.chk_DocCust.parent("frm_DCC")
+Gui.F_Main.chk_DocCust.event(Click,chk_doccust_click)
+Gui.F_Main.chk_DocCust.Enabled(True)
+Gui.F_Main.chk_DocCust.Visible(True)
+Gui.F_Main.chk_DocCust.Zorder(0)
+Gui.F_Main.chk_DocCust.FontName("Tahoma")
+Gui.F_Main.chk_DocCust.FontSize(8.25)
+Gui.F_Main.txtCustGroup.create(textbox,"",True,1800,300,0,405,1425,True,0,"Arial",8,-2147483643,1)
+Gui.F_Main.txtCustGroup.parent("frm_DCC")
+Gui.F_Main.txtCustGroup.defaultvalue("")
+Gui.F_Main.txtCustGroup.Event(LostFocus,txtCustGroup_LostFocus)
+Gui.F_Main.cmd_txtCustGroup.create(button)
+Gui.F_Main.cmd_txtCustGroup.caption("^")
+Gui.F_Main.cmd_txtCustGroup.size(330,330)
+Gui.F_Main.cmd_txtCustGroup.position(2295,1410)
+Gui.F_Main.cmd_txtCustGroup.parent("frm_DCC")
+Gui.F_Main.cmd_txtCustGroup.event(Click,cmd_txtcustgroup_click)
+Gui.F_Main.cmd_txtCustGroup.defaultvalue("")
+Gui.F_Main.cmd_txtCustGroup.Enabled(True)
+Gui.F_Main.cmd_txtCustGroup.Visible(True)
+Gui.F_Main.cmd_txtCustGroup.Zorder(0)
+Gui.F_Main.cmd_txtCustGroup.FontName("Tahoma")
+Gui.F_Main.cmd_txtCustGroup.FontSize(8.25)
+Gui.F_Main.frm_Dir.create(frame)
+Gui.F_Main.frm_Dir.size(4185,1665)
+Gui.F_Main.frm_Dir.position(4740,195)
+Gui.F_Main.frm_Dir.borderstyle(0)
+Gui.F_Main.frm_Dir.Enabled(True)
+Gui.F_Main.frm_Dir.Visible(True)
+Gui.F_Main.frm_Dir.Zorder(0)
+Gui.F_Main.frm_Dir.Caption("")
+Gui.F_Main.frm_Dir.FontName("Tahoma")
+Gui.F_Main.frm_Dir.FontSize(8.25)
+Gui.F_Main.cmd_txtDir.create(button)
+Gui.F_Main.cmd_txtDir.caption("^")
+Gui.F_Main.cmd_txtDir.size(330,330)
+Gui.F_Main.cmd_txtDir.position(3735,1140)
+Gui.F_Main.cmd_txtDir.parent("frm_Dir")
+Gui.F_Main.cmd_txtDir.event(Click,cmd_txtdir_click)
+Gui.F_Main.cmd_txtDir.defaultvalue("")
+Gui.F_Main.cmd_txtDir.Enabled(True)
+Gui.F_Main.cmd_txtDir.Visible(True)
+Gui.F_Main.cmd_txtDir.Zorder(0)
+Gui.F_Main.cmd_txtDir.FontName("Tahoma")
+Gui.F_Main.cmd_txtDir.FontSize(8.25)
+Gui.F_Main.chkFolder.create(checkbox)
+Gui.F_Main.chkFolder.caption("Use Custom Folder for Invoices")
+Gui.F_Main.chkFolder.size(3600,300)
+Gui.F_Main.chkFolder.position(0,15)
+Gui.F_Main.chkFolder.parent("frm_Dir")
+Gui.F_Main.chkFolder.event(Click,chkfolder_click)
+Gui.F_Main.chkFolder.Enabled(True)
+Gui.F_Main.chkFolder.Visible(True)
+Gui.F_Main.chkFolder.Zorder(0)
+Gui.F_Main.chkFolder.FontName("Tahoma")
+Gui.F_Main.chkFolder.FontSize(8.25)
+Gui.F_Main.lbl_txtBase.create(label,"Base Directory",True,1800,195,1,405,330,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_txtBase.parent("frm_Dir")
+Gui.F_Main.lbl_txtBase.defaultvalue("")
+Gui.F_Main.lbl_txtBase.BorderStyle(0)
+Gui.F_Main.txtBase.create(textbox,"",True,3285,300,0,405,540,True,0,"Arial",8,16777215,1)
+Gui.F_Main.txtBase.parent("frm_Dir")
+Gui.F_Main.txtBase.defaultvalue("")
+Gui.F_Main.txtBase.MaxLength(250)
+Gui.F_Main.cmd_txtBase.create(button)
+Gui.F_Main.cmd_txtBase.caption("^")
+Gui.F_Main.cmd_txtBase.size(330,330)
+Gui.F_Main.cmd_txtBase.position(3735,540)
+Gui.F_Main.cmd_txtBase.parent("frm_Dir")
+Gui.F_Main.cmd_txtBase.event(Click,cmd_txtbase_click)
+Gui.F_Main.cmd_txtBase.defaultvalue("")
+Gui.F_Main.cmd_txtBase.Enabled(True)
+Gui.F_Main.cmd_txtBase.Visible(True)
+Gui.F_Main.cmd_txtBase.Zorder(0)
+Gui.F_Main.cmd_txtBase.FontName("Tahoma")
+Gui.F_Main.cmd_txtBase.FontSize(8.25)
+Gui.F_Main.lbl_txtDir.create(label,"Invoice Directory",True,1800,195,1,405,930,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_txtDir.parent("frm_Dir")
+Gui.F_Main.lbl_txtDir.defaultvalue("")
+Gui.F_Main.lbl_txtDir.BorderStyle(0)
+Gui.F_Main.txtDir.create(textbox,"",True,3285,300,0,405,1140,True,0,"Arial",8,16777215,1)
+Gui.F_Main.txtDir.parent("frm_Dir")
+Gui.F_Main.txtDir.defaultvalue("")
+Gui.F_Main.txtDir.MaxLength(250)
+Gui.F_Main.frm_File.create(frame)
+Gui.F_Main.frm_File.size(4125,1050)
+Gui.F_Main.frm_File.position(4740,1905)
+Gui.F_Main.frm_File.borderstyle(0)
+Gui.F_Main.frm_File.Enabled(True)
+Gui.F_Main.frm_File.Visible(True)
+Gui.F_Main.frm_File.Zorder(0)
+Gui.F_Main.frm_File.Caption("")
+Gui.F_Main.frm_File.FontName("Tahoma")
+Gui.F_Main.frm_File.FontSize(8.25)
+Gui.F_Main.chkFile.create(checkbox)
+Gui.F_Main.chkFile.caption("Use Custom File Format")
+Gui.F_Main.chkFile.size(2175,300)
+Gui.F_Main.chkFile.position(0,0)
+Gui.F_Main.chkFile.parent("frm_File")
+Gui.F_Main.chkFile.event(Click,chkfile_click)
+Gui.F_Main.chkFile.Enabled(True)
+Gui.F_Main.chkFile.Visible(True)
+Gui.F_Main.chkFile.Zorder(0)
+Gui.F_Main.chkFile.FontName("Tahoma")
+Gui.F_Main.chkFile.FontSize(8.25)
+Gui.F_Main.lbl_ddlFile1.create(label,"File Prefix",True,1800,200,1,400,300,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_ddlFile1.parent("frm_File")
+Gui.F_Main.lbl_ddlFile1.defaultvalue("")
+Gui.F_Main.lbl_ddlFile1.BorderStyle(0)
+Gui.F_Main.ddlFile2.create(dropdownlist)
+Gui.F_Main.ddlFile2.size(1800,330)
+Gui.F_Main.ddlFile2.position(2295,525)
+Gui.F_Main.ddlFile2.parent("frm_File")
+Gui.F_Main.ddlFile2.defaultvalue("")
+Gui.F_Main.ddlFile2.Enabled(True)
+Gui.F_Main.ddlFile2.Visible(True)
+Gui.F_Main.ddlFile2.Zorder(0)
+Gui.F_Main.ddlFile2.FontName("Tahoma")
+Gui.F_Main.ddlFile2.FontSize(8.25)
+Gui.F_Main.lbl_ddlFile2.create(label,"File Suffix",True,1800,200,1,2300,300,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_ddlFile2.parent("frm_File")
+Gui.F_Main.lbl_ddlFile2.defaultvalue("")
+Gui.F_Main.lbl_ddlFile2.BorderStyle(0)
+Gui.F_Main.ddlFile1.create(dropdownlist)
+Gui.F_Main.ddlFile1.size(1800,330)
+Gui.F_Main.ddlFile1.position(405,525)
+Gui.F_Main.ddlFile1.parent("frm_File")
+Gui.F_Main.ddlFile1.defaultvalue("")
+Gui.F_Main.ddlFile1.Enabled(True)
+Gui.F_Main.ddlFile1.Visible(True)
+Gui.F_Main.ddlFile1.Zorder(0)
+Gui.F_Main.ddlFile1.FontName("Tahoma")
+Gui.F_Main.ddlFile1.FontSize(8.25)
+Gui.F_Main.frm_Email.create(frame)
+Gui.F_Main.frm_Email.size(8640,3330)
+Gui.F_Main.frm_Email.position(195,4065)
+Gui.F_Main.frm_Email.borderstyle(0)
+Gui.F_Main.frm_Email.Enabled(True)
+Gui.F_Main.frm_Email.Visible(True)
+Gui.F_Main.frm_Email.Zorder(0)
+Gui.F_Main.frm_Email.Caption("")
+Gui.F_Main.frm_Email.FontName("Tahoma")
+Gui.F_Main.frm_Email.FontSize(8.25)
+Gui.F_Main.mltxtBody.create(textboxm)
+Gui.F_Main.mltxtBody.size(7995,1665)
+Gui.F_Main.mltxtBody.position(360,1425)
+Gui.F_Main.mltxtBody.parent("frm_Email")
+Gui.F_Main.mltxtBody.defaultvalue("")
+Gui.F_Main.mltxtBody.Event(LostFocus,mltxtBody_LostFocus)
+Gui.F_Main.mltxtBody.MaxLength(250)
+Gui.F_Main.mltxtBody.Enabled(True)
+Gui.F_Main.mltxtBody.Visible(True)
+Gui.F_Main.mltxtBody.Zorder(0)
+Gui.F_Main.mltxtBody.FontName("Tahoma")
+Gui.F_Main.mltxtBody.FontSize(8.25)
+Gui.F_Main.lbl1.Create(Label,"Wildcards",True,1935,255,0,6660,15,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl1.Parent("frm_Email")
+Gui.F_Main.lbl1.BorderStyle(0)
+Gui.F_Main.ddlWildcards.Create(DropDownList)
+Gui.F_Main.ddlWildcards.Size(1695,330)
+Gui.F_Main.ddlWildcards.Position(6645,270)
+Gui.F_Main.ddlWildcards.Parent("frm_Email")
+Gui.F_Main.ddlWildcards.Event(SelectedIndexChanged,ddlWildCards_SelectedIndexChanged)
+Gui.F_Main.ddlWildcards.Enabled(True)
+Gui.F_Main.ddlWildcards.Visible(True)
+Gui.F_Main.ddlWildcards.Zorder(0)
+Gui.F_Main.ddlWildcards.FontName("Tahoma")
+Gui.F_Main.ddlWildcards.FontSize(8.25)
+Gui.F_Main.lbl_txtSubject.create(label,"Email Subject",True,945,210,1,360,510,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_txtSubject.parent("frm_Email")
+Gui.F_Main.lbl_txtSubject.defaultvalue("")
+Gui.F_Main.lbl_txtSubject.BorderStyle(0)
+Gui.F_Main.txtSubject.create(textbox,"",True,7995,300,0,360,735,True,0,"Arial",8,16777215,1)
+Gui.F_Main.txtSubject.parent("frm_Email")
+Gui.F_Main.txtSubject.defaultvalue("")
+Gui.F_Main.txtSubject.Event(LostFocus,txtSubject_LostFocus)
+Gui.F_Main.txtSubject.MaxLength(250)
+Gui.F_Main.lbl_mltxtBody.create(label,"Email Body Text",True,1800,195,1,360,1215,True,0,"Arial",8,-2147483633,0,0)
+Gui.F_Main.lbl_mltxtBody.parent("frm_Email")
+Gui.F_Main.lbl_mltxtBody.defaultvalue("")
+Gui.F_Main.lbl_mltxtBody.BorderStyle(0)
+Gui.F_Main.cmdSave.create(button)
+Gui.F_Main.cmdSave.caption("Save")
+Gui.F_Main.cmdSave.size(855,375)
+Gui.F_Main.cmdSave.position(195,9510)
+Gui.F_Main.cmdSave.event(Click,cmdsave_click)
+Gui.F_Main.cmdSave.defaultvalue("")
+Gui.F_Main.cmdSave.Enabled(True)
+Gui.F_Main.cmdSave.Visible(True)
+Gui.F_Main.cmdSave.Zorder(0)
+Gui.F_Main.cmdSave.FontName("Tahoma")
+Gui.F_Main.cmdSave.FontSize(8.25)
+Gui.F_Main.frm_Type.Create(Frame)
+Gui.F_Main.frm_Type.Size(4125,975)
+Gui.F_Main.frm_Type.Position(4740,2985)
+Gui.F_Main.frm_Type.BorderStyle(0)
+Gui.F_Main.frm_Type.Enabled(True)
+Gui.F_Main.frm_Type.Visible(True)
+Gui.F_Main.frm_Type.Zorder(0)
+Gui.F_Main.frm_Type.Caption("")
+Gui.F_Main.frm_Type.FontName("Tahoma")
+Gui.F_Main.frm_Type.FontSize(8.25)
+Gui.F_Main.chkTypeAhead.Create(CheckBox)
+Gui.F_Main.chkTypeAhead.Size(1875,300)
+Gui.F_Main.chkTypeAhead.Position(0,0)
+Gui.F_Main.chkTypeAhead.Parent("frm_Type")
+Gui.F_Main.chkTypeAhead.Caption("Enable Type Ahead")
+Gui.F_Main.chkTypeAhead.Enabled(True)
+Gui.F_Main.chkTypeAhead.Visible(True)
+Gui.F_Main.chkTypeAhead.Zorder(0)
+Gui.F_Main.chkTypeAhead.FontName("Tahoma")
+Gui.F_Main.chkTypeAhead.FontSize(8.25)
+Gui.F_Main.chkSalesRep.Create(CheckBox)
+Gui.F_Main.chkSalesRep.Size(2655,300)
+Gui.F_Main.chkSalesRep.Position(0,300)
+Gui.F_Main.chkSalesRep.Parent("frm_Type")
+Gui.F_Main.chkSalesRep.Caption("Send E-invoice to Salesperson")
+Gui.F_Main.chkSalesRep.Enabled(True)
+Gui.F_Main.chkSalesRep.Visible(True)
+Gui.F_Main.chkSalesRep.Zorder(0)
+Gui.F_Main.chkSalesRep.FontName("Tahoma")
+Gui.F_Main.chkSalesRep.FontSize(8.25)
+Gui.F_Main.chkSeparateEmail.Create(CheckBox)
+Gui.F_Main.chkSeparateEmail.Size(3225,300)
+Gui.F_Main.chkSeparateEmail.Position(0,600)
+Gui.F_Main.chkSeparateEmail.Parent("frm_Type")
+Gui.F_Main.chkSeparateEmail.Caption("Send Each Invoice in a Separate Email")
+Gui.F_Main.chkSeparateEmail.Enabled(True)
+Gui.F_Main.chkSeparateEmail.Visible(True)
+Gui.F_Main.chkSeparateEmail.Zorder(0)
+Gui.F_Main.chkSeparateEmail.FontName("Tahoma")
+Gui.F_Main.chkSeparateEmail.FontSize(8.25)
+Gui.F_Main.frm_DefaultEmails.Create(Frame)
+Gui.F_Main.frm_DefaultEmails.Enabled(True)
+Gui.F_Main.frm_DefaultEmails.Visible(True)
+Gui.F_Main.frm_DefaultEmails.Zorder(0)
+Gui.F_Main.frm_DefaultEmails.Size(8640,1935)
+Gui.F_Main.frm_DefaultEmails.Position(195,7530)
+Gui.F_Main.frm_DefaultEmails.Caption("")
+Gui.F_Main.frm_DefaultEmails.FontName("Tahoma")
+Gui.F_Main.frm_DefaultEmails.FontSize(8.25)
+Gui.F_Main.txtWatchedEmail.Create(TextBox,"",True,5955,300,0,360,360,True,0,"Tahoma",8.25,,1)
+Gui.F_Main.txtWatchedEmail.Parent("frm_DefaultEmails")
+Gui.F_Main.lblWatchedEmail.Create(Label,"Watched email address:",True,1725,195,0,360,135,True,0,"Tahoma",8.25,-2147483633,0,0)
+Gui.F_Main.lblWatchedEmail.BorderStyle(0)
+Gui.F_Main.lblWatchedEmail.ToolTip("Enter a watched email to have invoices sent to in the event a customer does not have a contact identified.")
+Gui.F_Main.lblWatchedEmail.Parent("frm_DefaultEmails")
+Gui.F_Main.txtDefaultSenderAddr.Create(TextBox,"",True,5955,300,0,360,975,True,0,"Tahoma",8.25,,1)
+Gui.F_Main.txtDefaultSenderAddr.Parent("frm_DefaultEmails")
+Gui.F_Main.lblDefaultSenderAddr.Create(Label,"Default sender address",True,1680,195,0,360,735,True,0,"Tahoma",8.25,-2147483633,0,0)
+Gui.F_Main.lblDefaultSenderAddr.BorderStyle(0)
+Gui.F_Main.lblDefaultSenderAddr.Parent("frm_DefaultEmails")
+Gui.F_Main.txtDefaultSenderName.Create(TextBox,"",True,5955,300,0,360,1560,True,0,"Tahoma",8.25,,1)
+Gui.F_Main.txtDefaultSenderName.Parent("frm_DefaultEmails")
+Gui.F_Main.lblDefaultSenderName.Create(Label,"Default sender name",True,1500,195,0,360,1350,True,0,"Tahoma",8.25,-2147483633,0,0)
+Gui.F_Main.lblDefaultSenderName.BorderStyle(0)
+Gui.F_Main.lblDefaultSenderName.DefaultValue("")
+Gui.F_Main.lblDefaultSenderName.Parent("frm_DefaultEmails")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.iLastField.Declare(Long,-1)
+Variable.Global.iLastPosition.Declare(Long,-1)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+'TJS, October 2022
+'Customer: Metal Zinc
+'Quote 13719
+'BUSINESS CASE: The customer would like to auto-create and post invoices every day and let e-invoicing send those invoices without manual intervention.
+
+'SOLUTION:  
+'- Modify the e-invoicing script to pull the recipients from CRM where the contacts 'user field 11' = 'Y'.
+'- If the customer is part of a buying group, find the correct contact from the buying group as well as the current customer. Both should get the email with the invoice attached.
+'- If the customer does not have a designated recipient, send the invoice to a watched email
+'address (can be set in new e-invoicing options)
+'- All emails should list the sender as coming from a default sender to be set in the new e-invoicing options. The customer's courier settings are set to BCC the sender. The sender email address in this case is a shared mail box monitored by a few different people.
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+Gui.F_Main.ddlWildcards.AddItem("#CUSTOMERID#",0)
+Gui.F_Main.ddlWildcards.AddItem("#CUSTOMERNAME#",1)
+Gui.F_Main.ddlWildcards.AddItem("#CONTACTNAME#",2)
+Gui.F_Main.ddlWildcards.AddItem("#INVOICES#",3)
+Gui.F_Main.ddlWildcards.AddItem("#ORDERS#",4)
+Gui.F_Main.ddlWildcards.AddItem("#CURRENTDATE#",5)
+Gui.F_Main.ddlWildcards.AddItem("#PO#",6)
+
+Gui.F_Main.ddlReview.AddItem("Send Emails Without Review",0)
+Gui.F_Main.ddlReview.AddItem("Review and Send Emails During Batch Processing",1)
+Gui.F_Main.ddlReview.AddItem("Review and Send Emails Manually After Batch Processing",2)
+
+Gui.F_Main.ddlReview.ListIndex(0)
+
+Gui.F_Main.txtNumLimit.NumericOnly(2)
+Gui.F_Main.txtNumLimit.Text("1")
+
+F.Intrinsic.Control.CallSub(Loadoptions)
+'Gui.F_Main.txtCustGroup.Locked(True)
+'Gui.F_Main.txtSOGroup.locked(True)
+Gui.F_Main.txtCustGroup.NumericOnly(2)
+Gui.F_Main.txtSOGroup.NumericOnly(2)
+
+Gui.F_Main..Show
+
+Program.Sub.Main.End
+
+Program.Sub.f_main_unload.Start
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+Program.Sub.f_main_unload.End
+
+Program.Sub.chk_docso_click.Start
+F.Intrinsic.Control.If(V.Screen.F_Main!chk_DocSO.Value,=,1)
+	Gui.F_Main.txtSOGroup.Enabled(True)
+	Gui.F_Main.cmd_txtSOGroup.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.txtSOGroup.Enabled(False)
+	Gui.F_Main.cmd_txtSOGroup.Enabled(False)
+	Gui.F_Main.txtSOGroup.Text("")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.chk_docso_click.End
+
+Program.Sub.cmd_txtsogroup_click.Start
+'Document Control Group Browser
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sQuery.Set("Select GRP_ID, GRP_NAME, GRP_DESC from ATG_DOC_GRP")
+F.Intrinsic.String.Split("ID*!*Name*!*Description","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("500*!*1000*!*3000","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.Browser("Document Control Group Browser","conx",V.Local.sQuery,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_Main.txtSOGroup.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+Program.Sub.cmd_txtsogroup_click.End
+
+Program.Sub.chk_doccust_click.Start
+F.Intrinsic.Control.If(V.Screen.F_Main!chk_DocCust.Value,=,1)
+	Gui.F_Main.txtCustGroup.Enabled(True)
+	Gui.F_Main.cmd_txtCustGroup.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.txtCustGroup.Enabled(False)
+	Gui.F_Main.cmd_txtCustGroup.Enabled(False)
+	Gui.F_Main.txtCustGroup.Text("")
+F.Intrinsic.Control.EndIf
+
+
+Program.Sub.chk_doccust_click.End
+
+Program.Sub.cmd_txtcustgroup_click.Start
+'Document Control Group Browser
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+V.Local.sQuery.Set("Select GRP_ID, GRP_NAME, GRP_DESC from ATG_DOC_GRP")
+F.Intrinsic.String.Split("ID*!*Name*!*Description","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("500*!*1000*!*3000","*!*",V.Local.iWidths)
+
+F.Intrinsic.UI.Browser("Document Control Group Browser","conx",V.Local.sQuery,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_Main.txtCustGroup.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+
+
+Program.Sub.cmd_txtcustgroup_click.End
+
+Program.Sub.chkfolder_click.Start
+F.Intrinsic.Control.If(V.Screen.F_Main!chkFolder.Value,=,1)
+	Gui.F_Main.txtBase.Enabled(True)
+	Gui.F_Main.txtdir.Enabled(True)
+	Gui.F_Main.cmd_txtBase.Enabled(True)
+	Gui.F_Main.cmd_txtDir.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.txtBase.Enabled(False)
+	Gui.F_Main.txtDir.Enabled(False)
+	Gui.F_Main.txtBase.text("")
+	Gui.F_Main.txtDir.text("")
+	Gui.F_Main.cmd_txtBase.Enabled(False)
+	Gui.F_Main.cmd_txtDir.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+Program.Sub.chkfolder_click.End
+
+Program.Sub.cmd_txtbase_click.Start
+V.Local.sDir.Declare(String)
+
+F.Intrinsic.UI.FolderBrowser("Select a Base Directory",V.Local.sDir)
+F.Intrinsic.File.GetUNCName(V.Local.sDir,V.Local.sDir)
+
+Gui.F_Main.txtBase.Text(V.Local.sDir)
+
+Program.Sub.cmd_txtbase_click.End
+
+Program.Sub.cmd_txtdir_click.Start
+V.Local.sDir.Declare(String)
+
+F.Intrinsic.UI.FolderBrowser("Select a Base Directory",V.Local.sDir)
+F.Intrinsic.File.GetUNCName(V.Local.sDir,V.Local.sDir)
+
+Gui.F_Main.txtDir.Text(V.Local.sDir)
+
+Program.Sub.cmd_txtdir_click.End
+
+Program.Sub.chkfile_click.Start
+F.Intrinsic.Control.If(V.Screen.F_Main!chkFile.Value,=,1)
+	Gui.F_Main.ddlFile1.Enabled(True)
+	Gui.F_Main.ddlFile2.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.ddlFile1.Enabled(False)
+	Gui.F_Main.ddlFile2.Enabled(False)
+	Gui.F_Main.ddlFile1.Text("INVOICENO")
+	Gui.F_Main.ddlFile2.Text("ORDERNO")
+F.Intrinsic.Control.EndIf
+
+Program.Sub.chkfile_click.End
+
+Program.Sub.chkemail_click.Start
+'F.Intrinsic.Control.If(V.Screen.F_Main!chkEmail.Value,=,1)
+'	Gui.F_Main.txtSubject.Enabled(True)
+'	Gui.F_Main.mltxtBody.Enabled(True)
+'	Gui.F_Main.ddlWildcards.Enabled(False)
+'F.Intrinsic.Control.Else
+'	Gui.F_Main.txtSubject.Enabled(False)
+'	Gui.F_Main.mltxtBody.Enabled(False)
+'	Gui.F_Main.txtSubject.Text("Your Invoice(s) #INVOICES# for Order(s) #ORDERNUMBERS#")
+'	Gui.F_Main.mltxtBody.Text("Your invoice(s) #INVOICES# for order(s) #ORDERNUMBERS# are ready to view.")
+'	Gui.F_Main.ddlWildcards.Enabled(False)
+'F.Intrinsic.Control.EndIf
+
+Program.Sub.chkemail_click.End
+
+Program.Sub.cmdsave_click.Start
+'Function.Global.General.SaveOption(ID,sequence,booleanvalue,flagvalue,text0value,text1value,floatvalue,datevalue)
+V.Local.sBaseDir.Declare(String)
+V.Local.sInvoiceDir.Declare(String)
+V.Local.bRet.Declare(String)
+
+F.Global.General.SaveOption(402135,"00000",,,,,V.Screen.F_Main!ddlReview.ListIndex,)
+
+'Queue Invoices
+'F.Intrinsic.Control.If(V.Screen.F_Main!chkQueue.Value,=,1)
+'	F.Global.General.SaveOption(402135,"00000",True,"","","","","")
+'F.Intrinsic.Control.Else
+'	F.Global.General.SaveOption(402135,"00000",False,"","","","","")
+'F.Intrinsic.Control.EndIf
+
+'Consolidate
+F.Intrinsic.Control.If(V.Screen.F_Main!chkConsolidate.Value,=,1)
+		F.Global.General.SaveOption(402133,"00000",True,"","","","","")
+F.Intrinsic.Control.Else
+		F.Global.General.SaveOption(402133,"00000",False,"","","","","")
+F.Intrinsic.Control.EndIf
+
+'Limit Number of Invoices
+F.Intrinsic.Control.If(V.Screen.F_Main!chkLimit.Value,=,1)
+		F.Global.General.SaveOption(402133,"00001",True,"","","","","")
+F.Intrinsic.Control.Else
+		F.Global.General.SaveOption(402133,"00001",False,"","","","","")
+F.Intrinsic.Control.EndIf
+
+'Number of Invoices
+F.Intrinsic.Control.If(V.Screen.F_Main!txtNumLimit.Text.long,>,50)
+	F.Intrinsic.UI.Msgbox("Invoice Limit can not be more 50")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Global.General.SaveOption(402133,"00002","","","","",V.Screen.F_Main!txtNumLimit.Text,"")
+
+'Include Tracking Number
+F.Intrinsic.Control.If(V.Screen.F_Main!chkTracking.Value,=,1)
+	F.Global.General.SaveOption(402134,"00000",True,"","","","","")
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402134,"00000",False,"","","","","")
+F.Intrinsic.Control.EndIf
+
+'Show Review Screen
+'F.Intrinsic.Control.If(V.Screen.F_Main!chkShowReview.Value,=,1)
+'	F.Global.General.SaveOption(402400,"00000",True,"","","","","")
+'F.Intrinsic.Control.Else
+'	F.Global.General.SaveOption(402400,"00000",False,"","","","","")
+'F.Intrinsic.Control.EndIf
+
+'Attach Invoice to DCC Sales Order
+F.Intrinsic.Control.If(V.Screen.F_Main!chk_DocSO.Value,=,1)
+	F.Global.General.SaveOption(402136,"00000",True,"","","","","")
+	F.Intrinsic.Control.If(V.Screen.F_Main!txtSOGroup.Text,=,"")
+		F.Global.General.SaveOption(402136,"00001","","","","",-1,"")
+	F.Intrinsic.Control.Else
+		F.Global.General.SaveOption(402136,"00001","","","","",V.Screen.F_Main!txtSOGroup.Text.long,"")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402136,"00000",False,"","","","","")
+	F.Global.General.SaveOption(402136,"00001","","","","",-1,"")
+F.Intrinsic.Control.EndIf
+
+'Attach Invoice to DCC Customer
+F.Intrinsic.Control.If(V.Screen.F_Main!chk_DocCust.Value,=,1)
+	F.Global.General.SaveOption(402137,"00000",True,"","","","","")
+	F.Intrinsic.Control.If(V.Screen.F_Main!txtCustGroup.Text,=,"")
+		F.Global.General.SaveOption(402137,"00001","","","","",-1,"")
+	F.Intrinsic.Control.Else
+		F.Global.General.SaveOption(402137,"00001","","","","",V.Screen.F_Main!txtCustGroup.Text.long,"")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402137,"00000",False,"","","","","")
+	F.Global.General.SaveOption(402137,"00001","","","","",-1,"")
+F.Intrinsic.Control.EndIf
+
+'Use Custom Folder
+F.Intrinsic.Control.If(V.Screen.F_Main!chkFolder.Value,=,1)
+	F.Global.General.SaveOption(402139,"00000",True,"","","","","")
+	F.Intrinsic.File.GetUNCName(V.Screen.F_Main!txtBase.Text,V.Local.sBaseDir)
+	F.Intrinsic.File.IsUNC(V.Local.sBaseDir,V.Local.bRet)
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		F.Global.General.SaveOption(402139,"00001","","",V.Screen.F_Main!txtBase.Text,"","","")
+		F.Global.General.SaveOption(402139,"00002","","",V.Screen.F_Main!txtDir.Text,"","","")
+	F.Intrinsic.Control.Else
+		F.Intrinsic.UI.Msgbox("Invoice Directory must be a Fully Qualified Path")
+		Gui.F_Main.txtBase.SetFocus
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402139,"00000",False,"","","","","")
+	F.Global.General.SaveOption(402139,"00001","","","","","","")
+	F.Global.General.SaveOption(402139,"00002","","","","","","")
+F.Intrinsic.Control.EndIf
+
+'File Name Format
+F.Intrinsic.Control.If(V.Screen.F_Main!chkFile.Value,=,1)
+	F.Global.General.SaveOption(402140,"00000",True,"","","","","")
+	F.Global.General.SaveOption(402140,"00001","","",V.Screen.F_Main!ddlFile1.Text,"","","")
+	F.Global.General.SaveOption(402140,"00002","","",V.Screen.F_Main!ddlFile2.Text,"","","")
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402140,"00000",False,"","","","","")
+	F.Global.General.SaveOption(402140,"00001","","","INVOICENO","","","")
+	F.Global.General.SaveOption(402140,"00002","","","ORDERNO","","","")
+F.Intrinsic.Control.EndIf
+
+'Use Custom Email Subject and Body
+'F.Intrinsic.Control.If(V.Screen.F_Main!chkEmail.Value,=,1)
+	'F.Global.General.SaveOption(402138,"00000",True,"","","","","")
+	F.Global.General.SaveOption(402138,"00001","","",V.Screen.F_Main!txtSubject.Text,"","","")
+	F.Global.General.SaveOption(402138,"00002","","",V.Screen.F_Main!mltxtBody.Text,"","","")
+'F.Intrinsic.Control.Else
+	'F.Global.General.SaveOption(402138,"00000",False,"","","","","")
+	'F.Global.General.SaveOption(402138,"00001","","","Your Invoice(s) #INVOICES# for Order(s) #ORDERNUMBERS#","","","")
+	'F.Global.General.SaveOption(402138,"00002","","","Your invoice(s) #INVOICES# for order(s) #ORDERNUMBERS# are ready to view.","","","")
+'F.Intrinsic.Control.EndIf
+
+'Enable Type Ahead
+F.Intrinsic.Control.If(V.Screen.F_Main!chkTypeAhead.Value,=,0)
+	F.Global.General.SaveOption(402533,"00000",False,"","","","","")
+Function.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402533,"00000",True,"","","","","")
+Function.Intrinsic.Control.EndIf
+
+'Email Salesperson
+F.Intrinsic.Control.If(V.Screen.F_Main!chkSalesRep.Value,=,0)
+		F.Global.General.SaveOption(402558,"00000",False,"","","","","")
+F.Intrinsic.Control.Else
+	F.Global.General.SaveOption(402558,"00000",True,"","","","","")
+F.Intrinsic.Control.EndIf
+
+'Send Each Invoice in a Separate Email
+F.Intrinsic.Control.If(V.Screen.F_Main!chkSeparateEmail.Value,=,1)
+		F.Global.General.SaveOption(402608,"00000",True,"","","","","")
+F.Intrinsic.Control.Else
+		F.Global.General.SaveOption(402608,"00000",False,"","","","","")
+F.Intrinsic.Control.EndIf
+
+'TJS - saving default addresses to the registry
+'Watched email account = sequence 1000
+F.Global.Registry.AddValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,1000,False,V.Screen.F_Main!txtWatchedEmail.Text.Trim,False,0,0.00,1/1/1980,12:00:00 AM,"")
+'Default sender address = sequence 2000
+F.Global.Registry.AddValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,2000,False,V.Screen.F_Main!txtDefaultSenderAddr.Text.Trim,False,0,0.00,1/1/1980,12:00:00 AM,"")
+'Default sender name = sequence 3000
+F.Global.Registry.AddValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,3000,False,V.Screen.F_Main!txtDefaultSenderName.Text.Trim,False,0,0.00,1/1/1980,12:00:00 AM,"")
+
+F.Intrinsic.Control.CallSub(F_main_unload)
+
+Program.Sub.cmdsave_click.End
+
+Program.Sub.LoadOptions.Start
+F.Intrinsic.Control.SetErrorHandler("ReadOptions_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sInvoiceDir.Declare(String)
+V.Local.sBaseDir.Declare(String)
+V.Local.bFileName.Declare(String)
+V.Local.sPrefix.Declare(String)
+V.Local.sSuffix.Declare(String)
+V.Local.bRet.Declare(Boolean)
+V.Local.sRet.Declare(String)
+V.Local.iRet.Declare(Long)
+V.Local.sTemp.Declare
+
+'Fill drop downs
+'Prefix
+Gui.F_Main.ddlFile1.AddItem("INVOICENO")
+Gui.F_Main.ddlFile1.AddItem("ORDERNO")
+Gui.F_Main.ddlFile1.AddItem("CCC")
+Gui.F_Main.ddlFile1.AddItem("CUST")
+Gui.F_Main.ddlFile1.AddItem("DATE")
+'Suffix
+Gui.F_Main.ddlFile2.AddItem("INVOICENO")
+Gui.F_Main.ddlFile2.AddItem("ORDERNO")
+Gui.F_Main.ddlFile2.AddItem("CCC")
+Gui.F_Main.ddlFile2.AddItem("CUST")
+Gui.F_Main.ddlFile2.AddItem("DATE")
+
+'Queue Invoices
+
+Function.Global.General.ReadOption(402135,2,1,00000,V.Local.iRet)
+Gui.F_Main.ddlReview.ListIndex(V.Local.iRet)
+'F.Intrinsic.Control.If(V.Local.bRet,=,True)
+'	Gui.F_Main.chkQueue.Value(1)
+'F.Intrinsic.Control.Else
+'	Gui.F_Main.chkQueue.Value(0)
+'F.Intrinsic.Control.EndIf
+
+'Consolidate
+Function.Global.General.ReadOption(402133,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkConsolidate.Value(1)
+	Gui.F_Main.chkLimit.Enabled(True)
+	'Limit Number of Invoices
+	Function.Global.General.ReadOption(402133,0,False,00001,V.Local.bRet)
+	F.Intrinsic.Control.If(V.Local.bRet,=,True)
+		Gui.F_Main.chkLimit.Value(1)
+		Gui.F_Main.txtNumLimit.Enabled(True)
+
+		'Read Option for Num Limit
+		Function.Global.General.ReadOption(402133,2,1,00002,V.Local.iRet)
+		Gui.F_Main.txtNumLimit.Text(V.Local.iret)
+
+	F.Intrinsic.Control.Else
+		Gui.F_Main.chkLimit.Value(0)
+		Gui.F_Main.txtNumLimit.Text("")
+		Gui.F_Main.txtNumLimit.Enabled(False)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkConsolidate.Value(0)
+	Gui.F_Main.chkLimit.Enabled(False)
+	Gui.F_Main.txtNumLimit.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+'Include Tracking Number
+Function.Global.General.ReadOption(402134,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkTracking.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkTracking.Value(0)
+F.Intrinsic.Control.EndIf
+
+'Show Review Screen
+'F.Global.General.ReadOption(402400,0,False,V.Local.bRet)
+'F.Intrinsic.Control.If(V.Local.bRet,=,True)
+'	Gui.F_Main.chkShowReview.Value(1)
+'F.Intrinsic.Control.Else
+'	Gui.F_Main.chkShowReview.Value(0)
+'F.Intrinsic.Control.EndIf
+
+'Attach Invoice to DCC Sales Order
+Function.Global.General.ReadOption(402136,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chk_DocSO.Value(1)
+	Function.Global.General.ReadOption(402136,2,-1,00001,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,=,-1)
+		Gui.F_Main.txtSOGroup.Text("")
+	F.Intrinsic.Control.Else
+		Gui.F_Main.txtSOGroup.Text(V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_Main.chk_DocSO.Value(0)
+	Gui.F_Main.cmd_txtSOGroup.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+
+'Attach Invoice to DCC Customer
+Function.Global.General.ReadOption(402137,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chk_DocCust.Value(1)
+	Function.Global.General.ReadOption(402137,2,-1,00001,V.Local.sRet)
+	F.Intrinsic.Control.If(V.Local.sRet,=,-1)
+		Gui.F_Main.txtCustGroup.Text("")
+	F.Intrinsic.Control.Else
+		Gui.F_Main.txtCustGroup.Text(V.Local.sRet)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	Gui.F_Main.chk_DocCust.Value(0)
+	Gui.F_Main.cmd_txtCustGroup.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+'Use Custom Folder
+Function.Global.General.ReadOption(402139,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkFolder.Value(1)
+	F.Intrinsic.String.Concat(V.Caller.PluginsDir,"\Invoices",V.Local.sBaseDir)
+	Function.Global.General.ReadOption(402139,1,V.local.sBaseDir,00001,V.local.sBaseDir)
+	Function.Global.General.ReadOption(402139,1,"#BASE#",00002,V.local.sInvoiceDir)
+	Gui.F_Main.txtBase.Text(V.Local.sBaseDir)
+	Gui.F_Main.txtDir.Text(V.Local.sInvoiceDir)
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkFolder.Value(0)
+	Gui.F_Main.cmd_txtBase.Enabled(False)
+	Gui.F_Main.cmd_txtDir.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+'File Name Format
+Function.Global.General.ReadOption(402140,0,"False",00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkFile.Value(1)
+	Function.Global.General.ReadOption(402140,1,"INVOICENO",00001,V.local.sPrefix)
+	Function.Global.General.ReadOption(402140,1,"ORDERNO",00002,V.local.sSuffix)
+	Gui.F_Main.ddlFile1.Text(V.Local.sPrefix)
+	Gui.F_Main.ddlFile2.Text(V.Local.sSuffix)
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkFile.Value(0)
+	Gui.F_Main.ddlFile1.Text("INVOICENO")
+	Gui.F_Main.ddlFile2.Text("ORDERNO")
+	Gui.F_Main.ddlFile1.Enabled(False)
+	Gui.F_Main.ddlFile2.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+'Use Custom Email Subject and Body
+'Function.Global.General.ReadOption(402138,0,False,00000,V.Local.bRet)
+'F.Intrinsic.Control.If(V.Local.bRet,=,True)
+'	Gui.F_Main.chkEmail.Value(1)
+	Function.Global.General.ReadOption(402138,1,"Your Invoice(s) #INVOICES# for Order(s) #ORDERS#",00001,V.local.sRet)
+	Gui.F_Main.txtSubject.Text(V.Local.sRet)
+	Function.Global.General.ReadOption(402138,1,"Your invoice(s) #INVOICES# for order(s) #ORDERS# are ready to view.",00002,V.local.sRet)
+	Gui.F_Main.mltxtBody.Text(V.Local.sRet)
+'F.Intrinsic.Control.Else
+'	Gui.F_Main.chkEmail.Value(0)
+'	Gui.F_Main.txtSubject.Text("Your Invoice(s) #INVOICES# for Order(s) #ORDERNUMBERS#")
+'	Gui.F_Main.mltxtBody.Text("Your invoice(s) #INVOICES# for order(s) #ORDERNUMBERS# are ready to view.")
+'	Gui.F_Main.txtSubject.Enabled(False)
+'	Gui.F_Main.mltxtBody.Enabled(False)
+'F.Intrinsic.Control.EndIf
+
+'Enable Type Ahead
+Function.Global.General.ReadOption(402533,0,False,00000,V.Local.bRet)
+Function.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkTypeAhead.Value(1)
+Function.Intrinsic.Control.Else
+	Gui.F_Main.chkTypeAhead.Value(0)
+Function.Intrinsic.Control.EndIf
+
+'Email Salesperson
+Function.Global.General.ReadOption(402558,0,False,00000,V.Local.bRet)
+Function.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkSalesRep.Value(1)
+Function.Intrinsic.Control.Else
+	Gui.F_Main.chkSalesRep.Value(0)
+Function.Intrinsic.Control.EndIf
+
+'Send Each Invoice in a Seperate Email
+'Include Tracking Number
+Function.Global.General.ReadOption(402608,0,False,00000,V.Local.bRet)
+F.Intrinsic.Control.If(V.Local.bRet,=,True)
+	Gui.F_Main.chkSeparateEmail.Value(1)
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkSeparateEmail.Value(0)
+F.Intrinsic.Control.EndIf
+
+'TJS - Reading in options for default emails
+'Watched email account  = sequence 1000
+F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,1000,5,"",V.Local.sTemp)
+Gui.F_Main.txtWatchedEmail.Text(V.Local.sTemp)
+'Default sender account = sequence 2000
+F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,2000,5,"",V.Local.sTemp)
+Gui.F_Main.txtDefaultSenderAddr.Text(V.Local.sTemp)
+'Default sender name = sequence 3000
+F.Global.Registry.ReadValue(V.Caller.CompanyCode,V.Caller.CompanyCode,"GCG_6935_Einvoicing_Options.g2u",6935,3000,5,"",V.Local.sTemp)
+Gui.F_Main.txtDefaultSenderName.Text(V.Local.sTemp)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ReadOptions_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.LoadOptions.End
+
+Program.Sub.ddlWildCards_SelectedIndexChanged.Start
+F.Intrinsic.Control.SetErrorHandler("ddlWildCards_SelectedIndexChanged_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sWildcard.Declare(String)
+V.Local.sLeftString.Declare(String)
+V.Local.sRightString.Declare(String)
+V.Local.sCombinedString.Declare(String)
+V.Local.iPosition.Declare(Long)
+V.Local.iLength.Declare(String)
+
+'Add wildcard to last field
+Function.Intrinsic.Control.If(V.Screen.F_Main!ddlWildcards.Text,<>,"")
+    'Getting wildcard selected
+    V.Local.sWildcard.Set(V.Screen.F_Main!ddlWildcards.Text)
+
+    'Reseting ddl back to blank
+    Gui.F_Main.ddlWildcards.ClearSelected
+
+    'Check to see which was lst field.  0 - Subject, 1 - Body
+	Function.Intrinsic.Control.If(V.Global.iLastField,=,0)
+        'Getting text up to cursor position
+		Function.Intrinsic.String.Left(V.Screen.F_Main!txtSubject.Text,V.Global.iLastPosition,V.Local.sLeftString)
+        'Getting text after cursor position
+		Function.Intrinsic.String.Len(V.Screen.F_Main!txtSubject.Text,V.Local.iLength)
+		F.Intrinsic.Math.Sub(V.Local.iLength,V.Global.iLastPosition,V.Local.iLength)
+		F.Intrinsic.String.Mid(V.Screen.F_Main!txtSubject.Text,V.Global.iLastPosition.++,V.Local.iLength,V.Local.sRightString)
+
+        'Combining string
+		Function.Intrinsic.String.Build("{0}{1}{2}",V.Local.sLeftString,V.Local.sWildcard,V.Local.sRightString,V.Local.sCombinedString)
+        'Setting String back to text box
+		Gui.F_Main.txtSubject.Text(V.Local.sCombinedString)
+
+        'Setting the selection start
+		F.Intrinsic.String.Len(V.Local.sWildcard,V.Local.iLength)
+		F.Intrinsic.Math.Add(V.Global.iLastPosition,V.Local.iLength,V.Global.iLastPosition)
+		Gui.F_Main.txtSubject.SelectionStart(V.Global.iLastPosition)
+
+		'Gui.F_Main.txtSubject.SetFocus
+	Function.Intrinsic.Control.ElseIf(V.Global.iLastField,>,0)
+        'Getting text up to cursor position
+		Function.Intrinsic.String.Left(V.Screen.F_Main!mltxtBody.Text,V.Global.iLastPosition,V.Local.sLeftString)
+        'Getting text after cursor position
+		Function.Intrinsic.String.Len(V.Screen.F_Main!mltxtBody.Text,V.Local.iLength)
+		F.Intrinsic.Math.Sub(V.Local.iLength,V.Global.iLastPosition,V.Local.iLength)
+		F.Intrinsic.String.Mid(V.Screen.F_Main!mltxtBody.Text,V.Global.iLastPosition.++,V.Local.iLength,V.Local.sRightString)
+
+        'Combining string
+		Function.Intrinsic.String.Build("{0}{1}{2}",V.Local.sLeftString,V.Local.sWildcard,V.Local.sRightString,V.Local.sCombinedString)
+        'Setting String back to text box
+		Gui.F_Main.mltxtBody.Text(V.Local.sCombinedString)
+
+        'Setting the selection start
+		F.Intrinsic.String.Len(V.Local.sWildcard,V.Local.iLength)
+		F.Intrinsic.Math.Add(V.Global.iLastPosition,V.Local.iLength,V.Global.iLastPosition)
+		Gui.F_Main.mltxtBody.SelectionStart(V.Global.iLastPosition)
+
+		'Gui.F_Main.mltxtBody.SetFocus
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("ddlWildCards_SelectedIndexChanged_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+    Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+    F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.ddlWildCards_SelectedIndexChanged.End
+
+Program.Sub.txtSubject_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtSubject_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Setting last position of cursor
+V.Global.iLastPosition.Set(V.Args.SelectionStart)
+
+'Setting last field flag, so we know last field user had cursor in, in case the user wants to add a wildcard
+V.Global.iLastField.Set(0)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtSubject_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+    Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+    F.Intrinsic.UI.Msgbox(V.Local.sError)
+    F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.txtSubject_LostFocus.End
+
+Program.Sub.mltxtBody_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtBody_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+'Setting last position of cursor
+V.Global.iLastPosition.Set(V.Args.SelectionStart)
+
+'Setting last field flag, so we know last field user had cursor in, in case the user wants to add a wildcard
+V.Global.iLastField.Set(1)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtBody_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+    Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+    F.Intrinsic.UI.Msgbox(V.Local.sError)
+    F.Intrinsic.Control.End
+
+Function.Intrinsic.Control.EndIf
+Program.Sub.mltxtBody_LostFocus.End
+
+Program.Sub.chkConsolidate_Click.Start
+F.Intrinsic.Control.SetErrorHandler("chkConsolidate_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.If(V.Screen.F_Main!chkConsolidate.Value,=,1)
+	Gui.F_Main.chkLimit.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.chkLimit.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkConsolidate_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.chkConsolidate_Click.End
+
+Program.Sub.chkLimit_Click.Start
+F.Intrinsic.Control.SetErrorHandler("chkLimit_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+F.Intrinsic.Control.If(V.Screen.F_Main!chkLimit.Value,=,1)
+	Gui.F_Main.txtNumLimit.Enabled(True)
+F.Intrinsic.Control.Else
+	Gui.F_Main.txtNumLimit.Enabled(False)
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("chkLimit_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.chkLimit_Click.End
+
+Program.Sub.txtSOGroup_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+Function.Intrinsic.Control.If(V.Screen.F_Main!txtSOGroup.Text,<>,"")
+	F.Intrinsic.String.Build("Select * From ATG_DOC_GRP where GRP_ID={0}",V.Screen.F_Main!txtSOGroup.Text,V.Local.sQuery)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+	Function.Intrinsic.Control.If(V.Ambient.executeandreturnEOF,=,True)
+		F.Intrinsic.UI.Msgbox("Please enter a valid Group ID")
+		Gui.F_Main.txtSOGroup.Text("")
+		F.Intrinsic.Control.ExitSub
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.txtSOGroup_LostFocus.End
+
+Program.Sub.txtCustGroup_LostFocus.Start
+F.Intrinsic.Control.SetErrorHandler("txtSOGroup_LostFocus_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+
+Function.Intrinsic.Control.If(V.Screen.F_Main!txtCustGroup.Text,<>,"")
+	F.Intrinsic.String.Build("Select * From ATG_DOC_GRP where GRP_ID={0}",V.Screen.F_Main!txtCustGroup.Text,V.Local.sQuery)
+	F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sQuery,V.Local.sRet)
+	Function.Intrinsic.Control.If(V.Ambient.executeandreturnEOF,=,True)
+		F.Intrinsic.UI.Msgbox("Please enter a valid Group ID")
+		Gui.F_Main.txtCustGroup.Text("")
+		F.Intrinsic.Control.ExitSub
+	Function.Intrinsic.Control.EndIf
+Function.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("txtSOGroup_LostFocus_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_6935_Einvoicing_Options.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.Debug.SetLA(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+Program.Sub.txtCustGroup_LostFocus.End
+
+Program.Sub.Comments.Start
+${$0$}$Einvoicing_Options_Sample$}$SUPERVSR$}$10/9/2013$}$False
+${$5$}$20.1.8286.22461$}$1
+${$6$}$tsmith$}$20221013152128791$}$xqPbj9atw05FglvzeFsZ9cqXP+qvG6tXw0teA2pKEpw4ifRY31zncpVrxqmhjEDnqSPOD1mLHDs=
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::E-Invoicing Options
+SS_Form1.CTRL{{NAME::chkConsignment\\TYPE::9\\CAPTION::Exclude Consignment Batches\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkPacking\\TYPE::9\\CAPTION::Include Packing List\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkConsolidate\\TYPE::9\\CAPTION::Consolidate Multiple Invoices to Single Email\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkTracking\\TYPE::9\\CAPTION::Include Tracking Number on Invoice\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkDCC\\TYPE::9\\CAPTION::Attach Invoice To Document Control for Order\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtGroup\\TYPE::2\\CAPTION::Document Control Group\\GROUP::-1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chkSaveAll\\TYPE::9\\CAPTION::Save All Invoices as PDFs\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkFolder\\TYPE::9\\CAPTION::Use Custom Folder for Invoices\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtBase\\TYPE::2\\CAPTION::Base Directory\\GROUP::-1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtDir\\TYPE::2\\CAPTION::Invoice Directory\\GROUP::-1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::ddlFile1\\TYPE::4\\CAPTION::File Prefix\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::ddlFile2\\TYPE::4\\CAPTION::File Suffix\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtSubject\\TYPE::2\\CAPTION::Email Subject\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::mltxtBody\\TYPE::8\\CAPTION::Email Body Text\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
